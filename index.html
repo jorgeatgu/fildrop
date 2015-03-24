@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SVG FILTERS + DRAG AND DROP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="//use.typekit.net/dco8xwz.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.1/gist-embed.min.js"></script>
+    </head>
+    <body>
+
+
+<h1 class="texto-principal">SVG Filters</h1>
+
+<section class="section-left">
+    <article class="section-left-example">
+        <h1 class="texto-secundario">EXAMPLE</h1>
+        <picture>
+            <img src="images/ino-festival-asalto-2015.JPG" alt="Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar">
+        </picture>
+    </article>
+    <article class="section-left-drag">
+        <h1 class="texto-secundario">Drag an drop your image</h1>
+        <div id="holder" >
+        </div>
+        <p id="upload" class="hidden">
+            <label>Drag &amp; drop not supported, but you can still upload via this input field:
+                <br>
+                <input type="file">
+            </label>
+        </p>
+        <p id="filereader" class="hidden">File API &amp; FileReader API not supported</p>
+        <p id="formdata" class="hidden">XHR2's FormData is not supported</p>
+        <p id="progress" class="hidden">XHR2's upload progress isn't supported</p>
+        <!-- <p>Upload progress:
+            <progress id="uploadprogress" max="100" value="0">0</progress>
+        </p> -->
+    </article>
+</section>
+
+
+<section class="section-buttons">
+
+<button class="btn-saturate">
+  Saturate
+</button>
+<button class="btn-matrix">
+  Matrix
+</button>
+<button class="btn-matrix-dos">
+  Matrix
+</button>
+<button class="btn-hueRotate">
+  hueRotate
+</button>
+<button class="btn-luminance">
+  Luminance
+</button>
+<button class="btn-discrete">
+  Discrete
+</button>
+<button class="btn-discrete-dos">
+  Discrete 2
+</button>
+<button class="btn-table">
+  Table
+</button>
+<button class="btn-table-dos">
+  Table 2
+</button>
+<button class="btn-identity">
+  Identity
+</button>
+<button class="btn-turbu-map">
+  Turbu * map
+</button>
+<button class="btn-linear">
+  Linear
+</button>
+<button class="btn-sepia">
+  Sepia
+</button>
+<button class="btn-turbulence">
+  Turbulence
+</button>
+<button class="btn-gamma">
+  Gamma
+</button>
+<button class="btn-con-matrix-uno">
+  feMatrix 1
+</button>
+<button class="btn-con-matrix-dos">
+  feMatrix 2
+</button>
+<button class="btn-blur-uno">
+  Blur 1
+</button>
+<button class="btn-blur-dos">
+  Blur 2
+</button>
+<button class="btn-blur-tres">
+  Blur 3
+</button>
+<button class="btn-morpho-uno">
+  Morpho 1
+</button>
+<button class="btn-morpho-dos">
+  Morpho 2
+</button>
+<button class="btn-morpho-tres">
+  Morpho 3
+</button>
+<button class="btn-morpho-cuatro">
+  Morpho 4
+</button>
+
+
+</section>
+
+
+<article class="filters-code-even">
+    <h3>feColorMatrix | Saturate
+  <code data-gist-id="e00454aa7015456f6b5a"></code>
+</h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feColorMatrix | Matrix
+    <code data-gist-id="c80283f88ecf3561cae4"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feColorMatrix | Matrix 2
+    <code data-gist-id="f45f9c9f230bb32a2f4b"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feColorMatrix | HueRotate
+    <code data-gist-id="5da1df95aa87629095c9"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feColorMatrix | Luminace to Alpha
+ <code data-gist-id="63b0e5bab350cd0db7d2"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feComponentTransfer | Discrete
+<code data-gist-id="54b82ac9745b5d1e30af"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feComponentTransfer | Discrete 2
+  <code data-gist-id="68b9e5dc6deca4383785"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feComponentTransfer | Table
+  <code data-gist-id="5e14abb2a0c94d015222"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feComponentTransfer | Table 2
+<code data-gist-id="68521f65aa885a2f7543"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feComponentTransfer | Identity
+  <code data-gist-id="120d326127710a219407"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feComponentTransfer | Linear
+  <code data-gist-id="44bf021c08ca6646e2ab"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feComponentTransfer | Gamma
+ <code data-gist-id="7798ef0c54e40dbd5b03"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feConvolveMatrix | Matrix
+<code data-gist-id="9907785939468dbabc5b"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feConvolveMatrix | Matrix 2
+  <code data-gist-id="0f2966128e08bedcbe82"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feColorMatrix | Sepia
+  <code data-gist-id="5b338cc1a4e0df901348"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feTurbulence + feComposite | Turbulence
+  <code data-gist-id="8ed03a5e7c08fdae21fe"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feTurbulence + feDisplacementMap | TurbuMap
+   <code data-gist-id="7cb01387ecdadaa41701"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feGaussianBlur | Blur
+  <code data-gist-id="1cd51c31563c6b76f043"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feGaussianBlur | Blur 2
+  <code data-gist-id="7e87f6541d3df00ffa42"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feGaussianBlur | Blur 3
+  <code data-gist-id="16bf546394ad82f9b955"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feMorphology | Erode
+  <code data-gist-id="af1f7d2239f9018bd000"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feMorphology | Erode 2
+  <code data-gist-id="6f3a3a03b20957fb7d1a"></code>
+ </h3>
+</article>
+<article class="filters-code-even">
+    <h3>feMorphology | Dilate
+  <code data-gist-id="12192cff50d8fbd7482b"></code>
+ </h3>
+</article>
+<article class="filters-code-odd">
+    <h3>feMorphology | Dilate 2
+  <code data-gist-id="9eb4ff4273301d596309"></code>
+ </h3>
+</article>
+
+<svg>
+  <defs>
+     <!-- feColorMatrix -->
+
+         <filter id="saturate" filterUnits="objectBoundingBox">
+           <feColorMatrix type="saturate" in="SourceGraphic" values="0.4"/>
+         </filter>
+         <filter id="matrix" filterUnits="objectBoundingBox">
+           <feColorMatrix type="matrix" in="SourceGraphic"
+           values="-1 2 -3 0 -.5
+                   0 1 0 0 0
+                   0 0 0 0 0
+                   0 0 0 1 0"/>
+         </filter>
+         <filter id="matrixDos" filterUnits="objectBoundingBox">
+           <feColorMatrix type="matrix" in="SourceGraphic"
+           values="-1 2 -3 0 -.5
+                   2 1 0 0 0
+                   0 3 0 0 0
+                   0 0 1 1 0"/>
+         </filter>
+         <filter id="hueRotate" filterUnits="objectBoundingBox">
+           <feColorMatrix type="hueRotate" in="SourceGraphic" values="180"/>
+         </filter>
+         <filter id="luminanceToAlpha" filterUnits="objectBoundingBox">
+           <feColorMatrix type="luminanceToAlpha" in="SourceGraphic" values="0.4"/>
+         </filter>
+
+         <!-- feComponentTransfer -->
+
+         <filter id="discrete">
+           <feComponentTransfer>
+             <feFuncR type="discrete" tableValues="0 .5 1 1"/>
+             <feFuncG type="discrete" tableValues="0 .5 1"/>
+             <feFuncB type="discrete" tableValues="0 .5"/>
+           </feComponentTransfer>
+         </filter>
+         <filter id="discrete-dos">
+           <feComponentTransfer>
+             <feFuncR type="discrete" tableValues="0 .5 1 1"/>
+             <feFuncG type="discrete" tableValues="0  5 1"/>
+             <feFuncB type="discrete" tableValues="0 .5 1 1"/>
+           </feComponentTransfer>
+         </filter>
+         <filter id="table">
+            <feComponentTransfer>
+                <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                <feFuncG type="table" tableValues="1 0 1" exponent="2"/>
+                <feFuncB type="table" tableValues="1 0 1" exponent="5"/>
+            </feComponentTransfer>
+         </filter>
+         <filter id="tableDos">
+            <feComponentTransfer>
+                <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                <feFuncG type="table" tableValues="1 10 1" exponent="2"/>
+                <feFuncB type="table" tableValues="1 5 1" exponent="5"/>
+            </feComponentTransfer>
+         </filter>
+         <filter id="identity">
+            <feComponentTransfer>
+                <feFuncR type="identity"/>
+                <feFuncG type="identity"/>
+                <feFuncB type="identity"/>
+            </feComponentTransfer>
+         </filter>
+         <filter id="linear">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope=".5" amplitude="6" intercept=".25"/>
+               <feFuncG type="linear" slope=".5" amplitude="2" intercept="0"/>
+               <feFuncB type="linear" slope=".5" amplitude="3" intercept=".5"/>
+            </feComponentTransfer>
+         </filter>
+         <filter id="gamma">
+            <feComponentTransfer>
+                 <feFuncR type="gamma" amplitude="2" exponent="1"/>
+                 <feFuncG type="gamma" amplitude="2" exponent="3"/>
+                 <feFuncB type="gamma" amplitude="2" exponent="1"/>
+            </feComponentTransfer>
+         </filter>
+
+         <!-- feConvolveMatrix -->
+
+         <filter id="fematrixUno">
+            <feConvolveMatrix order="3"
+            kernelMatrix="-1 -1 3
+            -2 1 -1
+            -1 1 -1"/>
+         </filter>
+         <filter id="fematrixDos">
+             <feConvolveMatrix order="4"
+                    kernelMatrix="-2 2 1 -1
+                    -1 3 2 1
+                    -1 0 -1 -4
+                    -1 1 0 0"/>
+         </filter>
+
+         <filter id="sepiatone">
+           <feColorMatrix type="matrix" values=".343 .669 .119 0 0 .249 .626 .130 0 0 .172 .334 .111 0 0 .000 .000 .000 1 0"/>
+         </filter>
+
+        <filter id='turbulence' x='0' y='0'>
+            <feTurbulence type='turbulence' baseFrequency='.7' result='fuzz' numOctaves='2' stitchTiles='stitch'/>
+            <feComposite in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
+        </filter>
+
+
+
+        <!-- feGaussianBlur * feDisplacementMap -->
+
+
+    <!--      <filter id="mapUno">
+           <feGaussianBlur stdDeviation="3" result="gausiano"/>
+           <feDisplacementMap in="SourceGraphic" in2="gausiano" scale="200" xChannelSelector="R" yChannelSelector="G" result="C"/>
+         </filter>
+         <filter id="mapDos">
+           <feGaussianBlur stdDeviation="3" result="gausiano"/>
+           <feDisplacementMap in="SourceGraphic" in2="gausiano" scale="200" xChannelSelector="G" yChannelSelector="A" result="C"/>
+         </filter> -->
+
+         <filter id="turbuMap" >
+           <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulence" data-filterId="3"/>
+           <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence" scale="40"/>
+         </filter>
+
+        <!-- feGaussianBlur -->
+
+         <filter id="blurUno">
+           <feGaussianBlur stdDeviation="3"/>
+         </filter>
+         <filter id="blurDos">
+           <feGaussianBlur stdDeviation="9"/>
+         </filter>
+         <filter id="blurTres">
+           <feGaussianBlur stdDeviation="18"/>
+         </filter>
+
+         <!-- feMorphology -->
+
+         <filter id="morphoUno">
+           <feMorphology operator="erode" in="SourceGraphic" radius="3"/>
+         </filter>
+         <filter id="morphoDos">
+           <feMorphology operator="erode" in="SourceGraphic" radius="6"/>
+         </filter>
+         <filter id="morphoTres">
+           <feMorphology operator="dilate" in="SourceGraphic" radius="3"/>
+         </filter>
+         <filter id="morphoCuatro">
+           <feMorphology operator="dilate" in="SourceGraphic" radius="6"/>
+         </filter>
+  </defs>
+
+</svg>
+
+
+
+   <script type="text/javascript">
+       // DRAG & DROP by Remy
+       // https://github.com/remy/html5demos
+       // https://github.com/remy
+
+
+       var holder = document.getElementById('holder'),
+           tests = {
+             filereader: typeof FileReader != 'undefined',
+             dnd: 'draggable' in document.createElement('span'),
+             formdata: !!window.FormData,
+             progress: "upload" in new XMLHttpRequest
+           },
+           support = {
+             filereader: document.getElementById('filereader'),
+             formdata: document.getElementById('formdata'),
+             progress: document.getElementById('progress')
+           },
+           acceptedTypes = {
+             'image/png': true,
+             'image/jpeg': true,
+             'image/gif': true,
+             'image/svg': true
+           },
+           progress = document.getElementById('uploadprogress'),
+           fileupload = document.getElementById('upload');
+
+       "filereader formdata progress".split(' ').forEach(function (api) {
+         if (tests[api] === false) {
+           support[api].className = 'fail';
+         } else {
+           // FFS. I could have done el.hidden = true, but IE doesn't support
+           // hidden, so I tried to create a polyfill that would extend the
+           // Element.prototype, but then IE10 doesn't even give me access
+           // to the Element object. Brilliant.
+           support[api].className = 'hidden';
+         }
+       });
+
+       function previewfile(file) {
+         if (tests.filereader === true && acceptedTypes[file.type] === true) {
+           var reader = new FileReader();
+           reader.onload = function (event) {
+             var image = new Image();
+             image.src = event.target.result;
+             image.width = 250; // a fake resize
+             holder.appendChild(image);
+           };
+
+           reader.readAsDataURL(file);
+         }  else {
+           holder.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
+           console.log(file);
+         }
+       }
+
+       function readfiles(files) {
+           debugger;
+           var formData = tests.formdata ? new FormData() : null;
+           for (var i = 0; i < files.length; i++) {
+             if (tests.formdata) formData.append('file', files[i]);
+             previewfile(files[i]);
+           }
+
+           // now post a new XHR request
+           if (tests.formdata) {
+             var xhr = new XMLHttpRequest();
+             xhr.open('POST', '/devnull.php');
+             xhr.onload = function() {
+               progress.value = progress.innerHTML = 100;
+             };
+
+             if (tests.progress) {
+               xhr.upload.onprogress = function (event) {
+                 if (event.lengthComputable) {
+                   var complete = (event.loaded / event.total * 100 | 0);
+                   progress.value = progress.innerHTML = complete;
+                 }
+               }
+             }
+
+             xhr.send(formData);
+           }
+       }
+
+       if (tests.dnd) {
+         holder.ondragover = function () { this.className = 'hover'; return false; };
+         holder.ondragend = function () { this.className = ''; return false; };
+         holder.ondrop = function (e) {
+           this.className = '';
+           e.preventDefault();
+           readfiles(e.dataTransfer.files);
+         }
+       } else {
+         fileupload.className = 'hidden';
+         fileupload.querySelector('input').onchange = function () {
+           readfiles(this.files);
+         };
+       }
+
+
+
+       //Añadiendo las clases con los efectos de los filtros svg
+
+       $(document).ready(function(){
+
+        $( ".btn-saturate" ).click(function() {
+          $( "img").removeClass().addClass("saturate");
+        });
+
+
+         $( ".btn-matrix" ).click(function() {
+           $( "img").removeClass().addClass("matrix");
+         });
+
+         $( ".btn-matrix-dos" ).click(function() {
+           $( "img").removeClass().addClass("matrix-dos");
+         });
+
+         $( ".btn-hueRotate" ).click(function() {
+           $( "img").removeClass().addClass("huerotate");
+         });
+
+         $( ".btn-luminance" ).click(function() {
+           $( "img").removeClass().addClass("luminance");
+         });
+
+         $( ".btn-discrete" ).click(function() {
+           $( "img").removeClass().addClass("discrete");
+         });
+
+         $( ".btn-discrete-dos" ).click(function() {
+           $( "img").removeClass().addClass("discrete-dos");
+         });
+
+         $( ".btn-table" ).click(function() {
+           $( "img").removeClass().addClass("table");
+         });
+
+         $( ".btn-table-dos" ).click(function() {
+           $( "img").removeClass().addClass("table-dos");
+         });
+
+         $( ".btn-identity" ).click(function() {
+           $( "img").removeClass().addClass("identity");
+         });
+
+         $( ".btn-linear" ).click(function() {
+           $( "img").removeClass().addClass("linear");
+         });
+
+         $( ".btn-gamma" ).click(function() {
+           $( "img").removeClass().addClass("gamma");
+         });
+
+         $( ".btn-turbulence" ).click(function() {
+           $( "img").removeClass().addClass("turbulence");
+         });
+
+         $( ".btn-sepia" ).click(function() {
+           $( "img").removeClass().addClass("sepia");
+         });
+
+        $( ".btn-turbu-map" ).click(function() {
+          $( "img").removeClass().addClass("turbu-map");
+        });
+
+         $( ".btn-con-matrix-uno" ).click(function() {
+           $( "img").removeClass().addClass("fematrix-uno");
+         });
+
+        $( ".btn-con-matrix-dos" ).click(function() {
+          $( "img").removeClass().addClass("fematrix-dos");
+        });
+
+        $( ".btn-map-uno" ).click(function() {
+          $( "img").removeClass().addClass("map-uno");
+        });
+
+        $( ".btn-map-dos" ).click(function() {
+          $( "img").removeClass().addClass("map-dos");
+        });
+
+        $( ".btn-blur-uno" ).click(function() {
+          $( "img").removeClass().addClass("blur-uno");
+        });
+
+        $( ".btn-blur-dos" ).click(function() {
+          $( "img").removeClass().addClass("blur-dos");
+        });
+
+        $( ".btn-blur-tres" ).click(function() {
+          $( "img").removeClass().addClass("blur-tres");
+        });
+
+        $( ".btn-morpho-uno" ).click(function() {
+          $( "img").removeClass().addClass("morpho-uno");
+        });
+
+        $( ".btn-morpho-dos" ).click(function() {
+          $( "img").removeClass().addClass("morpho-dos");
+        });
+
+        $( ".btn-morpho-tres" ).click(function() {
+          $( "img").removeClass().addClass("morpho-tres");
+        });
+
+        $( ".btn-morpho-cuatro" ).click(function() {
+          $( "img").removeClass().addClass("morpho-cuatro");
+        });
+
+       });
+   </script>
+
+    </body>
+</html>
