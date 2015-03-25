@@ -2,12 +2,11 @@ SVG FILTERS
 ============
 
 
-Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanpub.com/scalable/). En esta demo podemos ver los diferentes efectos de filtros que tenemos a nuestra disposición en SVG. Puedes subir tus propias fotos y aplicarles los difrentes efectos a través de los botones.
+Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanpub.com/scalable/). En esta demo podemos ver los diferentes efectos de filtros que tenemos a nuestra disposición en SVG. No están todos los que son :)
 
 [DEMO ONLINE](http://jorgeatgu.github.io/svg-filters/)
 
-
-Credits
+##Credits
 
 [David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters)
 
@@ -16,6 +15,19 @@ Credits
 [WebPlatform SVG FILTER](http://docs.webplatform.org/wiki/svg/tutorials/smarter_svg_filters)
 
 [W3C](http://www.w3.org/TR/SVG/filters.html)
+
+##CodePen
+
+[Michale Mullany](http://codepen.io/mullany/)
+
+[Animate Filters SMIL](http://codepen.io/jorgeatgu/pen/Ayevf)
+
+[Animate Filters SMIL feTurbulence](http://codepen.io/jorgeatgu/pen/npsAq)
+
+[Filter effects](http://codepen.io/jorgeatgu/pen/pJCqc)
+
+[Filter effects SMIL](http://codepen.io/jorgeatgu/pen/jyibl)
+
 
 
 
