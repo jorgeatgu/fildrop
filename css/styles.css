@@ -360,6 +360,12 @@ html,
 body {
   background: #F0F6BE; }
 
+.icons {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
+
 .section-left {
   width: 100%;
   padding-top: 5px;
