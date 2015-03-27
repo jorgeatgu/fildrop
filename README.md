@@ -8,29 +8,24 @@ Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanp
 
 ##Credits
 
-[David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters){:target="_blank"}
+[David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters)
 
-[Hands On: SVG FILTER EFFECTS](http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_svg-filter-effects.htm){:target="_blank"}
+[Hands On: SVG FILTER EFFECTS](http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_svg-filter-effects.htm)
 
-[WebPlatform SVG FILTER](http://docs.webplatform.org/wiki/svg/tutorials/smarter_svg_filters){:target="_blank"}
+[WebPlatform SVG FILTER](http://docs.webplatform.org/wiki/svg/tutorials/smarter_svg_filters)
 
-[W3C](http://www.w3.org/TR/SVG/filters.html){:target="_blank"}
+[W3C](http://www.w3.org/TR/SVG/filters.html)
 
-[Drag & Drop](https://github.com/remy/html5demos){:target="_blank"}
+[Drag & Drop](https://github.com/remy/html5demos)
 
 ##CodePen
 
-[Michale Mullany](http://codepen.io/mullany/){:target="_blank"}
+[Michale Mullany](http://codepen.io/mullany/)
 
-[Animate Filters SMIL](http://codepen.io/jorgeatgu/pen/Ayevf){:target="_blank"}
+[Animate Filters SMIL](http://codepen.io/jorgeatgu/pen/Ayevf)
 
-[Animate Filters SMIL feTurbulence](http://codepen.io/jorgeatgu/pen/npsAq){:target="_blank"}
+[Animate Filters SMIL feTurbulence](http://codepen.io/jorgeatgu/pen/npsAq)
 
-[Filter effects](http://codepen.io/jorgeatgu/pen/pJCqc){:target="_blank"}
+[Filter effects](http://codepen.io/jorgeatgu/pen/pJCqc)
 
-[Filter effects SMIL](http://codepen.io/jorgeatgu/pen/jyibl){:target="_blank"}
-
-
-
-
-
+[Filter effects SMIL](http://codepen.io/jorgeatgu/pen/jyibl)
