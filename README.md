@@ -6,6 +6,8 @@ Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanp
 
 [DEMO ONLINE](http://jorgeatgu.github.io/svg-filters/)
 
+[DEMO CodePen](http://codepen.io/jorgeatgu/full/wBRmBZ/)
+
 ##Credits
 
 [David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters)
