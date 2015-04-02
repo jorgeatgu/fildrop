@@ -149,11 +149,36 @@ button:hover {
 	background: white;
 }
 
-//FILTERS CLASS
+//FILTERS CLAS
 
 .saturate {
 	-webkit-filter: url('#saturate');
 	        filter: url('#saturate');
+}
+
+.saturotate {
+	-webkit-filter: url('#saturotate');
+	        filter: url('#saturotate');
+}
+
+.rotamatrix {
+	-webkit-filter: url('#rotamatrix');
+	        filter: url('#rotamatrix');
+}
+
+.multitable {
+	-webkit-filter: url('#multitable');
+	        filter: url('#multitable');
+}
+
+.tablen {
+	-webkit-filter: url('#tablen');
+	        filter: url('#tablen');
+}
+
+.dishue {
+	-webkit-filter: url('#dishue');
+	        filter: url('#dishue');
 }
 
 .matrix {
