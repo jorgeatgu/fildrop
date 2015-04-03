@@ -18,6 +18,8 @@ Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanp
 
 [W3C](http://www.w3.org/TR/SVG/filters.html)
 
+[Matthew Bystedt](http://apike.ca/prog_svg_filters.html)
+
 [Drag & Drop](https://github.com/remy/html5demos)
 
 ##CodePen
