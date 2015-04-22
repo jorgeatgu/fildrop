@@ -364,6 +364,22 @@ body {
   width: 100%;
   text-align: center; }
 
+nav {
+  width: 100%;
+  margin: 25px 0;
+  text-align: center; }
+  nav a {
+    border: 1px solid #157169;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    font-family: "proxima-nova",sans-serif; }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.65);
+      color: #000; }
+
 .section-left {
   width: 100%;
   padding-top: 5px;
@@ -412,10 +428,9 @@ button {
   font-family: "proxima-nova",sans-serif;
   text-transform: uppercase;
   transition: all 0.3s ease-in; }
-
-button:hover {
-  background: rgba(255, 255, 255, 0.65);
-  color: #000; }
+  button:hover {
+    background: rgba(255, 255, 255, 0.65);
+    color: #000; }
 
 .section-buttons {
   width: 100%;
