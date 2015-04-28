@@ -96,22 +96,3 @@ if (tests.dnd) {
     readfiles(this.files);
   };
 }
-
-
-
-//Añadiendo las clases con los efectos de los filtros svg
-
-$(document).ready(function(){
-
-  $( ".btn-matrix" ).click(function() {
-    $( "img").removeClass().addClass("matrix");
-  });
-
-
-
-});
-
-
-
-
-
