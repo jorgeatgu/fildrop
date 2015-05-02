@@ -22,7 +22,7 @@ body {
 
 nav {
 	width: 100%;
-	margin: 25px 0;
+	margin: 15px 0;
 	text-align: center;
 	a {
 		border: 1px solid $color-btn;
@@ -87,7 +87,7 @@ nav {
 
 button {
 	box-sizing: border-box;
-	width: 10%;
+	width: 100/10 * 1%;
   	padding: 15px 10px;
   	margin: 5px 2.5%;
 	-webkit-appearance: none;
@@ -115,7 +115,7 @@ button {
 	font-size: 64px;
 	text-align: center;
 	font-family: "proxima-nova",sans-serif;
-	margin: 15px 0 0;
+	margin: 5px 0 0;
 	font-weight: 800;
 	width: 100%;
 	letter-spacing: 1px;
