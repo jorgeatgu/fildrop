@@ -1,6 +1,4 @@
-// VARIABLES
-
-@import 'reset';
+@import '_reset.css';
 
 $color-primario: #39CCCC;
 $color-secundario: #001F3F;
@@ -294,35 +292,6 @@ button {
     filter: url('../filters.svg#morphoCuatro');
 }
 
-
-
-//DRAG&DROP styles
-
-
-// progress {
-//     width: 80%;
-//     background: #f3f3f3;
-//     border: 0;
-//     height: 25px;
-//     border-radius: 5px;
-// }
-
-// progress::-webkit-progress-bar {
-// 	background: #54BCBC;
-// 	border-radius: 5px;
-// }
-// progress::-webkit-progress-value {
-// 	background: #54BCBC;
-// 	border-radius: 5px;
-// }
-// progress::-moz-progress-bar {
-// 	background: #54BCBC;
-// 	border-radius: 5px;
-// }
-
-// progress:after {
-//     content: '%';
-// }
 
 .fail {
     background: #c00;

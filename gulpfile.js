@@ -6,6 +6,7 @@ var gulp = require('gulp'),
  postcss = require('gulp-postcss');
  precss = require('precss');
  autoprefixer = require('autoprefixer');
+ atImport = require('postcss-import');
  cssnano = require('cssnano');
 
 
@@ -42,10 +43,15 @@ gulp.task('images', function() {
 gulp.task('css', function () {
   var processors = [
   	autoprefixer({browsers: ['last 1 version']}),
+  	atImport,
   	cssnano,
  	precss,
   ];
-  return gulp.src('./src/*.css')
+  return gulp.src('./src/css/styles.css')
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/css'));
+   return gulp.src('./dist/css/styles.css')
+           .pipe(nano())
+           .pipe(rename('styles.min.css'))
+           .pipe(gulp.dest('./dist/css'));
 });
