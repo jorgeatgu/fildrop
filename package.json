@@ -16,13 +16,16 @@
     "HTML5"
   ],
   "author": {
-      "name": "Jorge Aznar",
-      "email": "contacto@jorgeatgu.com",
-      "url": "http://jorgeatgu.com"
+    "name": "Jorge Aznar",
+    "email": "contacto@jorgeatgu.com",
+    "url": "http://jorgeatgu.com"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jorgeatgu/SVG-FILTERS/issues"
   },
-  "homepage": "http://jorgeatgu.github.io/svg-filters/"
+  "homepage": "http://jorgeatgu.github.io/svg-filters/",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
