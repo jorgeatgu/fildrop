@@ -20,45 +20,37 @@ gulp.task('imagemin', function() {
 		.pipe(gulp.dest('dist/img'));
 });
 
-
-
 gulp.task('autoprefixer', function() {
 
-	return gulp.src('css/*.css')
+	return gulp.src('dist/css/*.css')
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-
-		.pipe(gulp.dest('css'));
+		.pipe(gulp.dest('dist/css'));
 });
 
-
-
 gulp.task('mincss', function() {
-
-	gulp.src('css/*.css')
+	gulp.src('dist/css/filters.css')
 		.pipe(minifyCSS())
 		.pipe(size({gzip: true, showFiles: true}))
-	    .pipe(rename('.min.css'))
-		.pipe(gulp.dest('/css'));
+	    .pipe(rename('filters.min.css'))
+		.pipe(gulp.dest('dist/css'));
 });
 
 
 gulp.task('compress', function() {
 
-	return gulp.src('js/*.js')
+	return gulp.src('src/js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'));
 });
 
-var imgSrc = 'img/**';
+var imgSrc = 'src/img/**';
 var imgDest = 'dist/img';
 
 
 gulp.task('images', function() {
-
-
 	return gulp.src(imgSrc)
 		.pipe(newer(imgDest))
 		.pipe(imagemin())
@@ -67,13 +59,11 @@ gulp.task('images', function() {
 });
 
 gulp.task('styles', function() {
-    gulp.src('src/scss/*.scss')
+    gulp.src('src/scss/filters.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'));
 });
 
-
 gulp.task('css',function() {
     gulp.watch('scss/*.scss',['styles']);
 });
-
