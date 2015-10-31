@@ -3,6 +3,10 @@ var gulp = require('gulp'),
  newer = require('gulp-newer');
  imagemin = require('gulp-imagemin');
  pngquant = require('imagemin-pngquant');
+ postcss = require('gulp-postcss');
+ precss = require('precss');
+ autoprefixer = require('autoprefixer');
+ cssnano = require('cssnano');
 
 
 gulp.task('imagemin', function() {
@@ -33,4 +37,15 @@ gulp.task('images', function() {
 		.pipe(imagemin())
 		.pipe(gulp.dest(imgDest));
 
+});
+
+gulp.task('css', function () {
+  var processors = [
+  	autoprefixer({browsers: ['last 1 version']}),
+  	cssnano,
+ 	precss,
+  ];
+  return gulp.src('./src/*.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./dist'));
 });
