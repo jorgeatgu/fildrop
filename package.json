@@ -1,0 +1,28 @@
+{
+  "name": "svg-filters",
+  "version": "1.0.0",
+  "description": "Drag and drop SVG Filters",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgeatgu/SVG-FILTERS.git"
+  },
+  "keywords": [
+    "SVG",
+    "Filters",
+    "HTML5"
+  ],
+  "author": {
+      "name": "Jorge Aznar",
+      "email": "contacto@jorgeatgu.com",
+      "url": "http://jorgeatgu.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorgeatgu/SVG-FILTERS/issues"
+  },
+  "homepage": "http://jorgeatgu.github.io/svg-filters/"
+}
