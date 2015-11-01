@@ -9,6 +9,7 @@ var gulp = require('gulp'),
  atImport = require('postcss-import');
  nano = require('gulp-cssnano');
  rename = require("gulp-rename");
+ pxtorem = require('postcss-pxtorem');
 
 
 gulp.task('imagemin', function() {
@@ -53,7 +54,16 @@ gulp.task('css', function () {
   var processors = [
   	atImport,
   	precss,
-  	autoprefixer({browsers: ['last 1 version']})
+  	autoprefixer({
+  		browsers: ['last 1 version']
+  		}),
+  	pxtorem({
+  		    root_value: 16,
+  		    unit_precision: 4,
+  		    prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing'],
+  		    replace: true,
+  		    media_query: false
+  		})
   ];
   return gulp.src('./src/css/styles.css')
     .pipe(postcss(processors))
