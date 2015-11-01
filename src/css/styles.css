@@ -1,12 +1,10 @@
 @import '_reset.css';
+@import '_variables.css';
 
 $color-primario: #39CCCC;
 $color-secundario: #001F3F;
 $color-btn: #157169;
 $color-fondo: #F0F6BE;
-//$color-fondo: #F1EEDB;
-
-
 
 html,
 body {
@@ -85,7 +83,7 @@ nav {
 
 button {
 	box-sizing: border-box;
-	width: 100/10 * 1%;
+	width: calc(100/10 * 1%);
   	padding: 15px 10px;
   	margin: 5px 2.5%;
 	-webkit-appearance: none;
@@ -215,7 +213,6 @@ button {
     filter: url('../filters.svg#discrete-dos');
 }
 
-
 .table {
     filter: url('../filters.svg#table');
 }
@@ -291,7 +288,6 @@ button {
 .morpho-cuatro {
     filter: url('../filters.svg#morphoCuatro');
 }
-
 
 .fail {
     background: #c00;
