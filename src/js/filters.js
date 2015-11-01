@@ -1,4 +1,4 @@
-//Añadiendo las clases con los efectos de los filtros svg
+//Add class with filter effects
 
 $(document).ready(function() {
 
