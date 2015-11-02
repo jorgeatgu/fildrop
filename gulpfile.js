@@ -12,6 +12,7 @@ var gulp = require('gulp'),
  pxtorem = require('postcss-pxtorem');
  stylelint = require("stylelint");
  reporter = require("postcss-reporter");
+ sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('imagemin', function() {
@@ -70,7 +71,7 @@ gulp.task('css', function () {
 	    "indentation": [2, "tab", {
 	      except: ["_reset.css"],
 	    }],
-	    "declaration-block-semicolon-newline-before": [2, "always"],
+	    //"declaration-block-semicolon-newline-before": [2, "always"],
 	    "declaration-colon-space-after": [2, "always"],
 	    "no-eol-whitespace": [2, "always"],
 	    "number-leading-zero": [2, "always"],
@@ -84,7 +85,9 @@ gulp.task('css', function () {
   	reporter({ clearMessages: true })
   ];
   return gulp.src('./src/css/styles.css')
+  	.pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss(processors))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(nano())

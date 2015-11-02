@@ -388,7 +388,7 @@ td, th {
 }
 
 html, body {
-  background: #F0F6BE;
+  background: #ddd;
 }
 
 .icons {
@@ -409,7 +409,7 @@ nav a {
   text-decoration: none;
   color: #000;
   border-radius: 5px;
-  font-family: "proxima-nova",sans-serif;
+  font-family: 'Hind', sans-serif;
 }
 
 nav a:hover {
@@ -477,7 +477,7 @@ button {
 	background: none;
 	border-radius: 3px;
 	border: 1px solid #157169;
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Hind', sans-serif;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in;
 }
@@ -498,7 +498,7 @@ button:hover {
 	color: #001F3F;
 	font-size: 4rem;
 	text-align: center;
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	margin: 5px 0 0;
 	font-weight: 800;
 	width: 100%;
@@ -506,7 +506,7 @@ button:hover {
 }
 
 .texto-secundario {
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Hind', sans-serif;
 	font-size: 1.125rem;
 	margin: 15px 0;
 	color: #001F3F;
@@ -531,7 +531,7 @@ button:hover {
 .filters-code-even h3, .filters-code-odd h3 {
   text-align: center;
   font-size: 1.25rem;
-  font-family: "proxima-nova",sans-serif;
+  font-family: 'Hind', sans-serif;
 }
 
 .filters-code-even code, .filters-code-odd code {
@@ -719,3 +719,4 @@ button:hover {
 .hidden {
     display: none !important;
 }
+/*# sourceMappingURL=styles.css.map */

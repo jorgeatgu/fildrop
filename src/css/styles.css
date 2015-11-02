@@ -22,7 +22,7 @@ nav {
 		text-decoration: none;
 		color: #000;
 		border-radius: 5px;
-		font-family: "proxima-nova",sans-serif;
+		font-family: 'Hind', sans-serif;
 		&:hover {
 			background: rgba(255,255,255,0.65);
 			color: #000;
@@ -85,7 +85,7 @@ button {
 	background: none;
 	border-radius: 3px;
 	border: 1px solid $color-btn;
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Hind', sans-serif;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in;
 	&:hover {
@@ -105,7 +105,7 @@ button {
 	color: $color-secundario;
 	font-size: 64px;
 	text-align: center;
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	margin: 5px 0 0;
 	font-weight: 800;
 	width: 100%;
@@ -113,7 +113,7 @@ button {
 }
 
 .texto-secundario {
-	font-family: "proxima-nova",sans-serif;
+	font-family: 'Hind', sans-serif;
 	font-size: 18px;
 	margin: 15px 0;
 	color: $color-secundario;
@@ -137,7 +137,7 @@ button {
 	h3 {
 		text-align: center;
 		font-size: 20px;
-		font-family: "proxima-nova",sans-serif;
+		font-family: 'Hind', sans-serif;
 	}
 	code {
 		padding-top: 20px;
