@@ -10,6 +10,8 @@ var gulp = require('gulp'),
  nano = require('gulp-cssnano');
  rename = require("gulp-rename");
  pxtorem = require('postcss-pxtorem');
+ stylelint = require("stylelint");
+ reporter = require("postcss-reporter");
 
 
 gulp.task('imagemin', function() {
@@ -44,7 +46,6 @@ gulp.task('images', function() {
 });
 
 gulp.task('compress', function() {
-
 	return gulp.src('./src/js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
@@ -55,7 +56,7 @@ gulp.task('css', function () {
   	atImport,
   	precss,
   	autoprefixer({
-  		browsers: ['last 1 version']
+  		browsers: ['last 2 version']
   		}),
   	pxtorem({
   		    root_value: 16,
@@ -63,7 +64,18 @@ gulp.task('css', function () {
   		    prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing'],
   		    replace: true,
   		    media_query: false
-  		})
+  		}),
+  	stylelint({
+	  "rules": {
+	    "indentation": [2, "tab", {
+	      except: ["_reset.css"],
+	    }],
+	    "declaration-colon-space-after": [2, "always"],
+	    "declaration-colon-space-before": [2, "never"],
+	    "number-leading-zero": [2, "always"],
+	  }
+	}),
+  	reporter({ clearMessages: true })
   ];
   return gulp.src('./src/css/styles.css')
     .pipe(postcss(processors))
