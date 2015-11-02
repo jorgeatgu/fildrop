@@ -413,8 +413,8 @@ nav a {
 }
 
 nav a:hover {
-  background:rgba(255,255,255,0.65);
-  color:#000;
+  background: rgba(255,255,255,0.65);
+  color: #000;
 }
 
 .section-left {
@@ -483,8 +483,8 @@ button {
 }
 
 button:hover {
-  background:rgba(255,255,255,0.65);
-  color:#000;
+  background: rgba(255,255,255,0.65);
+  color: #000;
 }
 
 .section-buttons {

@@ -70,9 +70,15 @@ gulp.task('css', function () {
 	    "indentation": [2, "tab", {
 	      except: ["_reset.css"],
 	    }],
+	    "declaration-block-semicolon-newline-before": [2, "always"],
 	    "declaration-colon-space-after": [2, "always"],
-	    "declaration-colon-space-before": [2, "never"],
+	    "no-eol-whitespace": [2, "always"],
 	    "number-leading-zero": [2, "always"],
+	    "number-max-precision": [2, "always"],
+	    "number-zero-length-no-unit": [2, "always"],
+	    "rule-no-single-line": [2, "always"],
+	    "selector-no-id": [2, "always"],
+	    "selector-no-attribute": [2, "always"]
 	  }
 	}),
   	reporter({ clearMessages: true })
