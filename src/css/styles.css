@@ -7,32 +7,28 @@ body {
 }
 
 .icons {
-	width: 100%;
-	text-align: center;
 	font-size: 0;
 	width: 85%;
-	margin: 15px auto;
+	margin: 0 auto;
 	text-align: left;
-	display: inline-block;
 	vertical-align: middle;
 	.texto-principal {
 		color: $color-secundario;
 		font-size: 64px;
 		font-family: 'Work Sans', sans-serif;
-		margin: 5px 0 0;
-		margin-left: 40px;
 		display: inline-block;
+		vertical-align: middle;
+		margin: 0 20px 0 0;
 	}
 	a {
 		border: 1px solid $color-btn;
 		display: inline-block;
 		vertical-align: middle;
-		padding: 10px 20px;
+		padding: 5px 15px;
 		margin-right: 10px;
 		text-decoration: none;
 		color: #000;
 		font-size: 16px;
-		border-radius: 5px;
 		font-family: 'Hind', sans-serif;
 		&:hover {
 			background: rgba(255,255,255,0.65);
@@ -41,6 +37,7 @@ body {
 	}
 	.texto-secundario {
 		text-align: left;
+		margin-top: 0;
 	}
 }
 
@@ -62,7 +59,7 @@ body {
 				width: 70%;
 				display: block;
 				margin: 0 auto;
-				border: 5px solid salmon;
+				border: 5px solid $color-btn;
 			}
 		}
 	}
@@ -72,7 +69,7 @@ body {
 		display: inline-block;
 		float: left;
 		#holder {
-		    border: 5px solid salmon;
+		    border: 5px solid $color-btn;
 		    width: 70%;
 		    height: 100%;
 		    display: block;
@@ -98,7 +95,6 @@ button {
   	margin: 5px 2.5%;
 	-webkit-appearance: none;
 	background: none;
-	border-radius: 3px;
 	border: 1px solid $color-btn;
 	font-family: 'Hind', sans-serif;
 	text-transform: uppercase;

@@ -392,13 +392,10 @@ html, body {
 }
 
 .icons {
-	width: 100%;
-	text-align: center;
 	font-size: 0;
 	width: 85%;
-	margin: 15px auto;
+	margin: 0 auto;
 	text-align: left;
-	display: inline-block;
 	vertical-align: middle;
 }
 
@@ -406,21 +403,20 @@ html, body {
   color: #001F3F;
   font-size: 4rem;
   font-family: 'Work Sans', sans-serif;
-  margin: 5px 0 0;
-  margin-left: 40px;
   display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px 0 0;
 }
 
 .icons a {
-  border: 1px solid #157169;
+  border: 1px solid #84174D;
   display: inline-block;
   vertical-align: middle;
-  padding: 10px 20px;
+  padding: 5px 15px;
   margin-right: 10px;
   text-decoration: none;
   color: #000;
   font-size: 1rem;
-  border-radius: 5px;
   font-family: 'Hind', sans-serif;
 }
 
@@ -431,6 +427,7 @@ html, body {
 
 .icons .texto-secundario {
   text-align: left;
+  margin-top: 0;
 }
 
 
@@ -460,7 +457,7 @@ html, body {
   width: 70%;
   display: block;
   margin: 0 auto;
-  border: 5px solid salmon;
+  border: 5px solid #84174D;
 }
 
 
@@ -472,7 +469,7 @@ html, body {
 
 
 .section-left .section-left-drag #holder {
-  border: 5px solid salmon;
+  border: 5px solid #84174D;
   width: 70%;
   height: 100%;
   display: block;
@@ -499,8 +496,7 @@ button {
   	margin: 5px 2.5%;
 	-webkit-appearance: none;
 	background: none;
-	border-radius: 3px;
-	border: 1px solid #157169;
+	border: 1px solid #84174D;
 	font-family: 'Hind', sans-serif;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in;
@@ -529,7 +525,7 @@ button:hover {
 }
 
 .btn-filters {
-	background: #157169;
+	background: #84174D;
 }
 
 .center-svg {
