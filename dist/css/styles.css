@@ -394,28 +394,45 @@ html, body {
 .icons {
 	width: 100%;
 	text-align: center;
+	font-size: 0;
+	width: 85%;
+	margin: 15px auto;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
 }
 
-nav {
-	width: 100%;
-	margin: 15px 0;
-	text-align: center;
+.icons .texto-principal {
+  color: #001F3F;
+  font-size: 4rem;
+  font-family: 'Work Sans', sans-serif;
+  margin: 5px 0 0;
+  margin-left: 40px;
+  display: inline-block;
 }
 
-nav a {
+.icons a {
   border: 1px solid #157169;
+  display: inline-block;
+  vertical-align: middle;
   padding: 10px 20px;
   margin-right: 10px;
   text-decoration: none;
   color: #000;
+  font-size: 1rem;
   border-radius: 5px;
   font-family: 'Hind', sans-serif;
 }
 
-nav a:hover {
+.icons a:hover {
   background: rgba(255,255,255,0.65);
   color: #000;
 }
+
+.icons .texto-secundario {
+  text-align: left;
+}
+
 
 .section-left {
 	width: 100%;
@@ -425,16 +442,19 @@ nav a:hover {
 	overflow: hidden;
 }
 
+
 .section-left .section-left-example {
   width: 50%;
   display: inline-block;
   float: left;
 }
 
+
 .section-left .section-left-example picture {
   box-sizing: border-box;
   width: 100%;
 }
+
 
 .section-left .section-left-example picture img {
   width: 70%;
@@ -443,11 +463,13 @@ nav a:hover {
   border: 5px solid salmon;
 }
 
+
 .section-left .section-left-drag {
   width: 50%;
   display: inline-block;
   float: left;
 }
+
 
 .section-left .section-left-drag #holder {
   border: 5px solid salmon;
@@ -459,10 +481,12 @@ nav a:hover {
   box-sizing: border-box;
 }
 
+
 .section-left .section-left-drag #holder img {
   display: block;
   width: 100%;
 }
+
 
 .section-left .section-left-drag #holder.hover {
   border: 5px solid #AAA1CF;
@@ -494,16 +518,7 @@ button:hover {
   	border-bottom: 1px solid lightblue;
 }
 
-.texto-principal {
-	color: #001F3F;
-	font-size: 4rem;
-	text-align: center;
-	font-family: 'Work Sans', sans-serif;
-	margin: 5px 0 0;
-	font-weight: 800;
-	width: 100%;
-	letter-spacing: 0.0625rem;
-}
+
 
 .texto-secundario {
 	font-family: 'Hind', sans-serif;
