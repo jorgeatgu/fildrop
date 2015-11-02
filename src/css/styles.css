@@ -12,17 +12,37 @@ html {
 
 .icons {
 	font-size: 0;
-	text-align: left;
+	width: 85%;
+	margin: 0 auto;
 	font-family: 'Work Sans', sans-serif;
-	.icons-texto-principal {
-		color: $color-secundario;
-		font-size: 48px;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+	.icons-texto {
+		width: 50%;
+		text-align: left;
 		display: inline-block;
-		margin: 0 20px 0 0;
+		vertical-align: middle;
+		.icons-texto-principal {
+			color: $color-secundario;
+			font-size: 58px;
+			display: inline-block;
+			margin: 0 20px 0 0;
+		}
+		.icons-texto-secundario {
+			text-align: left;
+			margin: 0;
+			font-size: 16px;
+		}
 	}
+}
+
+.icons {
 	.icons-social {
 		display: inline-block;
-		width: 100%;
+		width: 50%;
+		vertical-align: middle;
+		text-align: right;
 		a {
 			border: 1px solid $color-btn;
 			display: inline-block;
@@ -37,11 +57,6 @@ html {
 				color: $color-btn;
 			}
 		}
-	}
-	.icons-texto-secundario {
-		text-align: left;
-		margin: 0;
-		font-size: 16px;
 	}
 }
 
