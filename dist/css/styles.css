@@ -388,15 +388,16 @@ td, th {
 }
 
 html, body {
-  background: #ddd;
+  background: #f1f1f1;
+}
+
+html {
+	padding: 30px;
 }
 
 .icons {
 	font-size: 0;
-	width: 85%;
-	margin: 0 auto;
 	text-align: left;
-	vertical-align: middle;
 }
 
 .icons .texto-principal {
@@ -404,14 +405,17 @@ html, body {
   font-size: 4rem;
   font-family: 'Work Sans', sans-serif;
   display: inline-block;
-  vertical-align: middle;
   margin: 0 20px 0 0;
 }
 
-.icons a {
+.icons .icons-social {
+  display: inline-block;
+  width: 100%;
+}
+
+.icons .icons-social a {
   border: 1px solid #84174D;
   display: inline-block;
-  vertical-align: middle;
   padding: 5px 15px;
   margin-right: 10px;
   text-decoration: none;
@@ -420,14 +424,14 @@ html, body {
   font-family: 'Hind', sans-serif;
 }
 
-.icons a:hover {
+.icons .icons-social a:hover {
   background: rgba(255,255,255,0.65);
-  color: #000;
+  color: #84174D;
 }
 
 .icons .texto-secundario {
   text-align: left;
-  margin-top: 0;
+  margin: 0;
 }
 
 

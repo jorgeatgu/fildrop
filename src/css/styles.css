@@ -6,38 +6,42 @@ body {
   background: $color-fondo;
 }
 
+html {
+	padding: 30px;
+}
+
 .icons {
 	font-size: 0;
-	width: 85%;
-	margin: 0 auto;
 	text-align: left;
-	vertical-align: middle;
 	.texto-principal {
 		color: $color-secundario;
 		font-size: 64px;
 		font-family: 'Work Sans', sans-serif;
 		display: inline-block;
-		vertical-align: middle;
 		margin: 0 20px 0 0;
 	}
-	a {
-		border: 1px solid $color-btn;
+	.icons-social {
 		display: inline-block;
-		vertical-align: middle;
-		padding: 5px 15px;
-		margin-right: 10px;
-		text-decoration: none;
-		color: #000;
-		font-size: 16px;
-		font-family: 'Hind', sans-serif;
-		&:hover {
-			background: rgba(255,255,255,0.65);
+		width: 100%;
+		a {
+			border: 1px solid $color-btn;
+			display: inline-block;
+			padding: 5px 15px;
+			margin-right: 10px;
+			text-decoration: none;
 			color: #000;
+			font-size: 16px;
+			font-family: 'Hind', sans-serif;
+			&:hover {
+				background: rgba(255,255,255,0.65);
+				color: $color-btn;
+			}
 		}
 	}
 	.texto-secundario {
 		text-align: left;
-		margin-top: 0;
+		margin: 0;
+
 	}
 }
 
