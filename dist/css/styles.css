@@ -400,7 +400,7 @@ html {
 	text-align: left;
 }
 
-.icons .texto-principal {
+.icons .icons-texto-principal {
   color: #001F3F;
   font-size: 4rem;
   font-family: 'Work Sans', sans-serif;
@@ -429,7 +429,7 @@ html {
   color: #84174D;
 }
 
-.icons .texto-secundario {
+.icons .icons-texto-secundario {
   text-align: left;
   margin: 0;
 }
@@ -511,15 +511,6 @@ button:hover {
   color: #000;
 }
 
-.section-buttons {
-	width: 100%;
-	box-sizing: border-box;
-	padding: 20px;
-  	border-bottom: 1px solid lightblue;
-}
-
-
-
 .texto-secundario {
 	font-family: 'Hind', sans-serif;
 	font-size: 1.125rem;
@@ -537,36 +528,6 @@ button:hover {
 	margin: 0 auto;
 }
 
-.filters-code-even, .filters-code-odd {
-	width: 100%;
-	padding: 20px 0;
-	border-bottom: 1px solid lightblue;
-}
-
-.filters-code-even h3, .filters-code-odd h3 {
-  text-align: center;
-  font-size: 1.25rem;
-  font-family: 'Hind', sans-serif;
-}
-
-.filters-code-even code, .filters-code-odd code {
-  padding-top: 20px;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.filters-code-even code .line-pre, .filters-code-odd code .line-pre {
-  text-align: left;
-}
-
-.filters-code-even {
-	background: #FCFCF6;
-
-}
-
-.filters-code-odd {
-	background: white;
-}
 
 //FILTERS CLASS
 

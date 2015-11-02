@@ -13,7 +13,7 @@ html {
 .icons {
 	font-size: 0;
 	text-align: left;
-	.texto-principal {
+	.icons-texto-principal {
 		color: $color-secundario;
 		font-size: 64px;
 		font-family: 'Work Sans', sans-serif;
@@ -38,7 +38,7 @@ html {
 			}
 		}
 	}
-	.texto-secundario {
+	.icons-texto-secundario {
 		text-align: left;
 		margin: 0;
 
@@ -109,15 +109,6 @@ button {
 	}
 }
 
-.section-buttons {
-	width: 100%;
-	box-sizing: border-box;
-	padding: 20px;
-  	border-bottom: 1px solid lightblue;
-}
-
-
-
 .texto-secundario {
 	font-family: 'Hind', sans-serif;
 	font-size: 18px;
@@ -135,34 +126,6 @@ button {
 	margin: 0 auto;
 }
 
-.filters-code-even,
-.filters-code-odd {
-	width: 100%;
-	padding: 20px 0;
-	border-bottom: 1px solid lightblue;
-	h3 {
-		text-align: center;
-		font-size: 20px;
-		font-family: 'Hind', sans-serif;
-	}
-	code {
-		padding-top: 20px;
-		width: 50%;
-		margin: 0 auto;
-		.line-pre {
-			text-align: left;
-		}
-	}
-}
-
-.filters-code-even {
-	background: #FCFCF6;
-
-}
-
-.filters-code-odd {
-	background: white;
-}
 
 //FILTERS CLASS
 
