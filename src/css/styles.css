@@ -13,10 +13,10 @@ html {
 .icons {
 	font-size: 0;
 	text-align: left;
+	font-family: 'Work Sans', sans-serif;
 	.icons-texto-principal {
 		color: $color-secundario;
-		font-size: 64px;
-		font-family: 'Work Sans', sans-serif;
+		font-size: 48px;
 		display: inline-block;
 		margin: 0 20px 0 0;
 	}
@@ -41,7 +41,7 @@ html {
 	.icons-texto-secundario {
 		text-align: left;
 		margin: 0;
-
+		font-size: 16px;
 	}
 }
 
@@ -67,7 +67,9 @@ html {
 			}
 		}
 	}
+}
 
+.section-left {
 	.section-left-drag {
 		width: 50%;
 		display: inline-block;
@@ -85,7 +87,6 @@ html {
 				width: 100%;
 		    }
 		 }
-
 		#holder.hover {
 		    border: 5px solid #AAA1CF;
 		}

@@ -12,7 +12,6 @@ var gulp = require('gulp'),
  pxtorem = require('postcss-pxtorem');
  stylelint = require("stylelint");
  reporter = require("postcss-reporter");
- sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('imagemin', function() {
@@ -43,7 +42,6 @@ gulp.task('images', function() {
 		.pipe(newer(imgDest))
 		.pipe(imagemin())
 		.pipe(gulp.dest(imgDest));
-
 });
 
 gulp.task('compress', function() {
@@ -71,7 +69,6 @@ gulp.task('css', function () {
 	    "indentation": [2, "tab", {
 	      except: ["_reset.css"],
 	    }],
-	    //"declaration-block-semicolon-newline-before": [2, "always"],
 	    "declaration-colon-space-after": [2, "always"],
 	    "no-eol-whitespace": [2, "always"],
 	    "number-leading-zero": [2, "always"],
@@ -85,9 +82,7 @@ gulp.task('css', function () {
   	reporter({ clearMessages: true })
   ];
   return gulp.src('./src/css/styles.css')
-  	.pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(postcss(processors))
-    .pipe(sourcemaps.write('.'))
+  	.pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(nano())
@@ -98,4 +93,5 @@ gulp.task('css', function () {
 gulp.task('default',function() {
     gulp.watch('./src/css/*.css',['css']);
     gulp.watch('./src/img/**',['images']);
+    gulp.watch('./src/js/**',['compress']);
 });
