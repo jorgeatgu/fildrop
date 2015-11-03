@@ -38,5 +38,8 @@
     "imagemin-pngquant": "^4.2.0",
     "postcss-short-color": "^1.0.0",
     "precss": "^1.3.0"
+  },
+  "dependencies": {
+    "rucksack-css": "^0.8.5"
   }
 }

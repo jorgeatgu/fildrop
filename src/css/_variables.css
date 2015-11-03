@@ -1,4 +1,11 @@
+/* Colors */
+
 $color-primario: #39CCCC;
 $color-secundario: #001F3F;
 $color-btn: #84174D;
 $color-fondo: #f1f1f1;
+
+/* Tipography */
+
+$hind: 'Hind', sans-serif;
+$work-sans: 'Work Sans', sans-serif;

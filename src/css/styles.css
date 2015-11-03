@@ -14,7 +14,8 @@ html {
 	font-size: 0;
 	width: 85%;
 	margin: 0 auto;
-	font-family: 'Work Sans', sans-serif;
+	margin-bottom: 16px;
+	font-family: $work-sans;
 	display: block;
 	vertical-align: middle;
 	text-align: center;
@@ -51,7 +52,7 @@ html {
 			text-decoration: none;
 			color: #000;
 			font-size: 16px;
-			font-family: 'Hind', sans-serif;
+			font-family: $hind;
 			&:hover {
 				background: rgba(255,255,255,0.65);
 				color: $color-btn;
@@ -63,10 +64,18 @@ html {
 
 .section-left {
 	width: 100%;
-	padding-top: 5px;
+	margin: 32px 0;
 	box-sizing: border-box;
 	text-align: center;
 	overflow: hidden;
+	.texto-secundario {
+		font-family: $hind;
+		font-size: 18px;
+		color: $color-secundario;
+		text-align: left;
+		width: 70%;
+		margin: 0 auto;
+	}
 	.section-left-example {
 		width: 50%;
 		display: inline-block;
@@ -108,6 +117,16 @@ html {
 	}
 }
 
+.fail {
+    background: #c00;
+    padding: 2px;
+    color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
 button {
 	box-sizing: border-box;
 	width: calc(100/10 * 1%);
@@ -116,21 +135,13 @@ button {
 	-webkit-appearance: none;
 	background: none;
 	border: 1px solid $color-btn;
-	font-family: 'Hind', sans-serif;
+	font-family: $hind;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in;
 	&:hover {
 		background: rgba(255,255,255,0.65);
 		color: #000;
 	}
-}
-
-.texto-secundario {
-	font-family: 'Hind', sans-serif;
-	font-size: 18px;
-	margin: 15px 0;
-	color: $color-secundario;
-	text-align: center;
 }
 
 .btn-filters {
@@ -267,14 +278,4 @@ button {
 
 .morpho-cuatro {
     filter: url('../filters.svg#morphoCuatro');
-}
-
-.fail {
-    background: #c00;
-    padding: 2px;
-    color: #fff;
-}
-
-.hidden {
-    display: none !important;
 }

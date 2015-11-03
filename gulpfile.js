@@ -8,10 +8,11 @@ var gulp = require('gulp'),
  autoprefixer = require('autoprefixer');
  atImport = require('postcss-import');
  nano = require('gulp-cssnano');
- rename = require("gulp-rename");
+ rename = require('gulp-rename');
  pxtorem = require('postcss-pxtorem');
- stylelint = require("stylelint");
- reporter = require("postcss-reporter");
+ stylelint = require('stylelint');
+ reporter = require('postcss-reporter');
+ rucksack = require('rucksack-css');
 
 
 gulp.task('imagemin', function() {
@@ -54,6 +55,7 @@ gulp.task('css', function () {
   var processors = [
   	atImport,
   	precss,
+  	rucksack,
   	autoprefixer({
   		browsers: ['last 2 version']
   		}),
