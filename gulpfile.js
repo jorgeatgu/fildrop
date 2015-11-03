@@ -72,13 +72,13 @@ gulp.task('css', function () {
 	      except: ["_reset.css"],
 	    }],
 	    "declaration-colon-space-after": [2, "always"],
-	    "no-eol-whitespace": [2, "always"],
-	    "number-leading-zero": [2, "always"],
-	    "number-max-precision": [2, "always"],
-	    "number-zero-length-no-unit": [2, "always"],
-	    "rule-no-single-line": [2, "always"],
-	    "selector-no-id": [2, "always"],
-	    "selector-no-attribute": [2, "always"]
+	    "no-eol-whitespace": [2],
+	    "number-leading-zero": [2],
+	    "number-max-precision": [2],
+	    "number-zero-length-no-unit": [2],
+	    "rule-no-single-line": [2],
+	    "selector-no-id": [2],
+	    "selector-no-attribute": [2]
 	  }
 	}),
   	reporter({ clearMessages: true })
