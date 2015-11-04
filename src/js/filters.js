@@ -2,7 +2,6 @@
 
 $(document).ready(function() {
 
-    var image = $("img");
     var btnSaturate = $(".btn-saturate");
     var saturate = "saturate";
     var btnSaturotate = $(".btn-saturotate");
@@ -68,39 +67,39 @@ $(document).ready(function() {
 
     function addFilter(button, image, filter) {
         $(button).click(function() {
-            $(image).removeClass().addClass(saturate);
+            $("img").removeClass().addClass(saturate);
         });
     }
 
-    addFilter(btnSaturate, image, saturate);
-    addFilter(btnSaturotate, image, saturotate);
-    addFilter(btnRotamatrix, image, rotamatrix);
-    addFilter(btnTablen, image, tablen);
-    addFilter(btnMultitable, image, multitable);
-    addFilter(btnDishue, image, dishue);
-    addFilter(btnMatrix, image, matrix);
-    addFilter(btnMatrix2, image, matrix2);
-    addFilter(btnHueRotate, image, huerotate);
-    addFilter(btnLuminance, image, luminance);
-    addFilter(btnDiscrete, image, discrete);
-    addFilter(btnDiscrete2, image, discrete2);
-    addFilter(btnTable, image, table);
-    addFilter(btnTable2, image, table2);
-    addFilter(btnIdentity, image, identity);
-    addFilter(btnLinear, image, linear);
-    addFilter(btnGamma, image, gamma);
-    addFilter(btnTurbelence, image, turbulence);
-    addFilter(btnSepia, image, sepia);
-    addFilter(btnTurbuMap, image, turbumap);
-    addFilter(btnMatrix, image, fematrix);
-    addFilter(btnMatrix2, image, fematrix2);
-    addFilter(btnMap, image, mapUno);
-    addFilter(btnMap2, image, mapDos);
-    addFilter(btnBlur, image, blur);
-    addFilter(btnBlur2, image, blur2);
-    addFilter(btnBlur3, image, blur3);
-    addFilter(btnMorpho, image, morpho);
-    addFilter(btnMorpho2, image, morpho2);
-    addFilter(btnMorpho3, image, morpho3);
-    addFilter(btnMorpho4, image, morpho4);
+    addFilter(btnSaturate, saturate);
+    addFilter(btnSaturotate, saturotate);
+    addFilter(btnRotamatrix, rotamatrix);
+    addFilter(btnTablen, tablen);
+    addFilter(btnMultitable, multitable);
+    addFilter(btnDishue, dishue);
+    addFilter(btnMatrix, matrix);
+    addFilter(btnMatrix2, matrix2);
+    addFilter(btnHueRotate, huerotate);
+    addFilter(btnLuminance, luminance);
+    addFilter(btnDiscrete, discrete);
+    addFilter(btnDiscrete2, discrete2);
+    addFilter(btnTable, table);
+    addFilter(btnTable2, table2);
+    addFilter(btnIdentity, identity);
+    addFilter(btnLinear, linear);
+    addFilter(btnGamma, gamma);
+    addFilter(btnTurbelence, turbulence);
+    addFilter(btnSepia, sepia);
+    addFilter(btnTurbuMap, turbumap);
+    addFilter(btnMatrix, fematrix);
+    addFilter(btnMatrix2, fematrix2);
+    addFilter(btnMap, mapUno);
+    addFilter(btnMap2, mapDos);
+    addFilter(btnBlur, blur);
+    addFilter(btnBlur2, blur2);
+    addFilter(btnBlur3, blur3);
+    addFilter(btnMorpho, morpho);
+    addFilter(btnMorpho2, morpho2);
+    addFilter(btnMorpho3, morpho3);
+    addFilter(btnMorpho4, morpho4);
 });
