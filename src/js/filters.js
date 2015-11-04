@@ -43,6 +43,28 @@ $(document).ready(function() {
     var sepia = "sepia";
     var btnTurbuMap = $(".btn-turbu-map");
     var turbumap = "turbu-map";
+    var btnMatrix = $(".btn-con-matrix-uno");
+    var fematrix = "fematrix-uno";
+    var btnMatrix2 = $(".btn-con-matrix-dos");
+    var fematrix2 = "fematrix-dos";
+    var btnMap = $(".btn-map-uno");
+    var mapUno = "map-uno";
+    var btnMap2 = $(".btn-map-dos");
+    var mapDos = "map-dos";
+    var btnBlur = $(".btn-blur-uno");
+    var blur = "blur-uno";
+    var btnBlur2 = $(".btn-blur-dos");
+    var blur2 = "blur-dos";
+    var btnBlur3 = $(".btn-blur-tres");
+    var blur3 = "blur-tres";
+    var btnMorpho = $(".btn-morpho-uno");
+    var morpho = "morpho-uno";
+    var btnMorpho2 = $(".btn-morpho-dos");
+    var morpho2 = "morpho-dos";
+    var btnMorpho3 = $(".btn-morpho-tres");
+    var morpho3 = "morpho-tres";
+    var btnMorpho4 = $(".btn-morpho-cuatro");
+    var morpho4 = "morpho-cuatro";
 
     function addFilter(button, image, filter) {
         $(button).click(function() {
@@ -70,54 +92,15 @@ $(document).ready(function() {
     addFilter(btnTurbelence, image, turbulence);
     addFilter(btnSepia, image, sepia);
     addFilter(btnTurbuMap, image, turbumap);
-
-
-    $(".btn-turbu-map").click(function() {
-        $("img").removeClass().addClass("turbu-map");
-    });
-
-    $(".btn-con-matrix-uno").click(function() {
-        $("img").removeClass().addClass("fematrix-uno");
-    });
-
-    $(".btn-con-matrix-dos").click(function() {
-        $("img").removeClass().addClass("fematrix-dos");
-    });
-
-    $(".btn-map-uno").click(function() {
-        $("img").removeClass().addClass("map-uno");
-    });
-
-    $(".btn-map-dos").click(function() {
-        $("img").removeClass().addClass("map-dos");
-    });
-
-    $(".btn-blur-uno").click(function() {
-        $("img").removeClass().addClass("blur-uno");
-    });
-
-    $(".btn-blur-dos").click(function() {
-        $("img").removeClass().addClass("blur-dos");
-    });
-
-    $(".btn-blur-tres").click(function() {
-        $("img").removeClass().addClass("blur-tres");
-    });
-
-    $(".btn-morpho-uno").click(function() {
-        $("img").removeClass().addClass("morpho-uno");
-    });
-
-    $(".btn-morpho-dos").click(function() {
-        $("img").removeClass().addClass("morpho-dos");
-    });
-
-    $(".btn-morpho-tres").click(function() {
-        $("img").removeClass().addClass("morpho-tres");
-    });
-
-    $(".btn-morpho-cuatro").click(function() {
-        $("img").removeClass().addClass("morpho-cuatro");
-    });
-
+    addFilter(btnMatrix, image, fematrix);
+    addFilter(btnMatrix2, image, fematrix2);
+    addFilter(btnMap, image, mapUno);
+    addFilter(btnMap2, image, mapDos);
+    addFilter(btnBlur, image, blur);
+    addFilter(btnBlur2, image, blur2);
+    addFilter(btnBlur3, image, blur3);
+    addFilter(btnMorpho, image, morpho);
+    addFilter(btnMorpho2, image, morpho2);
+    addFilter(btnMorpho3, image, morpho3);
+    addFilter(btnMorpho4, image, morpho4);
 });
