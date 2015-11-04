@@ -1,5 +1,6 @@
 @import '_reset.css';
 @import '_variables.css';
+@import '_filters.css';
 
 html,
 body {
@@ -153,129 +154,16 @@ button {
 	margin: 0 auto;
 }
 
+.panel {
+	height: 500px;
+	width: 100%;
+	background-color: crimson;
+	position: absolute;
+	left: -100%;
+	.panel-input {
 
-//FILTERS CLASS
+	}
+	.panel-code {
 
-.saturate {
-    filter: url('../filters.svg#saturate');
-}
-
-.saturotate {
-    filter: url('../filters.svg#saturotate');
-}
-
-.rotamatrix {
-    filter: url('../filters.svg#rotamatrix');
-}
-
-.multitable {
-    filter: url('../filters.svg#multitable');
-}
-
-.tablen {
-    filter: url('../filters.svg#tablen');
-}
-
-.dishue {
-    filter: url('../filters.svg#dishue');
-}
-
-.matrix {
-    filter: url('../filters.svg#matrix');
-}
-
-.matrix-dos {
-    filter: url('../filters.svg#matrixDos');
-}
-
-.huerotate {
-    filter: url('../filters.svg#hueRotate');
-}
-
-.luminance {
-    filter: url('../filters.svg#luminanceToAlpha');
-}
-
-.discrete {
-    filter: url('../filters.svg#discrete');
-}
-
-.discrete-dos {
-    filter: url('../filters.svg#discrete-dos');
-}
-
-.table {
-    filter: url('../filters.svg#table');
-}
-
-.table-dos {
-    filter: url('../filters.svg#tableDos');
-}
-
-.identity {
-    filter: url('../filters.svg#identity');
-}
-
-.linear {
-    filter: url('../filters.svg#linear');
-}
-
-.gamma {
-    filter: url('../filters.svg#gamma');
-}
-
-.turbulence {
-    filter: url('../filters.svg#turbulence');
-}
-
-.sepia {
-    filter: url('../filters.svg#sepiatone');
-}
-
-.fematrix-uno {
-    filter: url('../filters.svg#fematrixUno');
-}
-
-.fematrix-dos {
-    filter: url('../filters.svg#fematrixDos');
-}
-
-.turbu-map {
-    filter: url('../filters.svg#turbuMap');
-}
-
-.map-uno {
-    filter: url('../filters.svg#mapUno');
-}
-
-.map-dos {
-    filter: url('../filters.svg#mapDos');
-}
-
-.blur-uno {
-    filter: url('../filters.svg#blurUno');
-}
-
-.blur-dos {
-    filter: url('../filters.svg#blurDos');
-}
-
-.blur-tres {
-    filter: url('../filters.svg#blurTres');
-}
-
-.morpho-uno {
-    filter: url('../filters.svg#morphoUno');
-}
-
-.morpho-dos {
-    filter: url('../filters.svg#morphoDos');
-}
-
-.morpho-tres {
-    filter: url('../filters.svg#morphoTres');
-}
-
-.morpho-cuatro {
-    filter: url('../filters.svg#morphoCuatro');
+	}
 }

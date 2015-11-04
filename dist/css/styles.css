@@ -389,6 +389,160 @@ td, th {
 /* Colors */
 
 /* Tipography */
+.saturate {
+    -webkit-filter: url('../filters.svg#saturate');
+            filter: url('../filters.svg#saturate');
+}
+
+.saturotate {
+    -webkit-filter: url('../filters.svg#saturotate');
+            filter: url('../filters.svg#saturotate');
+}
+
+.rotamatrix {
+    -webkit-filter: url('../filters.svg#rotamatrix');
+            filter: url('../filters.svg#rotamatrix');
+}
+
+.multitable {
+    -webkit-filter: url('../filters.svg#multitable');
+            filter: url('../filters.svg#multitable');
+}
+
+.tablen {
+    -webkit-filter: url('../filters.svg#tablen');
+            filter: url('../filters.svg#tablen');
+}
+
+.dishue {
+    -webkit-filter: url('../filters.svg#dishue');
+            filter: url('../filters.svg#dishue');
+}
+
+.matrix {
+    -webkit-filter: url('../filters.svg#matrix');
+            filter: url('../filters.svg#matrix');
+}
+
+.matrix-dos {
+    -webkit-filter: url('../filters.svg#matrixDos');
+            filter: url('../filters.svg#matrixDos');
+}
+
+.huerotate {
+    -webkit-filter: url('../filters.svg#hueRotate');
+            filter: url('../filters.svg#hueRotate');
+}
+
+.luminance {
+    -webkit-filter: url('../filters.svg#luminanceToAlpha');
+            filter: url('../filters.svg#luminanceToAlpha');
+}
+
+.discrete {
+    -webkit-filter: url('../filters.svg#discrete');
+            filter: url('../filters.svg#discrete');
+}
+
+.discrete-dos {
+    -webkit-filter: url('../filters.svg#discrete-dos');
+            filter: url('../filters.svg#discrete-dos');
+}
+
+.table {
+    -webkit-filter: url('../filters.svg#table');
+            filter: url('../filters.svg#table');
+}
+
+.table-dos {
+    -webkit-filter: url('../filters.svg#tableDos');
+            filter: url('../filters.svg#tableDos');
+}
+
+.identity {
+    -webkit-filter: url('../filters.svg#identity');
+            filter: url('../filters.svg#identity');
+}
+
+.linear {
+    -webkit-filter: url('../filters.svg#linear');
+            filter: url('../filters.svg#linear');
+}
+
+.gamma {
+    -webkit-filter: url('../filters.svg#gamma');
+            filter: url('../filters.svg#gamma');
+}
+
+.turbulence {
+    -webkit-filter: url('../filters.svg#turbulence');
+            filter: url('../filters.svg#turbulence');
+}
+
+.sepia {
+    -webkit-filter: url('../filters.svg#sepiatone');
+            filter: url('../filters.svg#sepiatone');
+}
+
+.fematrix-uno {
+    -webkit-filter: url('../filters.svg#fematrixUno');
+            filter: url('../filters.svg#fematrixUno');
+}
+
+.fematrix-dos {
+    -webkit-filter: url('../filters.svg#fematrixDos');
+            filter: url('../filters.svg#fematrixDos');
+}
+
+.turbu-map {
+    -webkit-filter: url('../filters.svg#turbuMap');
+            filter: url('../filters.svg#turbuMap');
+}
+
+.map-uno {
+    -webkit-filter: url('../filters.svg#mapUno');
+            filter: url('../filters.svg#mapUno');
+}
+
+.map-dos {
+    -webkit-filter: url('../filters.svg#mapDos');
+            filter: url('../filters.svg#mapDos');
+}
+
+.blur-uno {
+    -webkit-filter: url('../filters.svg#blurUno');
+            filter: url('../filters.svg#blurUno');
+}
+
+.blur-dos {
+    -webkit-filter: url('../filters.svg#blurDos');
+            filter: url('../filters.svg#blurDos');
+}
+
+.blur-tres {
+    -webkit-filter: url('../filters.svg#blurTres');
+            filter: url('../filters.svg#blurTres');
+}
+
+.morpho-uno {
+    -webkit-filter: url('../filters.svg#morphoUno');
+            filter: url('../filters.svg#morphoUno');
+}
+
+.morpho-dos {
+    -webkit-filter: url('../filters.svg#morphoDos');
+            filter: url('../filters.svg#morphoDos');
+}
+
+.morpho-tres {
+    -webkit-filter: url('../filters.svg#morphoTres');
+            filter: url('../filters.svg#morphoTres');
+}
+
+.morpho-cuatro {
+    -webkit-filter: url('../filters.svg#morphoCuatro');
+            filter: url('../filters.svg#morphoCuatro');
+}
 
 html, body {
   background: #f1f1f1;
@@ -554,160 +708,14 @@ button:hover {
 	margin: 0 auto;
 }
 
-
-//FILTERS CLASS
-
-.saturate {
-    -webkit-filter: url('../filters.svg#saturate');
-            filter: url('../filters.svg#saturate');
+.panel {
+	height: 500px;
+	width: 100%;
+	background-color: crimson;
+	position: absolute;
+	left: -100%;
 }
 
-.saturotate {
-    -webkit-filter: url('../filters.svg#saturotate');
-            filter: url('../filters.svg#saturotate');
-}
+.panel .panel-input {}
 
-.rotamatrix {
-    -webkit-filter: url('../filters.svg#rotamatrix');
-            filter: url('../filters.svg#rotamatrix');
-}
-
-.multitable {
-    -webkit-filter: url('../filters.svg#multitable');
-            filter: url('../filters.svg#multitable');
-}
-
-.tablen {
-    -webkit-filter: url('../filters.svg#tablen');
-            filter: url('../filters.svg#tablen');
-}
-
-.dishue {
-    -webkit-filter: url('../filters.svg#dishue');
-            filter: url('../filters.svg#dishue');
-}
-
-.matrix {
-    -webkit-filter: url('../filters.svg#matrix');
-            filter: url('../filters.svg#matrix');
-}
-
-.matrix-dos {
-    -webkit-filter: url('../filters.svg#matrixDos');
-            filter: url('../filters.svg#matrixDos');
-}
-
-.huerotate {
-    -webkit-filter: url('../filters.svg#hueRotate');
-            filter: url('../filters.svg#hueRotate');
-}
-
-.luminance {
-    -webkit-filter: url('../filters.svg#luminanceToAlpha');
-            filter: url('../filters.svg#luminanceToAlpha');
-}
-
-.discrete {
-    -webkit-filter: url('../filters.svg#discrete');
-            filter: url('../filters.svg#discrete');
-}
-
-.discrete-dos {
-    -webkit-filter: url('../filters.svg#discrete-dos');
-            filter: url('../filters.svg#discrete-dos');
-}
-
-.table {
-    -webkit-filter: url('../filters.svg#table');
-            filter: url('../filters.svg#table');
-}
-
-.table-dos {
-    -webkit-filter: url('../filters.svg#tableDos');
-            filter: url('../filters.svg#tableDos');
-}
-
-.identity {
-    -webkit-filter: url('../filters.svg#identity');
-            filter: url('../filters.svg#identity');
-}
-
-.linear {
-    -webkit-filter: url('../filters.svg#linear');
-            filter: url('../filters.svg#linear');
-}
-
-.gamma {
-    -webkit-filter: url('../filters.svg#gamma');
-            filter: url('../filters.svg#gamma');
-}
-
-.turbulence {
-    -webkit-filter: url('../filters.svg#turbulence');
-            filter: url('../filters.svg#turbulence');
-}
-
-.sepia {
-    -webkit-filter: url('../filters.svg#sepiatone');
-            filter: url('../filters.svg#sepiatone');
-}
-
-.fematrix-uno {
-    -webkit-filter: url('../filters.svg#fematrixUno');
-            filter: url('../filters.svg#fematrixUno');
-}
-
-.fematrix-dos {
-    -webkit-filter: url('../filters.svg#fematrixDos');
-            filter: url('../filters.svg#fematrixDos');
-}
-
-.turbu-map {
-    -webkit-filter: url('../filters.svg#turbuMap');
-            filter: url('../filters.svg#turbuMap');
-}
-
-.map-uno {
-    -webkit-filter: url('../filters.svg#mapUno');
-            filter: url('../filters.svg#mapUno');
-}
-
-.map-dos {
-    -webkit-filter: url('../filters.svg#mapDos');
-            filter: url('../filters.svg#mapDos');
-}
-
-.blur-uno {
-    -webkit-filter: url('../filters.svg#blurUno');
-            filter: url('../filters.svg#blurUno');
-}
-
-.blur-dos {
-    -webkit-filter: url('../filters.svg#blurDos');
-            filter: url('../filters.svg#blurDos');
-}
-
-.blur-tres {
-    -webkit-filter: url('../filters.svg#blurTres');
-            filter: url('../filters.svg#blurTres');
-}
-
-.morpho-uno {
-    -webkit-filter: url('../filters.svg#morphoUno');
-            filter: url('../filters.svg#morphoUno');
-}
-
-.morpho-dos {
-    -webkit-filter: url('../filters.svg#morphoDos');
-            filter: url('../filters.svg#morphoDos');
-}
-
-.morpho-tres {
-    -webkit-filter: url('../filters.svg#morphoTres');
-            filter: url('../filters.svg#morphoTres');
-}
-
-.morpho-cuatro {
-    -webkit-filter: url('../filters.svg#morphoCuatro');
-            filter: url('../filters.svg#morphoCuatro');
-}
+.panel .panel-code {}

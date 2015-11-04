@@ -2,13 +2,21 @@
 
 $(document).ready(function() {
 
-    $(".btn-saturate").click(function() {
-        $("img").removeClass().addClass("saturate");
-    });
+    var image = $("img");
 
-    $(".btn-saturotate").click(function() {
-        $("img").removeClass().addClass("saturotate");
-    });
+    var btnSaturate = $(".btn-saturate");
+    var saturate = "saturate";
+    var btnSaturotate = $(".btn-saturotate");
+    var saturotate = "saturotate";
+
+    function addFilter(button, image, filter) {
+        $(button).click(function() {
+            $(image).removeClass().addClass(saturate);
+        });
+    }
+
+    addFilter(btnSaturate, image, saturate);
+    addFilter(btnSaturotate, image, saturotate);
 
     $(".btn-rotamatrix").click(function() {
         $("img").removeClass().addClass("rotamatrix");
