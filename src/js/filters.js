@@ -2,6 +2,10 @@
 
 $(document).ready(function() {
 
+    var btnHeight = $('.section-buttons').outerHeight() + 30;
+
+    $('.carrito.paso1 .cajaTuCompra').css('width',  $('.cajaTuCompraTexto').innerWidth());
+
     var btnSaturate = $(".btn-saturate");
     var saturate = "saturate";
     var btnSaturotate = $(".btn-saturotate");
@@ -70,6 +74,13 @@ $(document).ready(function() {
             $("img").removeClass().addClass(saturate);
         });
     }
+
+    $("button").click(function() {
+        $(".panel")
+        .animate({left:'0'}, 400)
+        .addClass("panel-bottom")
+        .css("height", btnHeight);
+    });
 
     addFilter(btnSaturate, saturate);
     addFilter(btnSaturotate, saturotate);

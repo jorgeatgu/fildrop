@@ -709,13 +709,17 @@ button:hover {
 }
 
 .panel {
-	height: 500px;
 	width: 100%;
-	background-color: crimson;
-	position: absolute;
 	left: -100%;
+	border-top: 5px solid #84174D;
+	background-color: #C2DFBF;
+	position: absolute;
 }
 
 .panel .panel-input {}
 
 .panel .panel-code {}
+.panel-bottom {
+	position: fixed;
+	bottom: 0;
+}
