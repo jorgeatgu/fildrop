@@ -9,152 +9,151 @@
         <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Hind:500|Work+Sans:500' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+<body>
+  <nav class="icons">
+    <section class="icons-texto">
+      <h1 class="icons-texto-principal">FILDROP</h1>
+      <p class="icons-texto-secundario">A set of custom SVG filter effects</p>
+    </section>
+    <section class="icons-social">
+      <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">GitHub</a>
+      <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">Tweet</a>
+    </section>
+  </nav>
 
-
-
-<nav class="icons">
-  <section class="icons-texto">
-    <h1 class="icons-texto-principal">FILDROP</h1>
-    <p class="icons-texto-secundario">A set of custom SVG filter effects</p>
+  <section class="section-left">
+      <article class="section-left-example">
+          <h1 class="texto-secundario">Example</h1>
+          <picture>
+              <img src="dist/img/ino-festival-asalto-2015.JPG" alt="Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar">
+          </picture>
+      </article>
+      <article class="section-left-drag">
+          <h1 class="texto-secundario">Drag an drop your image</h1>
+          <div id="holder" >
+          </div>
+          <p id="upload" class="hidden">
+              <label>Drag &amp; drop not supported, but you can still upload via this input field:
+                  <br>
+                  <input type="file">
+              </label>
+          </p>
+          <p id="filereader" class="hidden">File API &amp; FileReader API not supported</p>
+          <p id="formdata" class="hidden">XHR2's FormData is not supported</p>
+          <p id="progress" class="hidden">XHR2's upload progress isn't supported</p>
+      </article>
   </section>
-  <section class="icons-social">
-    <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">GitHub</a>
-    <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">Tweet</a>
+
+
+  <section class="section-buttons">
+
+    <button class="btn-saturate">
+      Saturate
+    </button>
+    <button class="btn-matrix">
+      Matrix
+    </button>
+    <button class="btn-matrix-dos">
+      Matrix
+    </button>
+    <button class="btn-hueRotate">
+      hueRotate
+    </button>
+    <button class="btn-luminance">
+      Luminance
+    </button>
+    <button class="btn-discrete">
+      Discrete
+    </button>
+    <button class="btn-discrete-dos">
+      Discrete 2
+    </button>
+    <button class="btn-table">
+      Table
+    </button>
+    <button class="btn-table-dos">
+      Table 2
+    </button>
+    <button class="btn-identity">
+      Identity
+    </button>
+    <button class="btn-turbu-map">
+      Turbu-map
+    </button>
+    <button class="btn-linear">
+      Linear
+    </button>
+    <button class="btn-sepia">
+      Sepia
+    </button>
+    <button class="btn-turbulence">
+      Turbulence
+    </button>
+    <button class="btn-gamma">
+      Gamma
+    </button>
+    <button class="btn-con-matrix-uno">
+      feMatrix 1
+    </button>
+    <button class="btn-con-matrix-dos">
+      feMatrix 2
+    </button>
+    <button class="btn-blur-uno">
+      Blur 1
+    </button>
+    <button class="btn-blur-dos">
+      Blur 2
+    </button>
+    <button class="btn-blur-tres">
+      Blur 3
+    </button>
+    <button class="btn-morpho-uno">
+      Morpho 1
+    </button>
+    <button class="btn-morpho-dos">
+      Morpho 2
+    </button>
+    <button class="btn-morpho-tres">
+      Morpho 3
+    </button>
+    <button class="btn-morpho-cuatro">
+      Morpho 4
+    </button>
+    <button class="btn-saturotate">
+      Saturotate
+    </button>
+    <button class="btn-rotamatrix">
+      Rotamatrix
+    </button>
+    <button class="btn-multitable">
+      Multitable
+    </button>
+    <button class="btn-tablen">
+      Tablen
+    </button>
+    <button class="btn-dishue">
+      Dishue
+    </button>
+
   </section>
-</nav>
 
-<section class="section-left">
-    <article class="section-left-example">
-        <h1 class="texto-secundario">Example</h1>
-        <picture>
-            <img src="dist/img/ino-festival-asalto-2015.JPG" alt="Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar">
-        </picture>
-    </article>
-    <article class="section-left-drag">
-        <h1 class="texto-secundario">Drag an drop your image</h1>
-        <div id="holder" >
-        </div>
-        <p id="upload" class="hidden">
-            <label>Drag &amp; drop not supported, but you can still upload via this input field:
-                <br>
-                <input type="file">
-            </label>
-        </p>
-        <p id="filereader" class="hidden">File API &amp; FileReader API not supported</p>
-        <p id="formdata" class="hidden">XHR2's FormData is not supported</p>
-        <p id="progress" class="hidden">XHR2's upload progress isn't supported</p>
-    </article>
-</section>
+  <section class="panel">
+    <div class="panel-input">
+      <input type="range" name="range" id="saturate" min="0" max="1" step="0.01" value="0.4"/>
 
 
-<section class="section-buttons">
 
-  <button class="btn-saturate">
-    Saturate
-  </button>
-  <button class="btn-matrix">
-    Matrix
-  </button>
-  <button class="btn-matrix-dos">
-    Matrix
-  </button>
-  <button class="btn-hueRotate">
-    hueRotate
-  </button>
-  <button class="btn-luminance">
-    Luminance
-  </button>
-  <button class="btn-discrete">
-    Discrete
-  </button>
-  <button class="btn-discrete-dos">
-    Discrete 2
-  </button>
-  <button class="btn-table">
-    Table
-  </button>
-  <button class="btn-table-dos">
-    Table 2
-  </button>
-  <button class="btn-identity">
-    Identity
-  </button>
-  <button class="btn-turbu-map">
-    Turbu-map
-  </button>
-  <button class="btn-linear">
-    Linear
-  </button>
-  <button class="btn-sepia">
-    Sepia
-  </button>
-  <button class="btn-turbulence">
-    Turbulence
-  </button>
-  <button class="btn-gamma">
-    Gamma
-  </button>
-  <button class="btn-con-matrix-uno">
-    feMatrix 1
-  </button>
-  <button class="btn-con-matrix-dos">
-    feMatrix 2
-  </button>
-  <button class="btn-blur-uno">
-    Blur 1
-  </button>
-  <button class="btn-blur-dos">
-    Blur 2
-  </button>
-  <button class="btn-blur-tres">
-    Blur 3
-  </button>
-  <button class="btn-morpho-uno">
-    Morpho 1
-  </button>
-  <button class="btn-morpho-dos">
-    Morpho 2
-  </button>
-  <button class="btn-morpho-tres">
-    Morpho 3
-  </button>
-  <button class="btn-morpho-cuatro">
-    Morpho 4
-  </button>
-  <button class="btn-saturotate">
-    Saturotate
-  </button>
-  <button class="btn-rotamatrix">
-    Rotamatrix
-  </button>
-  <button class="btn-multitable">
-    Multitable
-  </button>
-  <button class="btn-tablen">
-    Tablen
-  </button>
-  <button class="btn-dishue">
-    Dishue
-  </button>
+    </div>
 
-</section>
+    <div class="panel-code">
 
-<section class="panel">
-  <div class="panel-input">
-
-  </div>
-  <div class="panel-code">
-
-  </div>
-</section>
-
-
+    </div>
+    <button id="panelbtn-close"></button>
+  </section>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="dist/js/dragdrop.js"></script>
   <script type="text/javascript" src="dist/js/filters.js"></script>
-
   <script type="text/javascript">
 
           var _gaq = _gaq || [];
@@ -169,5 +168,5 @@
 
   </script>
 
-    </body>
+</body>
 </html>

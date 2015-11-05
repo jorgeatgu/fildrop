@@ -340,7 +340,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 0.125rem;
+  margin: 0 0.13rem;
   padding: 0.35em 0.625em 0.75em;
 }
 
@@ -548,10 +548,6 @@ html, body {
   background: #f1f1f1;
 }
 
-html {
-	padding: 1.875rem;
-}
-
 .icons {
 	font-size: 0;
 	width: 85%;
@@ -572,7 +568,7 @@ html {
 
 .icons .icons-texto .icons-texto-principal {
   color: #001F3F;
-  font-size: 3.625rem;
+  font-size: 3.63rem;
   display: inline-block;
   margin: 0 1.25rem 0 0;
 }
@@ -593,7 +589,7 @@ html {
 .icons .icons-social a {
   border: 1px solid #84174D;
   display: inline-block;
-  padding: 0.3125rem 0.9375rem;
+  padding: 0.31rem 0.94rem;
   margin-right: 10px;
   text-decoration: none;
   color: #000;
@@ -618,7 +614,7 @@ html {
 
 .section-left .texto-secundario {
   font-family: 'Hind',sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.13rem;
   color: #001F3F;
   text-align: left;
   width: 70%;
@@ -640,10 +636,10 @@ html {
 
 
 .section-left .section-left-example picture img {
-  width: 70%;
+  width: 90%;
   display: block;
-  margin: 0 auto;
-  border: 5px solid #84174D;
+  border: 3px solid #84174D;
+  border-left: 0;
 }
 
 .section-left .section-left-drag {
@@ -653,11 +649,12 @@ html {
 }
 
 .section-left .section-left-drag #holder {
-  border: 5px solid #84174D;
-  width: 70%;
+  border: 3px solid #84174D;
+  border-right: 0;
+  min-height: 372px;
+  width: 100%;
   height: 100%;
   display: block;
-  margin: 0 auto;
   padding: 1.25rem;
   box-sizing: border-box;
 }
@@ -669,11 +666,12 @@ html {
 
 .section-left .section-left-drag #holder.hover {
   border: 5px solid #AAA1CF;
+  border-right: 0;
 }
 
 .fail {
     background: #c00;
-    padding: 0.125rem;
+    padding: 0.13rem;
     color: #fff;
 }
 
@@ -684,8 +682,8 @@ html {
 button {
 	box-sizing: border-box;
 	width: calc(100/10 * 1%);
-  	padding: 0.9375rem 0.625rem;
-  	margin: 0.3125rem 2.5%;
+  	padding: 0.94rem 0.63rem;
+  	margin: 0.31rem 2.5%;
 	-webkit-appearance: none;
 	background: none;
 	border: 1px solid #84174D;

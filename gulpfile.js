@@ -61,7 +61,7 @@ gulp.task('css', function () {
   		}),
   	pxtorem({
   		    root_value: 16,
-  		    unit_precision: 4,
+  		    unit_precision: 2,
   		    prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'padding'],
   		    replace: true,
   		    media_query: false
