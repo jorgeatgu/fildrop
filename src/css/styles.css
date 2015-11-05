@@ -7,6 +7,10 @@ body {
   background: $color-fondo;
 }
 
+button {
+	outline: 0;
+}
+
 .icons {
 	font-size: 0;
 	width: 85%;
@@ -126,20 +130,22 @@ body {
     display: none !important;
 }
 
-button {
-	box-sizing: border-box;
-	width: calc(100/10 * 1%);
-  	padding: 15px 10px;
-  	margin: 5px 2.5%;
-	-webkit-appearance: none;
-	background: none;
-	border: 1px solid $color-btn;
-	font-family: $hind;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in;
-	&:hover {
-		background: rgba(255,255,255,0.65);
-		color: #000;
+.section-buttons {
+	button {
+		box-sizing: border-box;
+		width: calc(100/10 * 1%);
+	  	padding: 15px 10px;
+	  	margin: 5px 2.5%;
+		-webkit-appearance: none;
+		background: none;
+		border: 1px solid $color-btn;
+		font-family: $hind;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in;
+		&:hover {
+			background: rgba(255,255,255,0.65);
+			color: #000;
+		}
 	}
 }
 
@@ -155,7 +161,7 @@ button {
 .panel {
 	width: 100%;
 	left: -100%;
-	border-top: 5px solid $color-btn;
+	border-top: 3px solid $color-btn;
 	background-color: #C2DFBF;
 	position: absolute;
 	.panel-input {
@@ -163,6 +169,17 @@ button {
 	}
 	.panel-code {
 
+	}
+	#panel-btn-close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		border: 0;
+		background-color: transparent;
+		svg {
+			width: 26px;
+			height: 26px;
+		}
 	}
 }
 .panel-bottom {

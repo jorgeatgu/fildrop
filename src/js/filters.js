@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
 
-    var btnHeight = $('.section-buttons').outerHeight() + 30;
-
-    $('.carrito.paso1 .cajaTuCompra').css('width',  $('.cajaTuCompraTexto').innerWidth());
+    var btnHeight = $('.section-buttons').outerHeight() + 20;
+    var btnFilters = $('.section-buttons').find("button");
+    var btnClose = $('#panel-btn-close');
 
     var btnSaturate = $(".btn-saturate");
     var saturate = "saturate";
@@ -13,7 +13,7 @@ $(document).ready(function() {
     var btnRotamatrix = $(".btn-rotamatrix");
     var rotamatrix = "rotamatrix";
     var btnTablen = $(".btn-tablen");
-    var table = "tablen";
+    var tablen = "tablen";
     var btnMultitable = $(".btn-multitable");
     var multitable = "multitable";
     var btnDishue = $(".btn-dishue");
@@ -46,9 +46,9 @@ $(document).ready(function() {
     var sepia = "sepia";
     var btnTurbuMap = $(".btn-turbu-map");
     var turbumap = "turbu-map";
-    var btnMatrix = $(".btn-con-matrix-uno");
+    var btnConMatrix = $(".btn-con-matrix-uno");
     var fematrix = "fematrix-uno";
-    var btnMatrix2 = $(".btn-con-matrix-dos");
+    var btnConMatrix2 = $(".btn-con-matrix-dos");
     var fematrix2 = "fematrix-dos";
     var btnMap = $(".btn-map-uno");
     var mapUno = "map-uno";
@@ -69,17 +69,23 @@ $(document).ready(function() {
     var btnMorpho4 = $(".btn-morpho-cuatro");
     var morpho4 = "morpho-cuatro";
 
-    function addFilter(button, image, filter) {
+    function addFilter(button, filter) {
         $(button).click(function() {
-            $("img").removeClass().addClass(saturate);
+            $("img").removeClass().addClass(filter);
         });
     }
 
-    $("button").click(function() {
+    $(btnFilters).click(function() {
         $(".panel")
         .animate({left:'0'}, 400)
         .addClass("panel-bottom")
         .css("height", btnHeight);
+    });
+
+    $(btnClose).click(function() {
+        $(".panel")
+        .animate({left:'-100%'}, 400);
+        $("img").removeClass();
     });
 
     addFilter(btnSaturate, saturate);
@@ -102,8 +108,8 @@ $(document).ready(function() {
     addFilter(btnTurbelence, turbulence);
     addFilter(btnSepia, sepia);
     addFilter(btnTurbuMap, turbumap);
-    addFilter(btnMatrix, fematrix);
-    addFilter(btnMatrix2, fematrix2);
+    addFilter(btnConMatrix, fematrix);
+    addFilter(btnConMatrix2, fematrix2);
     addFilter(btnMap, mapUno);
     addFilter(btnMap2, mapDos);
     addFilter(btnBlur, blur);

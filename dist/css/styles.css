@@ -548,6 +548,10 @@ html, body {
   background: #f1f1f1;
 }
 
+button {
+	outline: 0;
+}
+
 .icons {
 	font-size: 0;
 	width: 85%;
@@ -679,20 +683,20 @@ html, body {
     display: none !important;
 }
 
-button {
-	box-sizing: border-box;
-	width: calc(100/10 * 1%);
-  	padding: 0.94rem 0.63rem;
-  	margin: 0.31rem 2.5%;
-	-webkit-appearance: none;
-	background: none;
-	border: 1px solid #84174D;
-	font-family: 'Hind',sans-serif;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in;
+.section-buttons button {
+  box-sizing: border-box;
+  width: calc(100/10 * 1%);
+  padding: 0.94rem 0.63rem;
+  margin: 0.31rem 2.5%;
+  -webkit-appearance: none;
+  background: none;
+  border: 1px solid #84174D;
+  font-family: 'Hind',sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
 }
 
-button:hover {
+.section-buttons button:hover {
   background: rgba(255,255,255,0.65);
   color: #000;
 }
@@ -709,7 +713,7 @@ button:hover {
 .panel {
 	width: 100%;
 	left: -100%;
-	border-top: 5px solid #84174D;
+	border-top: 3px solid #84174D;
 	background-color: #C2DFBF;
 	position: absolute;
 }
@@ -717,6 +721,19 @@ button:hover {
 .panel .panel-input {}
 
 .panel .panel-code {}
+
+.panel #panel-btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background-color: transparent;
+}
+
+.panel #panel-btn-close svg {
+  width: 26px;
+  height: 26px;
+}
 .panel-bottom {
 	position: fixed;
 	bottom: 0;
