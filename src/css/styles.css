@@ -161,8 +161,8 @@ button {
 .panel {
 	width: 100%;
 	left: -100%;
-	border-top: 3px solid $color-btn;
-	background-color: #C2DFBF;
+	border-top: 3px solid #000;
+	background-color: #F0F8FF;
 	position: absolute;
 	.panel-input {
 

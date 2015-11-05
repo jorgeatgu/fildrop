@@ -713,8 +713,8 @@ button {
 .panel {
 	width: 100%;
 	left: -100%;
-	border-top: 3px solid #84174D;
-	background-color: #C2DFBF;
+	border-top: 3px solid #000;
+	background-color: #F0F8FF;
 	position: absolute;
 }
 

@@ -3,6 +3,8 @@
 $(document).ready(function() {
 
     var btnHeight = $('.section-buttons').outerHeight() + 20;
+    var picture = $('picture').find("img");
+    var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
     var btnClose = $('#panel-btn-close');
 
@@ -88,6 +90,12 @@ $(document).ready(function() {
         $("img").removeClass();
     });
 
+    function equalHeight() {
+        $("#holder").css("min-height", pictureHeight);
+    }
+
+
+    equalHeight();
     addFilter(btnSaturate, saturate);
     addFilter(btnSaturotate, saturotate);
     addFilter(btnRotamatrix, rotamatrix);
@@ -119,4 +127,5 @@ $(document).ready(function() {
     addFilter(btnMorpho2, morpho2);
     addFilter(btnMorpho3, morpho3);
     addFilter(btnMorpho4, morpho4);
+
 });
