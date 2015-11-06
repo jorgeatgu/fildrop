@@ -35,7 +35,7 @@ $(document).ready(function() {
         "morpho-cuatro"
     ];
 
-    var btnHeight = $('.section-buttons').outerHeight() + 20;
+    var btnHeight = $('.section-buttons').outerHeight() + 50;
     var picture = $('picture').find("img");
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
@@ -115,8 +115,6 @@ $(document).ready(function() {
     $(btnClose).click(function() {
         closePanel();
     });
-
-
 
     equalHeight();
     closeClick();

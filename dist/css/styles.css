@@ -683,6 +683,10 @@ button {
     display: none !important;
 }
 
+.section-buttons {
+	margin-bottom: 50px;
+}
+
 .section-buttons button {
   box-sizing: border-box;
   width: calc(100/10 * 1%);
@@ -716,11 +720,33 @@ button {
 	border-top: 3px solid #000;
 	background-color: #F0F8FF;
 	position: absolute;
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
 }
 
-.panel .panel-input {}
+.panel .panel-input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  height: 100%;
+}
 
-.panel .panel-code {}
+.panel .panel-code {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+  height: 100%;
+}
+
+.panel .panel-code .panel-code-textarea {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  height: 175px;
+  border: 2px solid #84174D;
+  outline: 0;
+}
 
 .panel #panel-btn-close {
   position: absolute;
@@ -728,12 +754,25 @@ button {
   right: 10px;
   border: 0;
   background-color: transparent;
+  display: block;
 }
 
 .panel #panel-btn-close svg {
   width: 26px;
   height: 26px;
 }
+
+.panel .panel-btn-copy {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #84174D;
+  padding: 0.63rem 1.25rem;
+  display: inline-block;
+  font-size: 1.13rem;
+  font-family: 'Work Sans',sans-serif;
+  color: #000;
+}
+
 .panel-bottom {
 	position: fixed;
 	bottom: 0;
