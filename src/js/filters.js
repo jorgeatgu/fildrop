@@ -40,6 +40,7 @@ $(document).ready(function() {
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
     var btnClose = $('#panel-btn-close');
+    var panel = $(".panel");
 
     var btnSaturate = $(".btn-saturate");
     var btnSaturotate = $(".btn-saturotate");
@@ -79,25 +80,46 @@ $(document).ready(function() {
         });
     }
 
-    $(btnFilters).click(function() {
-        $(".panel")
-        .animate({left:'0'}, 400)
+    function closePanel() {
+        $(panel)
+        .velocity({ left: '-100%'}, { duration: 400, easing: "swing"}, [20, 50]);
+        $("img").removeClass();
+    }
+
+    function openPanel() {
+        $(panel)
+        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
         .addClass("panel-bottom")
         .css("height", btnHeight);
-    });
+    }
 
-    $(btnClose).click(function() {
-        $(".panel")
-        .animate({left:'-100%'}, 400);
-        $("img").removeClass();
-    });
+    function closeClick() {
+        $(document).mouseup(function (e)
+        {
+            if (!panel.is(e.target)
+                && panel.has(e.target).length === 0)
+            {
+                closePanel();
+            }
+        });
+    }
 
     function equalHeight() {
         $("#holder").css("min-height", pictureHeight);
     }
 
+    $(btnFilters).click(function() {
+        openPanel();
+    });
+
+    $(btnClose).click(function() {
+        closePanel();
+    });
+
+
 
     equalHeight();
+    closeClick();
     addFilter(btnSaturate, filters[0]);
     addFilter(btnSaturotate, filters[1]);
     addFilter(btnRotamatrix, filters[2]);
