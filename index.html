@@ -25,6 +25,14 @@
   <section class="section-left">
       <article class="section-left-example">
           <h1 class="texto-secundario">Example</h1>
+          <!-- <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100" aria-labelledby="title desc">
+
+              <title id="title">Photo example</title>
+              <desc id="desc">Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar</desc>
+
+              <image xlink:href="dist/img/ino-festival-asalto-2015.JPG" height="438px" width="579px"/>
+          </svg> -->
           <picture>
               <img src="dist/img/ino-festival-asalto-2015.JPG" alt="Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar">
           </picture>
@@ -138,6 +146,12 @@
 
   </section>
 
+  <section class="panel-info">
+    <button id="panel-btn-show">
+      MODIFY FILTERS
+    </button>
+  </section>
+
   <section class="panel">
     <button id="panel-btn-close">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="348.3" height="348.3" viewBox="-25 26.7 348.3 348.3">
@@ -156,11 +170,7 @@
 
     <div class="panel-code">
       <pre id="panel-code-filter" class="panel-code-textarea">
-        <code>
-          &lt;filter id="saturate" filterUnits="objectBoundingBox">
-            &lt;feColorMatrix type="saturate" in="SourceGraphic" values="0.4"/>
-          &lt;/filter>
-        </code>
+
       </pre>
       <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
           Copy to clipboard

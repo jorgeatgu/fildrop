@@ -81,6 +81,12 @@ button {
 		width: 50%;
 		display: inline-block;
 		float: left;
+		svg {
+			width: 90%;
+			display: block;
+			border: 3px solid $color-btn;
+			border-left: 0;
+		}
 		picture {
 			box-sizing: border-box;
 			width: 100%;
@@ -200,6 +206,27 @@ button {
 			width: 26px;
 			height: 26px;
 		}
+	}
+}
+
+.panel-info {
+	width: 100%;
+	right: -100%;
+	border-top: 3px solid #000;
+	background-color: #F0F8FF;
+	position: absolute;
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+	#panel-btn-show {
+		font-size: 24px;
+		font-family: $hind;
+		color: #000;
+		text-align: center;
+		background-color: transparent;
+		display: block;
+		border: 1px solid $color-btn;
+		margin: 15px auto;
 	}
 }
 

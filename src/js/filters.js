@@ -35,12 +35,13 @@ $(document).ready(function() {
         "morpho-cuatro"
     ];
 
-    var btnHeight = $('.section-buttons').outerHeight() + 50;
+    var btnHeight = $('.section-buttons').outerHeight();
     var picture = $('picture').find("img");
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
     var btnClose = $('#panel-btn-close');
     var panel = $(".panel");
+    var panelInfo = $(".panel-info");
 
     var btnSaturate = $(".btn-saturate");
     var btnSaturotate = $(".btn-saturotate");
@@ -87,10 +88,10 @@ $(document).ready(function() {
     }
 
     function openPanel() {
-        $(panel)
-        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
-        .addClass("panel-bottom")
-        .css("height", btnHeight);
+        $(panelInfo)
+        .velocity({ right: '0'}, { duration: 400, easing: "swing"}, [20, 50])
+        .addClass("panel-bottom");
+        // .css("height", btnHeight);
     }
 
     function closeClick() {

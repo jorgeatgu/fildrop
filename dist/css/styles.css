@@ -633,6 +633,14 @@ button {
 }
 
 
+.section-left .section-left-example svg {
+  width: 90%;
+  display: block;
+  border: 3px solid #84174D;
+  border-left: 0;
+}
+
+
 .section-left .section-left-example picture {
   box-sizing: border-box;
   width: 100%;
@@ -761,6 +769,28 @@ button {
 .panel #panel-btn-close svg {
   width: 26px;
   height: 26px;
+}
+
+.panel-info {
+	width: 100%;
+	right: -100%;
+	border-top: 3px solid #000;
+	background-color: #F0F8FF;
+	position: absolute;
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-info #panel-btn-show {
+  font-size: 1.5rem;
+  font-family: 'Hind',sans-serif;
+  color: #000;
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  border: 1px solid #84174D;
+  margin: 0.94rem auto;
 }
 
 .panel .panel-btn-copy {

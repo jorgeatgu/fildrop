@@ -9,7 +9,7 @@
          <!-- feColorMatrix -->
 
               <filter id="saturate" filterUnits="objectBoundingBox">
-                <feColorMatrix type="saturate" in="SourceGraphic" values="0.4"/>
+                <feColorMatrix id="saturate-value" type="saturate" in="SourceGraphic" values="0.4"/>
               </filter>
               <filter id="matrix" filterUnits="objectBoundingBox">
                 <feColorMatrix type="matrix" in="SourceGraphic"
@@ -162,7 +162,7 @@
              <!-- feGaussianBlur -->
 
               <filter id="blurUno">
-                <feGaussianBlur stdDeviation="3"/>
+                <feGaussianBlur id="blur-value" stdDeviation="3"/>
               </filter>
               <filter id="blurDos">
                 <feGaussianBlur stdDeviation="9"/>
