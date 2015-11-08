@@ -773,7 +773,7 @@ button {
 
 .panel-info {
 	width: 100%;
-	right: -100%;
+	left: -100%;
 	border-top: 3px solid #000;
 	background-color: #F0F8FF;
 	position: absolute;
@@ -783,7 +783,8 @@ button {
 }
 
 .panel-info #panel-btn-show {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 0.94rem;
   font-family: 'Hind',sans-serif;
   color: #000;
   text-align: center;

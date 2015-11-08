@@ -211,7 +211,7 @@ button {
 
 .panel-info {
 	width: 100%;
-	right: -100%;
+	left: -100%;
 	border-top: 3px solid #000;
 	background-color: #F0F8FF;
 	position: absolute;
@@ -219,7 +219,8 @@ button {
 	display: inline-block;
 	vertical-align: middle;
 	#panel-btn-show {
-		font-size: 24px;
+		font-size: 16px;
+		padding: 15px;
 		font-family: $hind;
 		color: #000;
 		text-align: center;

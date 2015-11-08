@@ -78,6 +78,7 @@ $(document).ready(function() {
     function addFilter(button, filter) {
         $(button).click(function() {
             $("img").removeClass().addClass(filter);
+            // $("button").data('data-info', 'hola');
         });
     }
 
@@ -87,11 +88,20 @@ $(document).ready(function() {
         $("img").removeClass();
     }
 
-    function openPanel() {
+    function openPanelModify() {
         $(panelInfo)
-        .velocity({ right: '0'}, { duration: 400, easing: "swing"}, [20, 50])
+        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
         .addClass("panel-bottom");
-        // .css("height", btnHeight);
+    }
+
+    function openPanel() {
+        $(panelInfo).click(function(){
+            $(this).velocity({ left: '-100%'}, { duration: 400, easing: "swing"}, [20, 50]).removeClass("panel-bottom");
+            $(panel)
+            .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
+            .addClass("panel-bottom")
+            .css("height", btnHeight);
+        });
     }
 
     function closeClick() {
@@ -110,7 +120,7 @@ $(document).ready(function() {
     }
 
     $(btnFilters).click(function() {
-        openPanel();
+        openPanelModify();
     });
 
     $(btnClose).click(function() {
@@ -119,6 +129,7 @@ $(document).ready(function() {
 
     equalHeight();
     closeClick();
+    openPanel();
     addFilter(btnSaturate, filters[0]);
     addFilter(btnSaturotate, filters[1]);
     addFilter(btnRotamatrix, filters[2]);
