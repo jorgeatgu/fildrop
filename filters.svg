@@ -154,18 +154,6 @@
                  <feComposite in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
              </filter>
 
-             <!-- feGaussianBlur * feDisplacementMap -->
-
-
-         <!--      <filter id="mapUno">
-                <feGaussianBlur stdDeviation="3" result="gausiano"/>
-                <feDisplacementMap in="SourceGraphic" in2="gausiano" scale="200" xChannelSelector="R" yChannelSelector="G" result="C"/>
-              </filter>
-              <filter id="mapDos">
-                <feGaussianBlur stdDeviation="3" result="gausiano"/>
-                <feDisplacementMap in="SourceGraphic" in2="gausiano" scale="200" xChannelSelector="G" yChannelSelector="A" result="C"/>
-              </filter> -->
-
               <filter id="turbuMap" >
                 <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulence" data-filterId="3"/>
                 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence" scale="40"/>

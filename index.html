@@ -154,7 +154,13 @@
     </div>
 
     <div class="panel-code">
-      <textarea id="panel-code-filter" class="panel-code-textarea"></textarea>
+      <pre id="panel-code-filter" class="panel-code-textarea">
+        <code>
+          &lt;filter id="saturate" filterUnits="objectBoundingBox">
+            &lt;feColorMatrix type="saturate" in="SourceGraphic" values="0.4"/>
+          &lt;/filter>
+        </code>
+      </pre>
       <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
           Copy to clipboard
       </button>

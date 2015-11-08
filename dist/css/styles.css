@@ -746,6 +746,7 @@ button {
   height: 175px;
   border: 2px solid #84174D;
   outline: 0;
+  background-color: #fff;
 }
 
 .panel #panel-btn-close {
@@ -771,6 +772,11 @@ button {
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
   color: #000;
+}
+
+.panel .panel-btn-copy:hover {
+  background-color: #fff;
+  color: #84174D;
 }
 
 .panel-bottom {

@@ -186,6 +186,7 @@ button {
 			height: 175px;
 			border: 2px solid $color-btn;
 			outline: 0;
+			background-color: #fff;
 		}
 	}
 	#panel-btn-close {
@@ -212,6 +213,10 @@ button {
 		font-size: 18px;
 		font-family: $work-sans;
 		color: #000;
+		&:hover {
+			background-color: #fff;
+			color: $color-btn;
+		}
 	}
 }
 
