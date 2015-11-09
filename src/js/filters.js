@@ -75,31 +75,9 @@ $(document).ready(function() {
     var btnMorpho3 = $(".btn-morpho-tres");
     var btnMorpho4 = $(".btn-morpho-cuatro");
 
-    var valueSaturate = $("#saturate").val();
-    var gaussFilterElem = document.getElementById("saturate-value");
-
-
-    $('#txt_name').val('bla');
-
-
-    $( "#slider-range-max" ).slider({
-                min: 0,
-                max: 300,
-                value: 20,
-                slide: function( event, ui ) {
-                    var gaussFilterElem = document.getElementById("gaussStdDev");
-                    var stdDev = ui.value/10;
-
-                    gaussFilterElem.setAttributeNS(null, "stdDeviation", stdDev );
-                    showFilter(stdDev);
-                }
-            });
-        });
-
     function addFilter(button, filter) {
         $(button).click(function() {
             $("img").removeClass().addClass(filter);
-            // $("button").data('data-info', 'hola');
         });
     }
 
@@ -109,39 +87,30 @@ $(document).ready(function() {
         $("img").removeClass();
     }
 
-    function openPanelModify() {
-        $(panelInfo)
-        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
-        .addClass("panel-bottom");
-    }
-
     function openPanel() {
-        $(panelInfo).click(function(){
-            $(this).velocity({ left: '-100%'}, { duration: 400, easing: "swing"}, [20, 50]).removeClass("panel-bottom");
-            $(panel)
-            .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
-            .addClass("panel-bottom")
-            .css("height", btnHeight);
-        });
+        $(panel)
+        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
+        .addClass("panel-bottom")
+        .css("height", btnHeight);
     }
 
-    function closeClick() {
-        $(document).mouseup(function (e)
-        {
-            if (!panel.is(e.target)
-                && panel.has(e.target).length === 0)
-            {
-                closePanel();
-            }
-        });
-    }
+    // function closeClick() {
+    //     $(document).mouseup(function (e)
+    //     {
+    //         if (!panel.is(e.target)
+    //             && panel.has(e.target).length === 0)
+    //         {
+    //             closePanel();
+    //         }
+    //     });
+    // }
 
     function equalHeight() {
         $("#holder").css("min-height", pictureHeight);
     }
 
     $(btnFilters).click(function() {
-        openPanelModify();
+        openPanel();
     });
 
     $(btnClose).click(function() {
@@ -149,8 +118,6 @@ $(document).ready(function() {
     });
 
     equalHeight();
-    closeClick();
-    openPanel();
     addFilter(btnSaturate, filters[0]);
     addFilter(btnSaturotate, filters[1]);
     addFilter(btnRotamatrix, filters[2]);
@@ -182,5 +149,31 @@ $(document).ready(function() {
     addFilter(btnMorpho2, filters[28]);
     addFilter(btnMorpho3, filters[29]);
     addFilter(btnMorpho4, filters[30]);
+
+
+    var saturateSlider = document.getElementById('slider-saturate');
+
+    noUiSlider.create(saturateSlider, {
+        start: [ 0 ],
+        step: 0.1,
+        range: {
+            'min': [ 0 ],
+            'max': [ 1 ]
+        }
+    });
+
+    saturateSlider.noUiSlider.on('change', function(){
+        var valueSaturate = $("#slider-saturate-value").val();
+        var saturateFilter = document.getElementById("saturate-value");
+        saturateFilter.setAttributeNS("values", valueSaturate );
+    });
+
+    var stepSliderValueElement = document.getElementById('slider-saturate-value');
+
+    saturateSlider.noUiSlider.on('update', function( values, handle ) {
+        stepSliderValueElement.innerHTML = values[handle];
+    });
+
+
 
 });

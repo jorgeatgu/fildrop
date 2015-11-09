@@ -1,6 +1,7 @@
 @import '_reset.css';
 @import '_variables.css';
 @import '_filters.css';
+@import '_nouislider.min.css';
 
 html,
 body {
