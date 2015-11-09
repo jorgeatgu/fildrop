@@ -1,123 +1,123 @@
 .saturate {
-    filter: url('../filters.svg#saturate');
+    filter: url('#saturate');
 }
 
 .saturotate {
-    filter: url('../filters.svg#saturotate');
+    filter: url('#saturotate');
 }
 
 .rotamatrix {
-    filter: url('../filters.svg#rotamatrix');
+    filter: url('#rotamatrix');
 }
 
 .multitable {
-    filter: url('../filters.svg#multitable');
+    filter: url('#multitable');
 }
 
 .tablen {
-    filter: url('../filters.svg#tablen');
+    filter: url('#tablen');
 }
 
 .dishue {
-    filter: url('../filters.svg#dishue');
+    filter: url('#dishue');
 }
 
 .matrix {
-    filter: url('../filters.svg#matrix');
+    filter: url('#matrix');
 }
 
 .matrix-dos {
-    filter: url('../filters.svg#matrixDos');
+    filter: url('#matrixDos');
 }
 
 .huerotate {
-    filter: url('../filters.svg#hueRotate');
+    filter: url('#hueRotate');
 }
 
 .luminance {
-    filter: url('../filters.svg#luminanceToAlpha');
+    filter: url('#luminanceToAlpha');
 }
 
 .discrete {
-    filter: url('../filters.svg#discrete');
+    filter: url('#discrete');
 }
 
 .discrete-dos {
-    filter: url('../filters.svg#discrete-dos');
+    filter: url('#discrete-dos');
 }
 
 .table {
-    filter: url('../filters.svg#table');
+    filter: url('#table');
 }
 
 .table-dos {
-    filter: url('../filters.svg#tableDos');
+    filter: url('#tableDos');
 }
 
 .identity {
-    filter: url('../filters.svg#identity');
+    filter: url('#identity');
 }
 
 .linear {
-    filter: url('../filters.svg#linear');
+    filter: url('#linear');
 }
 
 .gamma {
-    filter: url('../filters.svg#gamma');
+    filter: url('#gamma');
 }
 
 .turbulence {
-    filter: url('../filters.svg#turbulence');
+    filter: url('#turbulence');
 }
 
 .sepia {
-    filter: url('../filters.svg#sepiatone');
+    filter: url('#sepiatone');
 }
 
 .fematrix-uno {
-    filter: url('../filters.svg#fematrixUno');
+    filter: url('#fematrixUno');
 }
 
 .fematrix-dos {
-    filter: url('../filters.svg#fematrixDos');
+    filter: url('#fematrixDos');
 }
 
 .turbu-map {
-    filter: url('../filters.svg#turbuMap');
+    filter: url('#turbuMap');
 }
 
 .map-uno {
-    filter: url('../filters.svg#mapUno');
+    filter: url('#mapUno');
 }
 
 .map-dos {
-    filter: url('../filters.svg#mapDos');
+    filter: url('#mapDos');
 }
 
 .blur-uno {
-    filter: url('../filters.svg#blurUno');
+    filter: url('#blurUno');
 }
 
 .blur-dos {
-    filter: url('../filters.svg#blurDos');
+    filter: url('#blurDos');
 }
 
 .blur-tres {
-    filter: url('../filters.svg#blurTres');
+    filter: url('#blurTres');
 }
 
 .morpho-uno {
-    filter: url('../filters.svg#morphoUno');
+    filter: url('#morphoUno');
 }
 
 .morpho-dos {
-    filter: url('../filters.svg#morphoDos');
+    filter: url('#morphoDos');
 }
 
 .morpho-tres {
-    filter: url('../filters.svg#morphoTres');
+    filter: url('#morphoTres');
 }
 
 .morpho-cuatro {
-    filter: url('../filters.svg#morphoCuatro');
+    filter: url('#morphoCuatro');
 }

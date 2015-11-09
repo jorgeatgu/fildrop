@@ -75,6 +75,27 @@ $(document).ready(function() {
     var btnMorpho3 = $(".btn-morpho-tres");
     var btnMorpho4 = $(".btn-morpho-cuatro");
 
+    var valueSaturate = $("#saturate").val();
+    var gaussFilterElem = document.getElementById("saturate-value");
+
+
+    $('#txt_name').val('bla');
+
+
+    $( "#slider-range-max" ).slider({
+                min: 0,
+                max: 300,
+                value: 20,
+                slide: function( event, ui ) {
+                    var gaussFilterElem = document.getElementById("gaussStdDev");
+                    var stdDev = ui.value/10;
+
+                    gaussFilterElem.setAttributeNS(null, "stdDeviation", stdDev );
+                    showFilter(stdDev);
+                }
+            });
+        });
+
     function addFilter(button, filter) {
         $(button).click(function() {
             $("img").removeClass().addClass(filter);
