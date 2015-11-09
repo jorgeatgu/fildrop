@@ -163,9 +163,9 @@ $(document).ready(function() {
     });
 
     saturateSlider.noUiSlider.on('change', function(){
-        var valueSaturate = $("#slider-saturate-value").val();
+        var valueSaturate = saturateSlider.noUiSlider.get();
         var saturateFilter = document.getElementById("saturate-value");
-        saturateFilter.setAttributeNS("values", valueSaturate );
+        saturateFilter.setAttributeNS(null, "values", valueSaturate );
     });
 
     var stepSliderValueElement = document.getElementById('slider-saturate-value');
