@@ -141,25 +141,116 @@
   <section class="panel">
     <button id="panel-btn-close">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="348.3" height="348.3" viewBox="-25 26.7 348.3 348.3">
-        <path d="M311.6,95.3L206,200.8l105.5,105.5c15.7,15.7,15.7,41.1,0,56.9c-7.8,7.8-18.1,11.8-28.4,11.8c-10.3,0-20.6-3.9-28.4-11.8 L149.2,257.7L43.6,363.2c-7.8,7.8-18.1,11.8-28.4,11.8c-10.3,0-20.6-3.9-28.4-11.8c-15.7-15.7-15.7-41.1,0-56.9L92.3,200.8 L-13.2,95.3c-15.7-15.7-15.7-41.1,0-56.8c15.7-15.7,41.1-15.7,56.8,0L149.2,144L254.7,38.4c15.7-15.7,41.1-15.7,56.8,0 C327.3,54.1,327.3,79.6,311.6,95.3z"/>
+        <path fill="#E54F7C" d="M311.6,95.3L206,200.8l105.5,105.5c15.7,15.7,15.7,41.1,0,56.9c-7.8,7.8-18.1,11.8-28.4,11.8c-10.3,0-20.6-3.9-28.4-11.8 L149.2,257.7L43.6,363.2c-7.8,7.8-18.1,11.8-28.4,11.8c-10.3,0-20.6-3.9-28.4-11.8c-15.7-15.7-15.7-41.1,0-56.9L92.3,200.8 L-13.2,95.3c-15.7-15.7-15.7-41.1,0-56.8c15.7-15.7,41.1-15.7,56.8,0L149.2,144L254.7,38.4c15.7-15.7,41.1-15.7,56.8,0 C327.3,54.1,327.3,79.6,311.6,95.3z"/>
       </svg>
     </button>
-    <div class="panel-input" id="panel-saturate">
+    <div class="panel-input  hide" id="panel-saturate">
       <div id="slider-saturate"></div>
       <div id="slider-saturate-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
     </div>
-    <div class="panel-input" id="panel-huerotate">
+    <div class="panel-input  hide" id="panel-huerotate">
       <div id="slider-huerotate"></div>
       <div id="slider-huerotate-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
     </div>
+    <div class="panel-input  hide" id="panel-luminance">
+      <div id="slider-luminance"></div>
+      <div id="slider-luminance-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
 
-    <div class="panel-code">
-      <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
-          Copy to clipboard
-      </button>
-      <pre id="panel-code-filter" class="panel-code-textarea">
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-linear">
+      <div id="slider-linear"></div>
+      <div id="slider-linear-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
 
-      </pre>
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-turbulence">
+      <div id="slider-turbulence"></div>
+      <div id="slider-turbulence-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-gamma">
+      <div id="slider-gamma"></div>
+      <div id="slider-gamma-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-blur">
+      <div id="slider-blur"></div>
+      <div id="slider-blur-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-morpho">
+      <div id="slider-morpho"></div>
+      <div id="slider-morpho-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-saturotate">
+      <div id="slider-saturotate"></div>
+      <div id="slider-saturotate-value"></div>
+      <div class="panel-code">
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
+            Copy to clipboard
+        </button>
+        <pre id="panel-code-filter" class="panel-code-textarea">
+
+        </pre>
+      </div>
     </div>
 
 

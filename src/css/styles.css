@@ -210,6 +210,27 @@ button {
 	}
 }
 
+
+.panel {
+	.panel-btn-copy {
+		margin-top: 20px;
+		background-color: transparent;
+		border: 1px solid $color-btn;
+		padding: 10px 20px;
+		display: inline-block;
+		font-size: 18px;
+		font-family: $work-sans;
+		color: #000;
+		&:hover {
+			background-color: #fff;
+			color: $color-btn;
+		}
+	}
+	.hide {
+		display: none;
+	}
+}
+
 .panel-info {
 	width: 100%;
 	left: -100%;
@@ -229,23 +250,6 @@ button {
 		display: block;
 		border: 1px solid $color-btn;
 		margin: 15px auto;
-	}
-}
-
-.panel {
-	.panel-btn-copy {
-		margin-top: 20px;
-		background-color: transparent;
-		border: 1px solid $color-btn;
-		padding: 10px 20px;
-		display: inline-block;
-		font-size: 18px;
-		font-family: $work-sans;
-		color: #000;
-		&:hover {
-			background-color: #fff;
-			color: $color-btn;
-		}
 	}
 }
 

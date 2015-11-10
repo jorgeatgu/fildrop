@@ -775,6 +775,29 @@ button {
   height: 26px;
 }
 
+
+.panel .panel-btn-copy {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #84174D;
+  padding: 0.63rem 1.25rem;
+  display: inline-block;
+  font-size: 1.13rem;
+  font-family: 'Work Sans',sans-serif;
+  color: #000;
+}
+
+
+.panel .panel-btn-copy:hover {
+  background-color: #fff;
+  color: #84174D;
+}
+
+
+.panel .hide {
+  display: none;
+}
+
 .panel-info {
 	width: 100%;
 	left: -100%;
@@ -796,22 +819,6 @@ button {
   display: block;
   border: 1px solid #84174D;
   margin: 0.94rem auto;
-}
-
-.panel .panel-btn-copy {
-  margin-top: 20px;
-  background-color: transparent;
-  border: 1px solid #84174D;
-  padding: 0.63rem 1.25rem;
-  display: inline-block;
-  font-size: 1.13rem;
-  font-family: 'Work Sans',sans-serif;
-  color: #000;
-}
-
-.panel .panel-btn-copy:hover {
-  background-color: #fff;
-  color: #84174D;
 }
 
 .panel-bottom {

@@ -42,6 +42,7 @@ $(document).ready(function() {
     var btnClose = $('#panel-btn-close');
     var panel = $(".panel");
     var panelInfo = $(".panel-info");
+    var panelInput = $(".panel-input");
 
     var btnSaturate = $(".btn-saturate");
     var btnSaturotate = $(".btn-saturotate");
@@ -74,6 +75,15 @@ $(document).ready(function() {
     var btnMorpho2 = $(".btn-morpho-dos");
     var btnMorpho3 = $(".btn-morpho-tres");
     var btnMorpho4 = $(".btn-morpho-cuatro");
+    var panelSaturate = $("#panel-saturate");
+    var panelHuerotate = $("#panel-huerotate");
+    var panelLuminance = $("#panel-luminance");
+    var panelLinear = $("#panel-linear");
+    var panelTurbulence = $("#panel-turbulence");
+    var panelGamma = $("#panel-gamma");
+    var panelBlur = $("#panel-blur");
+    var panelMorpho = $("#panel-morpho");
+    var panelSaturotate = $("#panel-saturotate");
 
     function addFilter(button, filter) {
         $(button).click(function() {
@@ -115,8 +125,15 @@ $(document).ready(function() {
         }
     });
 
+    function showPanelFilter(btn, panel) {
+        $(btn).click(function(){
+            $(panel).removeClass("hide");
+        });
+    }
+
     $(btnClose).click(function() {
         closePanel();
+        $(panelInput).addClass("hide");
     });
 
     equalHeight();
@@ -151,6 +168,21 @@ $(document).ready(function() {
     addFilter(btnMorpho2, filters[28]);
     addFilter(btnMorpho3, filters[29]);
     addFilter(btnMorpho4, filters[30]);
+
+    showPanelFilter(btnSaturate, panelSaturate);
+    showPanelFilter(btnHueRotate, panelHuerotate);
+    showPanelFilter(btnLuminance, panelLuminance);
+    showPanelFilter(btnLinear, panelLinear);
+    showPanelFilter(btnTurbelence, panelTurbulence);
+    showPanelFilter(btnGamma, panelGamma);
+    showPanelFilter(btnBlur, panelBlur);
+    showPanelFilter(btnBlur2, panelBlur);
+    showPanelFilter(btnBlur3, panelBlur);
+    showPanelFilter(btnMorpho, panelMorpho);
+    showPanelFilter(btnMorpho2, panelMorpho);
+    showPanelFilter(btnMorpho3, panelMorpho);
+    showPanelFilter(btnMorpho4, panelMorpho);
+    showPanelFilter(btnSaturotate, panelSaturotate);
 
 
     var saturateSlider = document.getElementById('slider-saturate');
