@@ -110,7 +110,9 @@ $(document).ready(function() {
     }
 
     $(btnFilters).click(function() {
-        openPanel();
+        if (typeof $(this).data('panel') !== 'undefined') {
+            openPanel();
+        }
     });
 
     $(btnClose).click(function() {
