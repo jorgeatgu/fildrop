@@ -32,7 +32,8 @@ $(document).ready(function() {
         "morpho-uno",
         "morpho-dos",
         "morpho-tres",
-        "morpho-cuatro"
+        "morpho-cuatro",
+        "multitable"
     ];
 
     var btnHeight = $('.section-buttons').outerHeight();
@@ -141,33 +142,33 @@ $(document).ready(function() {
     addFilter(btnSaturotate, filters[1]);
     addFilter(btnRotamatrix, filters[2]);
     addFilter(btnTablen, filters[3]);
-    addFilter(btnMultitable, filters[4]);
-    addFilter(btnDishue, filters[5]);
-    addFilter(btnMatrix, filters[6]);
-    addFilter(btnMatrix2, filters[7]);
-    addFilter(btnHueRotate, filters[8]);
-    addFilter(btnLuminance, filters[9]);
-    addFilter(btnDiscrete, filters[10]);
-    addFilter(btnDiscrete2, filters[11]);
-    addFilter(btnTable, filters[12]);
-    addFilter(btnTable2, filters[13]);
-    addFilter(btnIdentity, filters[14]);
-    addFilter(btnLinear, filters[15]);
-    addFilter(btnGamma, filters[16]);
-    addFilter(btnTurbelence, filters[17]);
-    addFilter(btnSepia, filters[18]);
-    addFilter(btnTurbuMap, filters[19]);
-    addFilter(btnConMatrix, filters[20]);
-    addFilter(btnConMatrix2, filters[21]);
-    addFilter(btnMap, filters[22]);
-    addFilter(btnMap2, filters[23]);
-    addFilter(btnBlur, filters[24]);
-    addFilter(btnBlur2, filters[25]);
-    addFilter(btnBlur3, filters[26]);
-    addFilter(btnMorpho, filters[27]);
-    addFilter(btnMorpho2, filters[28]);
-    addFilter(btnMorpho3, filters[29]);
-    addFilter(btnMorpho4, filters[30]);
+    addFilter(btnDishue, filters[4]);
+    addFilter(btnMultitable, filters[30]);
+    addFilter(btnMatrix, filters[5]);
+    addFilter(btnMatrix2, filters[6]);
+    addFilter(btnHueRotate, filters[7]);
+    addFilter(btnLuminance, filters[8]);
+    addFilter(btnDiscrete, filters[9]);
+    addFilter(btnDiscrete2, filters[10]);
+    addFilter(btnTable, filters[11]);
+    addFilter(btnTable2, filters[12]);
+    addFilter(btnIdentity, filters[13]);
+    addFilter(btnLinear, filters[14]);
+    addFilter(btnGamma, filters[15]);
+    addFilter(btnTurbelence, filters[16]);
+    addFilter(btnSepia, filters[17]);
+    addFilter(btnTurbuMap, filters[18]);
+    addFilter(btnConMatrix, filters[19]);
+    addFilter(btnConMatrix2, filters[20]);
+    addFilter(btnMap, filters[21]);
+    addFilter(btnMap2, filters[22]);
+    addFilter(btnBlur, filters[23]);
+    addFilter(btnBlur2, filters[24]);
+    addFilter(btnBlur3, filters[25]);
+    addFilter(btnMorpho, filters[26]);
+    addFilter(btnMorpho2, filters[27]);
+    addFilter(btnMorpho3, filters[28]);
+    addFilter(btnMorpho4, filters[29]);
 
     showPanelFilter(btnSaturate, panelSaturate);
     showPanelFilter(btnHueRotate, panelHuerotate);
@@ -205,6 +206,29 @@ $(document).ready(function() {
     var stepSliderValueElement = document.getElementById('slider-saturate-value');
 
     saturateSlider.noUiSlider.on('update', function( values, handle ) {
+        stepSliderValueElement.innerHTML = values[handle];
+    });
+
+    var hueRotateSlider = document.getElementById('slider-huerotate');
+
+    noUiSlider.create(hueRotateSlider, {
+        start: [ 180 ],
+        step: 1,
+        range: {
+            'min': [ 0 ],
+            'max': [ 350 ]
+        }
+    });
+
+    hueRotateSlider.noUiSlider.on('change', function(){
+        var valueHuerotate = hueRotateSlider.noUiSlider.get();
+        var huerotateFilter = document.getElementById("hue-value");
+        huerotateFilter.setAttributeNS(null, "values", valueHuerotate );
+    });
+
+    var stepSliderValueElement = document.getElementById('slider-huerotate-value');
+
+    hueRotateSlider.noUiSlider.on('update', function( values, handle ) {
         stepSliderValueElement.innerHTML = values[handle];
     });
 
