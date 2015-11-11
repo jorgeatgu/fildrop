@@ -1,7 +1,6 @@
-//Add class with filter effects
-
 $(document).ready(function() {
 
+    //Array class of filters
     var filters = [
         "saturate",
         "saturotate",
@@ -36,7 +35,9 @@ $(document).ready(function() {
         "multitable"
     ];
 
-    var btnHeight = $('.section-buttons').outerHeight();
+    //Variables
+
+    var btnHeight = $('.section-buttons').outerHeight() + 35;
     var picture = $('picture').find("img");
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
@@ -86,6 +87,8 @@ $(document).ready(function() {
     var panelMorpho = $("#panel-morpho");
     var panelSaturotate = $("#panel-saturotate");
 
+
+    //Functions
     function addFilter(button, filter) {
         $(button).click(function() {
             $("img").removeClass().addClass(filter);
@@ -105,26 +108,10 @@ $(document).ready(function() {
         .css("height", btnHeight);
     }
 
-    // function closeClick() {
-    //     $(document).mouseup(function (e)
-    //     {
-    //         if (!panel.is(e.target)
-    //             && panel.has(e.target).length === 0)
-    //         {
-    //             closePanel();
-    //         }
-    //     });
-    // }
-
     function equalHeight() {
         $("#holder").css("min-height", pictureHeight);
     }
 
-    $(btnFilters).click(function() {
-        if (typeof $(this).data('panel') !== 'undefined') {
-            openPanel();
-        }
-    });
 
     function showPanelFilter(btn, panel) {
         $(btn).click(function(){
@@ -132,11 +119,28 @@ $(document).ready(function() {
         });
     }
 
+    // function each() {
+    //     $(btnFilters).click(function(){
+    //         $.each(filters, function(index) {
+    //             $(btnFilters).eq(index).addClass(filters[index] + 'z');
+    //         });
+    //     });
+    // }
+
+    //FIRE!
+
+    $(btnFilters).click(function() {
+        if (typeof $(this).data('panel') !== 'undefined') {
+            openPanel();
+        }
+    });
+
     $(btnClose).click(function() {
         closePanel();
         $(panelInput).addClass("hide");
     });
 
+    // each();
     equalHeight();
     addFilter(btnSaturate, filters[0]);
     addFilter(btnSaturotate, filters[1]);
@@ -184,54 +188,5 @@ $(document).ready(function() {
     showPanelFilter(btnMorpho3, panelMorpho);
     showPanelFilter(btnMorpho4, panelMorpho);
     showPanelFilter(btnSaturotate, panelSaturotate);
-
-
-    var saturateSlider = document.getElementById('slider-saturate');
-
-    noUiSlider.create(saturateSlider, {
-        start: [ 0 ],
-        step: 0.1,
-        range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
-        }
-    });
-
-    saturateSlider.noUiSlider.on('change', function(){
-        var valueSaturate = saturateSlider.noUiSlider.get();
-        var saturateFilter = document.getElementById("saturate-value");
-        saturateFilter.setAttributeNS(null, "values", valueSaturate );
-    });
-
-    var stepSliderValueElement = document.getElementById('slider-saturate-value');
-
-    saturateSlider.noUiSlider.on('update', function( values, handle ) {
-        stepSliderValueElement.innerHTML = values[handle];
-    });
-
-    var hueRotateSlider = document.getElementById('slider-huerotate');
-
-    noUiSlider.create(hueRotateSlider, {
-        start: [ 180 ],
-        step: 1,
-        range: {
-            'min': [ 0 ],
-            'max': [ 350 ]
-        }
-    });
-
-    hueRotateSlider.noUiSlider.on('change', function(){
-        var valueHuerotate = hueRotateSlider.noUiSlider.get();
-        var huerotateFilter = document.getElementById("hue-value");
-        huerotateFilter.setAttributeNS(null, "values", valueHuerotate );
-    });
-
-    var stepSliderValueElement = document.getElementById('slider-huerotate-value');
-
-    hueRotateSlider.noUiSlider.on('update', function( values, handle ) {
-        stepSliderValueElement.innerHTML = values[handle];
-    });
-
-
 
 });
