@@ -176,8 +176,8 @@ button {
 	vertical-align: middle;
 	.panel-input {
 		display: inline-block;
-		vertical-align: middle;
-		width: 60%;
+		vertical-align: top;
+		width: 100%;
 		height: 100%;
 	}
 	.panel-code {
