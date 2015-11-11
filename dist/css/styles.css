@@ -776,7 +776,7 @@ button {
 .panel .panel-input .panel-code .panel-code-textarea {
   display: inline-block;
   vertical-align: middle;
-  width: 70%;
+  width: 80%;
   height: 175px;
   border: 2px solid #84174D;
   outline: 0;
@@ -794,7 +794,7 @@ button {
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
   color: #000;
-  width: 71%;
+  width: 81%;
   text-align: left;
 }
 
@@ -850,6 +850,10 @@ button {
   width: 40px;
   height: 40px;
   top: -12px;
+  left: -20px;
+  background-color: #001F3F;
+  border: 1px solid #fff;
+  box-shadow: none;
 }
 
 .panel-input-slider .noUi-horizontal .noUi-handle:after {
@@ -862,5 +866,19 @@ button {
   height: 20px;
   left: 9px;
   top: 9px;
+  background-color: #fff;
+}
+
+.panel-input-slider .noUi-value-horizontal {
+  font-size: 1.13rem;
+  color: #001F3F;
+}
+
+.panel-input-slider .noUi-marker-horizontal.noUi-marker {
+  background-color: #000;
+}
+
+.panel-input-slider .noUi-pips-horizontal {
+  padding-top: 15px;
 }
 

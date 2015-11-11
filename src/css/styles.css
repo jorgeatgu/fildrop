@@ -210,7 +210,7 @@ button {
 			.panel-code-textarea {
 				display: inline-block;
 				vertical-align: middle;
-				width: 70%;
+				width: 80%;
 				height: 175px;
 				border: 2px solid $color-btn;
 				outline: 0;
@@ -232,7 +232,7 @@ button {
 		font-size: 18px;
 		font-family: $work-sans;
 		color: #000;
-		width: 71%;
+		width: 81%;
 		text-align: left;
 		&:hover {
 			background-color: #fff;
@@ -283,6 +283,10 @@ button {
 		width: 40px;
 		height: 40px;
 		top: -12px;
+		left: -20px;
+		background-color: $color-secundario;
+		border: 1px solid #fff;
+		box-shadow: none;
 		&:after {
 			display: none;
 		}
@@ -292,7 +296,19 @@ button {
 			height: 20px;
 			left: 9px;
 			top: 9px;
+			background-color: #fff;
 		}
+	}
+	.noUi-value-horizontal {
+		font-size: 18px;
+		color: $color-secundario;
+	}
+
+	.noUi-marker-horizontal.noUi-marker {
+		background-color: #000;
+	}
+	.noUi-pips-horizontal {
+		padding-top: 15px;
 	}
 }
 

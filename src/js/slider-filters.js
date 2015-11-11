@@ -7,6 +7,11 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
@@ -21,6 +26,18 @@
     saturateSlider.noUiSlider.on('update', function( values, handle ) {
         stepSliderValueElement.innerHTML = values[handle];
     });
+
+    function cloneFilter(){
+
+        var codeFilter = document.getElementById("panel-code-filter");
+        var svgFilter = document.getElementById("saturate");
+        // ("" + svgFilter).replace('<','&lt;').replace('>', '&gt;');
+        // ("" + svgFilter).toString();
+        var ubicacion = svgFilter.cloneNode(true);
+        codeFilter.appendChild(ubicacion);
+    }
+
+    cloneFilter();
 
 
     //feColorMatrix type hueRotate
@@ -46,3 +63,6 @@
     hueRotateSlider.noUiSlider.on('update', function( values, handle ) {
         stepSliderValueElement.innerHTML = values[handle];
     });
+
+
+

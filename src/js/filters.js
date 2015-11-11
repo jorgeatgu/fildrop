@@ -189,4 +189,10 @@ $(document).ready(function() {
     showPanelFilter(btnMorpho4, panelMorpho);
     showPanelFilter(btnSaturotate, panelSaturotate);
 
+    // $('#panel-code-filter').each(function(){
+    //     var $this = $(this);
+    //     var t = $this.text();
+    //     $this.html(t.replace('&lt','<').replace('&gt', '>'));
+    // });
+
 });
