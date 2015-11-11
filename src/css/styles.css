@@ -174,27 +174,6 @@ button {
 	font-size: 0;
 	display: inline-block;
 	vertical-align: middle;
-	.panel-input {
-		display: inline-block;
-		vertical-align: top;
-		width: 100%;
-		height: 100%;
-	}
-	.panel-code {
-		display: inline-block;
-		vertical-align: middle;
-		width: 35%;
-		height: 100%;
-		.panel-code-textarea {
-			display: inline-block;
-			vertical-align: middle;
-			width: 70%;
-			height: 175px;
-			border: 2px solid $color-btn;
-			outline: 0;
-			background-color: #fff;
-		}
-	}
 	#panel-btn-close {
 		position: absolute;
 		top: 10px;
@@ -209,17 +188,52 @@ button {
 	}
 }
 
+.panel {
+	.panel-input {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		.panel-input-slider {
+			display: inline-block;
+			width: 65%;
+			padding: 0 40px;
+			box-sizing: border-box;
+		}
+		.panel-code {
+			display: inline-block;
+			vertical-align: middle;
+			width: 35%;
+			height: 100%;
+			margin-top: 30px;
+			.panel-code-textarea {
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+				height: 175px;
+				border: 2px solid $color-btn;
+				outline: 0;
+				background-color: #fff;
+			}
+		}
+	}
+}
+
 
 .panel {
 	.panel-btn-copy {
-		margin-top: 20px;
 		background-color: transparent;
-		border: 1px solid $color-btn;
+		border: 2px solid $color-btn;
+		border-top: 0;
+		box-sizing: border-box;
 		padding: 10px 20px;
 		display: inline-block;
 		font-size: 18px;
 		font-family: $work-sans;
 		color: #000;
+		width: 71%;
+		text-align: left;
 		&:hover {
 			background-color: #fff;
 			color: $color-btn;
@@ -256,3 +270,29 @@ button {
 	position: fixed;
 	bottom: 0;
 }
+
+.panel-input-slider {
+	.noUi-base {
+		background-color: #E74C7B;
+	}
+	.noUi-origin {
+		border-radius: 0;
+	}
+	.noUi-horizontal .noUi-handle {
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		top: -12px;
+		&:after {
+			display: none;
+		}
+		&:before {
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			left: 9px;
+			top: 9px;
+		}
+	}
+}
+

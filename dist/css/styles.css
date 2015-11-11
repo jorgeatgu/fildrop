@@ -736,30 +736,6 @@ button {
 	vertical-align: middle;
 }
 
-.panel .panel-input {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  height: 100%;
-}
-
-.panel .panel-code {
-  display: inline-block;
-  vertical-align: middle;
-  width: 35%;
-  height: 100%;
-}
-
-.panel .panel-code .panel-code-textarea {
-  display: inline-block;
-  vertical-align: middle;
-  width: 70%;
-  height: 175px;
-  border: 2px solid #84174D;
-  outline: 0;
-  background-color: #fff;
-}
-
 .panel #panel-btn-close {
   position: absolute;
   top: 10px;
@@ -774,16 +750,52 @@ button {
   height: 26px;
 }
 
+.panel .panel-input {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+.panel .panel-input .panel-input-slider {
+  display: inline-block;
+  width: 65%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+}
+
+.panel .panel-input .panel-code {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.panel .panel-input .panel-code .panel-code-textarea {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  height: 175px;
+  border: 2px solid #84174D;
+  outline: 0;
+  background-color: #fff;
+}
+
 
 .panel .panel-btn-copy {
-  margin-top: 20px;
   background-color: transparent;
-  border: 1px solid #84174D;
+  border: 2px solid #84174D;
+  border-top: 0;
+  box-sizing: border-box;
   padding: 0.63rem 1.25rem;
   display: inline-block;
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
   color: #000;
+  width: 71%;
+  text-align: left;
 }
 
 
@@ -824,3 +836,31 @@ button {
 	position: fixed;
 	bottom: 0;
 }
+
+.panel-input-slider .noUi-base {
+  background-color: #E74C7B;
+}
+
+.panel-input-slider .noUi-origin {
+  border-radius: 0;
+}
+
+.panel-input-slider .noUi-horizontal .noUi-handle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: -12px;
+}
+
+.panel-input-slider .noUi-horizontal .noUi-handle:after {
+  display: none;
+}
+
+.panel-input-slider .noUi-horizontal .noUi-handle:before {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  left: 9px;
+  top: 9px;
+}
+
