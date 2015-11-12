@@ -728,8 +728,8 @@ button {
 .panel {
 	width: 100%;
 	left: -100%;
-	border-top: 10px solid #2C3E4F;
-	background-color: #F0F8FF;
+	border-top: 3px solid #fff;
+	background-color: #F8F5C4;
 	position: absolute;
 	font-size: 0;
 	display: inline-block;
@@ -746,8 +746,19 @@ button {
 }
 
 .panel #panel-btn-close svg {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
+}
+
+.panel .panel-input-title {
+  font-size: 1.13rem;
+  font-family: 'Work Sans',sans-serif;
+  text-indent: 20px;
+  color: #fff;
+  width: 100%;
+  background-color: #001F3F;
+  margin-top: 0;
+  padding: 0.63rem 0;
 }
 
 .panel .panel-input {
@@ -760,7 +771,7 @@ button {
 
 .panel .panel-input .panel-input-slider {
   display: inline-block;
-  width: 65%;
+  width: 55%;
   padding: 0 2.5rem;
   box-sizing: border-box;
 }
@@ -768,7 +779,7 @@ button {
 .panel .panel-input .panel-code {
   display: inline-block;
   vertical-align: middle;
-  width: 35%;
+  width: 45%;
   height: 100%;
   margin-top: 30px;
 }
@@ -794,7 +805,7 @@ button {
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
   color: #000;
-  width: 81%;
+  width: 80.7%;
   text-align: left;
 }
 
@@ -813,7 +824,7 @@ button {
 	width: 100%;
 	left: -100%;
 	border-top: 3px solid #000;
-	background-color: #F0F8FF;
+	background-color: #F3F2E2;
 	position: absolute;
 	font-size: 0;
 	display: inline-block;
@@ -839,18 +850,30 @@ button {
 
 .panel-input-slider .noUi-base {
   background-color: #E74C7B;
+  border: 1px solid #001F3F;
 }
 
 .panel-input-slider .noUi-origin {
   border-radius: 0;
 }
 
+.panel-input-slider .noUi-target, .panel-input-slider .noUi-pips-horizontal {
+  padding: 0.31rem;
+}
+
+.panel-input-slider .noUi-target {
+  border: 1px solid #001F3F;
+  position: relative;
+  top: -50px;
+  border-radius: 0;
+}
+
 .panel-input-slider .noUi-horizontal .noUi-handle {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  top: -12px;
-  left: -20px;
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  left: -15px;
   background-color: #001F3F;
   border: 1px solid #fff;
   box-shadow: none;
@@ -862,23 +885,20 @@ button {
 
 .panel-input-slider .noUi-horizontal .noUi-handle:before {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  left: 9px;
-  top: 9px;
+  width: 14px;
+  height: 14px;
+  left: 7px;
+  top: 7px;
   background-color: #fff;
 }
 
 .panel-input-slider .noUi-value-horizontal {
   font-size: 1.13rem;
   color: #001F3F;
+  font-family: 'Work Sans',sans-serif;
 }
 
 .panel-input-slider .noUi-marker-horizontal.noUi-marker {
   background-color: #000;
-}
-
-.panel-input-slider .noUi-pips-horizontal {
-  padding-top: 15px;
 }
 
