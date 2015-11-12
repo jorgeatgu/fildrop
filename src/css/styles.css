@@ -281,7 +281,7 @@ button {
 	bottom: 0;
 }
 
-.panel-input-slider {
+/* .panel-input-slider {
 	.noUi-base {
 		background-color: #E74C7B;
 		border: 1px solid $color-secundario;
@@ -295,8 +295,6 @@ button {
 	}
 	.noUi-target {
 		border: 1px solid $color-secundario;
-		position: relative;
-		top: -50px;
 		border-radius: 0;
 	}
 	.noUi-horizontal .noUi-handle {
@@ -330,3 +328,4 @@ button {
 	}
 }
 
+ */
