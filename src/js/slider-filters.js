@@ -27,7 +27,7 @@
         stepSliderValueElement.innerHTML = values[handle];
     });
 
-    function cloneFilter(){
+    // function cloneFilter(){
 
         var codeFilter = document.getElementById("panel-code-filter");
         var svgFilter = document.getElementById("saturate");
@@ -35,9 +35,9 @@
         // ("" + svgFilter).toString();
         var ubicacion = svgFilter.cloneNode(true);
         codeFilter.appendChild(ubicacion);
-    }
+    // }
 
-    cloneFilter();
+    // cloneFilter();
 
 
     //feColorMatrix type hueRotate
