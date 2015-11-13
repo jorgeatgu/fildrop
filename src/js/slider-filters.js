@@ -18,8 +18,17 @@
     saturateSlider.noUiSlider.on('change', function(){
         var valueSaturate = saturateSlider.noUiSlider.get();
         var saturateFilter = document.getElementById("saturate-value");
+        var saturateCode = document.getElementById("panel-code-saturate");
         saturateFilter.setAttributeNS(null, "values", valueSaturate );
+
+        $(saturateCode).text(
+            '<filter id="saturate-customize">\n' +
+                ' <feColorMatrix type="saturate" values="' + valueSaturate + '"/>\n' +
+            '</filter>');
+
     });
+
+
 
     var stepSliderValueElement = document.getElementById('slider-saturate-value');
 
@@ -27,18 +36,6 @@
         stepSliderValueElement.innerHTML = values[handle];
     });
 
-    // function cloneFilter() {
-
-    //     var codeFilter = document.getElementById("panel-code-filter");
-    //     var svgFilter = document.getElementById("saturate");
-    //     ubicacion = svgFilter.cloneNode(true);
-    //     // ("" + ubicacion).replace('<','&lt;').replace('>', '&gt;');
-    //     // ("" + svgFilter).toString();
-    //     ubicacion.id = "saturatecopy";
-    //     codeFilter.appendChild(ubicacion);
-    // }
-
-    // cloneFilter();
 
 
     //feColorMatrix type hueRotate

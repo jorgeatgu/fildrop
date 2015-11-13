@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //Array class of filters
+    //Array type/class of filters
     var filters = [
         "saturate",
         "saturotate",
@@ -27,11 +27,8 @@ $(document).ready(function() {
         "map-dos",
         "blur-uno",
         "blur-dos",
-        "blur-tres",
         "morpho-uno",
         "morpho-dos",
-        "morpho-tres",
-        "morpho-cuatro",
         "multitable"
     ];
 
@@ -72,11 +69,8 @@ $(document).ready(function() {
     var btnMap2 = $(".btn-map-dos");
     var btnBlur = $(".btn-blur-uno");
     var btnBlur2 = $(".btn-blur-dos");
-    var btnBlur3 = $(".btn-blur-tres");
     var btnMorpho = $(".btn-morpho-uno");
     var btnMorpho2 = $(".btn-morpho-dos");
-    var btnMorpho3 = $(".btn-morpho-tres");
-    var btnMorpho4 = $(".btn-morpho-cuatro");
     var panelSaturate = $("#panel-saturate");
     var panelHuerotate = $("#panel-huerotate");
     var panelLuminance = $("#panel-luminance");
@@ -119,6 +113,16 @@ $(document).ready(function() {
         });
     }
 
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+        $("body").css("display","none");
+    });
+
+    clipboard.on('error', function(e) {
+
+    });
+
     // function each() {
     //     $(btnFilters).click(function(){
     //         $.each(filters, function(index) {
@@ -147,7 +151,6 @@ $(document).ready(function() {
     addFilter(btnRotamatrix, filters[2]);
     addFilter(btnTablen, filters[3]);
     addFilter(btnDishue, filters[4]);
-    addFilter(btnMultitable, filters[30]);
     addFilter(btnMatrix, filters[5]);
     addFilter(btnMatrix2, filters[6]);
     addFilter(btnHueRotate, filters[7]);
@@ -168,11 +171,10 @@ $(document).ready(function() {
     addFilter(btnMap2, filters[22]);
     addFilter(btnBlur, filters[23]);
     addFilter(btnBlur2, filters[24]);
-    addFilter(btnBlur3, filters[25]);
     addFilter(btnMorpho, filters[26]);
     addFilter(btnMorpho2, filters[27]);
-    addFilter(btnMorpho3, filters[28]);
-    addFilter(btnMorpho4, filters[29]);
+    addFilter(btnMultitable, filters[28]);
+
 
     showPanelFilter(btnSaturate, panelSaturate);
     showPanelFilter(btnHueRotate, panelHuerotate);
@@ -182,17 +184,8 @@ $(document).ready(function() {
     showPanelFilter(btnGamma, panelGamma);
     showPanelFilter(btnBlur, panelBlur);
     showPanelFilter(btnBlur2, panelBlur);
-    showPanelFilter(btnBlur3, panelBlur);
     showPanelFilter(btnMorpho, panelMorpho);
     showPanelFilter(btnMorpho2, panelMorpho);
-    showPanelFilter(btnMorpho3, panelMorpho);
-    showPanelFilter(btnMorpho4, panelMorpho);
     showPanelFilter(btnSaturotate, panelSaturotate);
-
-    // $('#panel-code-filter').each(function(){
-    //     var $this = $(this);
-    //     var t = $this.text();
-    //     $this.html(t.replace('&lt','<').replace('&gt', '>'));
-    // });
 
 });

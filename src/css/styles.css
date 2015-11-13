@@ -12,6 +12,7 @@ button {
 	outline: 0;
 }
 
+
 .icons {
 	font-size: 0;
 	width: 85%;
@@ -203,6 +204,7 @@ button {
 		display: inline-block;
 		vertical-align: top;
 		width: 100%;
+		position: relative;
 		height: 100%;
 		font-size: 0;
 		.panel-input-slider {
@@ -210,6 +212,8 @@ button {
 			width: 55%;
 			padding: 0 40px;
 			box-sizing: border-box;
+			position: relative;
+			top: -50px;
 		}
 		.panel-code {
 			display: inline-block;
@@ -221,10 +225,16 @@ button {
 				display: inline-block;
 				vertical-align: middle;
 				width: 80%;
+				font-family: $work-sans;
 				height: 175px;
 				border: 2px solid $color-btn;
 				outline: 0;
+				padding: 10px;
+				color: #000;
 				background-color: #fff;
+				resize: none;
+				font-size: 18px;
+				box-sizing: border-box;
 			}
 		}
 	}
@@ -242,7 +252,7 @@ button {
 		font-size: 18px;
 		font-family: $work-sans;
 		color: #000;
-		width: 80.7%;
+		width: 80%;
 		text-align: left;
 		&:hover {
 			background-color: #fff;
