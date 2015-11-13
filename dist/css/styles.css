@@ -797,11 +797,11 @@ button {
   width: 80%;
   font-family: 'Work Sans',sans-serif;
   height: 175px;
-  border: 2px solid #84174D;
+  border: 2px solid #001E40;
   outline: 0;
   padding: 0.63rem;
-  color: #000;
-  background-color: #fff;
+  color: #FFDC00;
+  background-color: #001E40;
   resize: none;
   font-size: 1.13rem;
   box-sizing: border-box;
@@ -810,14 +810,14 @@ button {
 
 .panel .panel-btn-copy {
   background-color: transparent;
-  border: 2px solid #84174D;
+  border: 2px solid #001E40;
   border-top: 0;
   box-sizing: border-box;
   padding: 0.63rem 1.25rem;
   display: inline-block;
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
-  color: #000;
+  color: #	001E40;
   width: 80%;
   text-align: left;
 }

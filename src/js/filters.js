@@ -116,7 +116,14 @@ $(document).ready(function() {
     var clipboard = new Clipboard('.btn');
 
     clipboard.on('success', function(e) {
-        $("body").css("display","none");
+        var btnPanel = document.getElementsByClassName('panel-btn-copy');
+        setTimeout(changeText, 300);
+        function changeText() {
+            $(btnPanel).text("Copied!");
+            setTimeout(function(){
+            $(btnPanel).text("Copy to clipboard");
+             }, 1000);
+        }
     });
 
     clipboard.on('error', function(e) {
