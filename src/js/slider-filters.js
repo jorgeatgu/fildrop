@@ -3,7 +3,7 @@
 
     noUiSlider.create(saturateSlider, {
         start: [ 0 ],
-        step: 0.1,
+        step: 0.01,
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
@@ -27,14 +27,15 @@
         stepSliderValueElement.innerHTML = values[handle];
     });
 
-    // function cloneFilter(){
+    // function cloneFilter() {
 
-        var codeFilter = document.getElementById("panel-code-filter");
-        var svgFilter = document.getElementById("saturate");
-        // ("" + svgFilter).replace('<','&lt;').replace('>', '&gt;');
-        // ("" + svgFilter).toString();
-        var ubicacion = svgFilter.cloneNode(true);
-        codeFilter.appendChild(ubicacion);
+    //     var codeFilter = document.getElementById("panel-code-filter");
+    //     var svgFilter = document.getElementById("saturate");
+    //     ubicacion = svgFilter.cloneNode(true);
+    //     // ("" + ubicacion).replace('<','&lt;').replace('>', '&gt;');
+    //     // ("" + svgFilter).toString();
+    //     ubicacion.id = "saturatecopy";
+    //     codeFilter.appendChild(ubicacion);
     // }
 
     // cloneFilter();

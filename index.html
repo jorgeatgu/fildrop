@@ -105,20 +105,11 @@
     <button class="btn-blur-dos" data-panel="open">
       Blur 2
     </button>
-    <button class="btn-blur-tres" data-panel="open">
-      Blur 3
-    </button>
     <button class="btn-morpho-uno" data-panel="open">
       Morpho 1
     </button>
     <button class="btn-morpho-dos" data-panel="open">
       Morpho 2
-    </button>
-    <button class="btn-morpho-tres" data-panel="open">
-      Morpho 3
-    </button>
-    <button class="btn-morpho-cuatro" data-panel="open">
-      Morpho 4
     </button>
     <button class="btn-saturotate" data-panel="open">
       Saturotate
@@ -134,6 +125,9 @@
     </button>
     <button class="btn-dishue">
       Dishue
+    </button>
+    <button class="btn-dishue">
+      ALL!
     </button>
 
   </section>
@@ -151,9 +145,9 @@
         <div id="slider-saturate-value"></div>
       </div>
       <div class="panel-code">
-        <code id="panel-code-filter" class="panel-code-textarea">
+        <pre id="panel-code-filter" class="panel-code-textarea">
 
-        </code>
+        </pre>
         <button class="panel-btn-copy" data-clipboard-target="#panel-code-filter">
             Copy to clipboard
         </button>
@@ -453,9 +447,6 @@
                   <filter id="blurDos">
                     <feGaussianBlur stdDeviation="9"/>
                   </filter>
-                  <filter id="blurTres">
-                    <feGaussianBlur stdDeviation="18"/>
-                  </filter>
 
                   <!-- feMorphology -->
 
@@ -464,12 +455,6 @@
                   </filter>
                   <filter id="morphoDos">
                     <feMorphology operator="erode" in="SourceGraphic" radius="6"/>
-                  </filter>
-                  <filter id="morphoTres">
-                    <feMorphology operator="dilate" in="SourceGraphic" radius="3"/>
-                  </filter>
-                  <filter id="morphoCuatro">
-                    <feMorphology operator="dilate" in="SourceGraphic" radius="6"/>
                   </filter>
 
          </defs>
