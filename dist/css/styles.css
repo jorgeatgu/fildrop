@@ -720,6 +720,23 @@ button {
   color: #000;
 }
 
+.section-buttons .btn-danger {
+  padding: 0.75rem 0.63rem;
+}
+
+.section-buttons .btn-danger:hover {
+  background-color: #000;
+}
+
+.section-buttons .btn-danger:hover svg {
+  fill: #fff;
+}
+
+.section-buttons .btn-danger svg {
+  width: 32px;
+  height: 32px;
+}
+
 .btn-filters {
 	background: #84174D;
 }
