@@ -182,6 +182,7 @@ button {
 		border: 0;
 		background-color: transparent;
 		display: block;
+		z-index: 2;
 		svg {
 			width: 20px;
 			height: 20px;
@@ -251,11 +252,12 @@ button {
 		display: inline-block;
 		font-size: 18px;
 		font-family: $work-sans;
-		color: #	001E40;
+		color: #001E40;
+		background-color: #fff;
 		width: 80%;
 		text-align: left;
 		&:hover {
-			background-color: #fff;
+			background-color: #EFEBEB;
 			color: $color-btn;
 		}
 	}

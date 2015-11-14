@@ -747,6 +747,7 @@ button {
   border: 0;
   background-color: transparent;
   display: block;
+  z-index: 2;
 }
 
 .panel #panel-btn-close svg {
@@ -817,14 +818,15 @@ button {
   display: inline-block;
   font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
-  color: #	001E40;
+  color: #001E40;
+  background-color: #fff;
   width: 80%;
   text-align: left;
 }
 
 
 .panel .panel-btn-copy:hover {
-  background-color: #fff;
+  background-color: #EFEBEB;
   color: #84174D;
 }
 
