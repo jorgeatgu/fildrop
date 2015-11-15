@@ -728,13 +728,13 @@ button {
   background-color: #000;
 }
 
-.section-buttons .btn-danger:hover svg {
+.section-buttons .btn-danger:hover > svg path {
   fill: #fff;
 }
 
 .section-buttons .btn-danger svg {
   width: 32px;
-  height: 32px;
+  height: 20px;
 }
 
 .btn-filters {
@@ -843,7 +843,6 @@ button {
 
 
 .panel .panel-btn-copy:hover {
-  background-color: #EFEBEB;
   color: #84174D;
 }
 

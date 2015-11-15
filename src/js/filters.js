@@ -100,6 +100,7 @@ $(document).ready(function() {
         .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
         .addClass("panel-bottom")
         .css("height", btnHeight);
+        window.scrollTo(0,document.body.scrollHeight);
     }
 
     function equalHeight() {

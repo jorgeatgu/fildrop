@@ -159,13 +159,13 @@ button {
 		padding: 12px 10px;
 		&:hover {
 			background-color: #000;
-			svg {
+			> svg path {
 				fill: #fff;
 			}
 		}
 		svg {
 			width: 32px;
-			height: 32px;
+			height: 20px;
 		}
 	}
 }
@@ -270,7 +270,6 @@ button {
 		width: 80%;
 		text-align: left;
 		&:hover {
-			background-color: #EFEBEB;
 			color: $color-btn;
 		}
 	}
