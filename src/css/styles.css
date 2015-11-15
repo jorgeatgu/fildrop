@@ -149,10 +149,17 @@ button {
 		border: 1px solid $color-btn;
 		font-family: $hind;
 		text-transform: uppercase;
-		transition: all 0.3s ease-in;
 		&:hover {
-			background: rgba(255,255,255,0.65);
+			background: #fff;
 			color: #000;
+		}
+		&[data-panel="open"] {
+			background: transparent url('../img/btn-edit-filter.svg') 98% 5% no-repeat;
+			background-size: 10px;
+			&:hover {
+				background: #fff url('../img/btn-edit-filter.svg') 98% 5% no-repeat;
+				background-size: 10px;
+			}
 		}
 	}
 	.btn-poison {

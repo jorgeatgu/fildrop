@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     //Variables
 
-    var btnHeight = $('.section-buttons').outerHeight() + 35;
+    var btnHeight = $('.section-buttons').outerHeight() + 45;
     var picture = $('picture').find("img");
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
