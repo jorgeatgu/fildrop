@@ -155,11 +155,11 @@ button {
 			color: #000;
 		}
 	}
-	.btn-danger {
+	.btn-poison {
 		padding: 12px 10px;
 		&:hover {
 			background-color: #000;
-			> svg path {
+			path {
 				fill: #fff;
 			}
 		}
@@ -241,11 +241,11 @@ button {
 				width: 80%;
 				font-family: $work-sans;
 				height: 175px;
-				border: 2px solid #001E40;
+				border: 2px solid $color-panel-code;
 				outline: 0;
 				padding: 10px;
-				color: #FFDC00;
-				background-color: #001E40;
+				color: $color-text-code;
+				background-color: $color-panel-code;
 				resize: none;
 				font-size: 18px;
 				box-sizing: border-box;
@@ -261,16 +261,28 @@ button {
 		border: 2px solid #001E40;
 		border-top: 0;
 		box-sizing: border-box;
-		padding: 10px 20px;
+		padding: 10px 35px;
 		display: inline-block;
 		font-size: 18px;
 		font-family: $work-sans;
-		color: #001E40;
+		color: $color-panel-code;
 		background-color: #fff;
 		width: 80%;
 		text-align: left;
+		background: #fff url('../img/btn-copy.svg') 5px center no-repeat;
+		background-size: 24px;
 		&:hover {
 			color: $color-btn;
+		}
+		&.success {
+			background: #fff url('../img/btn-copy-success.svg') 5px center no-repeat;
+			background-size: 24px;
+			color: $color-success;
+		}
+		&.error {
+			background: #fff url('../img/btn-copy-error.svg') 5px center no-repeat;
+			background-size: 24px;
+			color: $color-error;
 		}
 	}
 	.hide {

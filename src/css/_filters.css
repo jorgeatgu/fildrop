@@ -102,9 +102,6 @@
     filter: url('#blurDos');
 }
 
-.blur-tres {
-    filter: url('#blurTres');
-}
 
 .morpho-uno {
     filter: url('#morphoUno');
@@ -112,12 +109,4 @@
 
 .morpho-dos {
     filter: url('#morphoDos');
-}
-
-.morpho-tres {
-    filter: url('#morphoTres');
-}
-
-.morpho-cuatro {
-    filter: url('#morphoCuatro');
 }

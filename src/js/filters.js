@@ -32,6 +32,7 @@ $(document).ready(function() {
         "multitable"
     ];
 
+
     //Variables
 
     var btnHeight = $('.section-buttons').outerHeight() + 35;
@@ -71,6 +72,7 @@ $(document).ready(function() {
     var btnBlur2 = $(".btn-blur-dos");
     var btnMorpho = $(".btn-morpho-uno");
     var btnMorpho2 = $(".btn-morpho-dos");
+    var btnPoison = $(".btn-poison");
     var panelSaturate = $("#panel-saturate");
     var panelHuerotate = $("#panel-huerotate");
     var panelLuminance = $("#panel-luminance");
@@ -89,6 +91,21 @@ $(document).ready(function() {
         });
     }
 
+    function poison() {
+        $(btnPoison).click(function(){
+
+            var bodys = document.getElementsByTagName("body");
+            var classRandom = filters[~~(Math.random()*filters.length)];
+
+            $(bodys).each(function(){
+                $(bodys).addClass(classRandom);
+                setTimeout(function(){
+                $(bodys).removeClass(classRandom);
+                 }, 3000);
+            });
+        });
+    }
+
     function closePanel() {
         $(panel)
         .velocity({ left: '-100%'}, { duration: 400, easing: "swing"}, [20, 50]);
@@ -100,6 +117,7 @@ $(document).ready(function() {
         .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
         .addClass("panel-bottom")
         .css("height", btnHeight);
+        //Go to the bottom of the page!
         window.scrollTo(0,document.body.scrollHeight);
     }
 
@@ -114,30 +132,29 @@ $(document).ready(function() {
         });
     }
 
-    var clipboard = new Clipboard('.btn');
+    //Copy to clipboard
+
+    var clipboard = new Clipboard('.panel-btn-copy');
 
     clipboard.on('success', function(e) {
         var btnPanel = document.getElementsByClassName('panel-btn-copy');
         setTimeout(changeText, 300);
         function changeText() {
-            $(btnPanel).text("Copied!");
+            $(btnPanel).text("Copied!").addClass("success");
             setTimeout(function(){
-            $(btnPanel).text("Copy to clipboard");
+            $(btnPanel).removeClass("success").text("Copy to clipboard");
              }, 1000);
         }
     });
 
     clipboard.on('error', function(e) {
-
+        function changeText() {
+            $(btnPanel).text("Error!").addClass("error");
+            setTimeout(function(){
+            $(btnPanel).removeClass("error").text("Copy to clipboard");
+             }, 1000);
+        }
     });
-
-    // function each() {
-    //     $(btnFilters).click(function(){
-    //         $.each(filters, function(index) {
-    //             $(btnFilters).eq(index).addClass(filters[index] + 'z');
-    //         });
-    //     });
-    // }
 
     //FIRE!
 
@@ -152,8 +169,8 @@ $(document).ready(function() {
         $(panelInput).addClass("hide");
     });
 
-    // each();
     equalHeight();
+    poison();
     addFilter(btnSaturate, filters[0]);
     addFilter(btnSaturotate, filters[1]);
     addFilter(btnRotamatrix, filters[2]);

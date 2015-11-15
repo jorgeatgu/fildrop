@@ -4,6 +4,10 @@ $color-primario: #39CCCC;
 $color-secundario: #001F3F;
 $color-btn: #84174D;
 $color-fondo: #f1f1f1;
+$color-panel-code: #001E40;
+$color-text-code: #FFDC00;
+$color-error: #FB2503;
+$color-success: #33B400;
 
 /* Tipography */
 
