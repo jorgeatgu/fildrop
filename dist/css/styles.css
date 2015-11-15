@@ -807,7 +807,7 @@ button {
 .panel .panel-input .panel-code .panel-code-textarea {
   display: inline-block;
   vertical-align: middle;
-  width: 80%;
+  width: 90%;
   font-family: 'Work Sans',sans-serif;
   height: 175px;
   border: 2px solid #001E40;
@@ -816,7 +816,7 @@ button {
   color: #FFDC00;
   background-color: #001E40;
   resize: none;
-  font-size: 1.13rem;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
@@ -832,7 +832,7 @@ button {
   font-family: 'Work Sans',sans-serif;
   color: #001E40;
   background-color: #fff;
-  width: 80%;
+  width: 90%;
   text-align: left;
   background: #fff url('../img/btn-copy.svg') 5px center no-repeat;
   background-size: 24px;

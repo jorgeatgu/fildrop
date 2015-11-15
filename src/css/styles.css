@@ -245,7 +245,7 @@ button {
 			.panel-code-textarea {
 				display: inline-block;
 				vertical-align: middle;
-				width: 80%;
+				width: 90%;
 				font-family: $work-sans;
 				height: 175px;
 				border: 2px solid $color-panel-code;
@@ -254,7 +254,7 @@ button {
 				color: $color-text-code;
 				background-color: $color-panel-code;
 				resize: none;
-				font-size: 18px;
+				font-size: 16px;
 				box-sizing: border-box;
 			}
 		}
@@ -274,7 +274,7 @@ button {
 		font-family: $work-sans;
 		color: $color-panel-code;
 		background-color: #fff;
-		width: 80%;
+		width: 90%;
 		text-align: left;
 		background: #fff url('../img/btn-copy.svg') 5px center no-repeat;
 		background-size: 24px;
