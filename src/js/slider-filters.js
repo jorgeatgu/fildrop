@@ -47,13 +47,24 @@
         range: {
             'min': [ 0 ],
             'max': [ 360 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 90, 180, 270, 360],
+            density: 5
         }
     });
 
     hueRotateSlider.noUiSlider.on('change', function(){
         var valueHuerotate = hueRotateSlider.noUiSlider.get();
         var huerotateFilter = document.getElementById("hue-value");
+        var huerotateCode = document.getElementById("panel-code-huerotate");
         huerotateFilter.setAttributeNS(null, "values", valueHuerotate );
+
+        $(huerotateCode).text(
+            '<filter id="saturate-customize">\n' +
+                ' <feColorMatrix type="hueRotate" values="' + valueHuerotate + '"/>\n' +
+            '</filter>');
     });
 
     var stepSliderValueElement = document.getElementById('slider-huerotate-value');
