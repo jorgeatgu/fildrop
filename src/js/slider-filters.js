@@ -88,6 +88,11 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
@@ -95,6 +100,7 @@
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
+        var gaGammaValue = feGammaGe.noUiSlider.get();
         var bGammaValue = feGammaBa.noUiSlider.get();
         var beGammaValue = feGammaBe.noUiSlider.get();
         var rGamma = document.getElementById("r-gamma");
@@ -132,13 +138,18 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
 
     feGammaRe.noUiSlider.on('change', function(){
-        var reGammaValue = feGammaRe.noUiSlider.get();
         var rGammaValue = feGammaRa.noUiSlider.get();
+        var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
         var gaGammaValue = feGammaGe.noUiSlider.get();
         var bGammaValue = feGammaBa.noUiSlider.get();
@@ -179,11 +190,16 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
     feGammaGa.noUiSlider.on('change', function(){
-        var rGammaValue = feGammaRe.noUiSlider.get();
+        var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
         var gaGammaValue = feGammaGe.noUiSlider.get();
@@ -226,6 +242,11 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
@@ -236,10 +257,10 @@
         var gaGammaValue = feGammaGe.noUiSlider.get();
         var bGammaValue = feGammaBa.noUiSlider.get();
         var beGammaValue = feGammaBe.noUiSlider.get();
-        var rGamma = document.getElementById("r-gamma");
+        var rGamma = document.getElementById("g-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCodeRe = rGamma.getAttribute("amplitude");
-        rGamma.setAttributeNS(null, "amplitude", reGammaValue );
+        rGamma.setAttributeNS(null, "amplitude", gaGammaValue );
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
@@ -272,11 +293,16 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
     feGammaBa.noUiSlider.on('change', function(){
-        var rGammaValue = feGammaRe.noUiSlider.get();
+        var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
         var gaGammaValue = feGammaGe.noUiSlider.get();
@@ -317,11 +343,16 @@
         range: {
             'min': [ 0 ],
             'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
         }
     });
 
     feGammaBe.noUiSlider.on('change', function(){
-        var rGammaValue = feGammaRe.noUiSlider.get();
+        var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
         var gaGammaValue = feGammaGe.noUiSlider.get();

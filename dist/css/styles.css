@@ -890,6 +890,25 @@ button {
 	bottom: 0;
 }
 
+#panel-gamma .panel-input-slider {
+  top: 0;
+}
+
+#panel-gamma h4 {
+  font-size: 1rem;
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+}
+
+.panel-input-slider .panel-input-gamma {
+  display: inline-block;
+  width: 45%;
+  margin: 1.88rem 0;
+  margin-right: 5%;
+  box-sizing: border-box;
+}
+
 .panel-input-slider .noUi-base {
   background-color: #E74C7B;
   border: 1px solid #001F3F;

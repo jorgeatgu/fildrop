@@ -214,18 +214,24 @@
     <div class="panel-input  hide" id="panel-gamma">
       <h2 class="panel-input-title">feComponentTransfer - Gamma</h2>
       <div class="panel-input-slider">
-        <div id="slider-gamma-ra"></div>
-        <div id="slider-gamma-re"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-ra"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-re"></div>
         <div id="slider-gamma-ra-value"></div>
         <div id="slider-gamma-re-value"></div>
 
-        <div id="slider-gamma-ga"></div>
-        <div id="slider-gamma-ge"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-ga"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-ge"></div>
         <div id="slider-gamma-ga-value"></div>
         <div id="slider-gamma-ge-value"></div>
 
-        <div id="slider-gamma-ba"></div>
-        <div id="slider-gamma-be"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-ba"></div>
+
+        <div class="panel-input-gamma" id="slider-gamma-be"></div>
         <div id="slider-gamma-ba-value"></div>
         <div id="slider-gamma-be-value"></div>
       </div>
@@ -393,9 +399,9 @@
                   </filter>
                   <filter id="gamma">
                      <feComponentTransfer>
-                          <feFuncR id="r-gamma" type="gamma" amplitude="2" exponent="1"/>
-                          <feFuncG id="g-gamma" type="gamma" amplitude="2" exponent="3"/>
-                          <feFuncB id="b-gamma" type="gamma" amplitude="2" exponent="1"/>
+                          <feFuncR id="r-gamma" type="gamma" amplitude="1" exponent="1"/>
+                          <feFuncG id="g-gamma" type="gamma" amplitude="1" exponent="3"/>
+                          <feFuncB id="b-gamma" type="gamma" amplitude="1" exponent="1"/>
                      </feComponentTransfer>
                   </filter>
 
