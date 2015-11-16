@@ -388,11 +388,11 @@
         step: 1,
         range: {
             'min': [0],
-            'max': [8]
+            'max': [20]
         },
         pips: {
             mode: 'values',
-            values: [0, 4, 8],
+            values: [0, 5, 10, 15, 20],
             density: 10
         }
     });
