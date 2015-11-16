@@ -416,7 +416,7 @@
         stepSliderValueBlurElement.innerHTML = values[handle];
     });
 
-    //feMorphology
+    //feMorphology - Erode
     var morphoSlider = document.getElementById('slider-morpho');
 
     noUiSlider.create(morphoSlider, {
@@ -450,4 +450,40 @@
 
     morphoSlider.noUiSlider.on('update', function(values, handle) {
         stepSliderValueMorphoElement.innerHTML = values[handle];
+    });
+
+    //feMorphology - Dilate
+    var morphoDilateSlider = document.getElementById('slider-morpho-dilate');
+
+    noUiSlider.create(morphoDilateSlider, {
+        start: [0],
+        step: 1,
+        range: {
+            'min': [0],
+            'max': [20]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 5, 10, 15, 20],
+            density: 10
+        }
+    });
+
+    morphoDilateSlider.noUiSlider.on('change', function() {
+        var valueMorphoDilate = morphoDilateSlider.noUiSlider.get();
+        var filterMorphoDilate = document.getElementById("morpho-dilate-value");
+        var panelMorphoDilate = document.getElementById("panel-code-morpho-dilate");
+        filterMorphoDilate.setAttributeNS(null, "radius", valueMorphoDilate);
+
+        $(panelMorpho).text(
+            '<filter id="morpho-customize">\n' +
+            ' <feGaussianBlur operator="dilate" in="SourceGraphic" radius="' + valueMorphoDilate + '"/>\n' +
+            '</filter>');
+
+    });
+
+    var stepSliderValueDilateMorphoElement = document.getElementById('slider-morpho-dilate-value');
+
+    morphoDilateSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueDilateMorphoElement.innerHTML = values[handle];
     });

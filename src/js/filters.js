@@ -81,6 +81,7 @@ $(document).ready(function() {
     var panelGamma = $("#panel-gamma");
     var panelBlur = $("#panel-blur");
     var panelMorpho = $("#panel-morpho");
+    var panelMorphoDilate = $("#panel-morpho-dilate");
     var panelSaturotate = $("#panel-saturotate");
 
 
@@ -221,7 +222,7 @@ $(document).ready(function() {
     showPanelFilter(btnBlur, panelBlur);
     showPanelFilter(btnBlur2, panelBlur);
     showPanelFilter(btnMorpho, panelMorpho);
-    showPanelFilter(btnMorpho2, panelMorpho);
+    showPanelFilter(btnMorpho2, panelMorphoDilate);
     showPanelFilter(btnSaturotate, panelSaturotate);
 
 });

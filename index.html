@@ -272,6 +272,20 @@
         </button>
       </div>
     </div>
+    <div class="panel-input  hide" id="panel-morpho-dilate">
+      <h2 class="panel-input-title">feMorphology - Dilate</h2>
+      <div class="panel-input-slider">
+        <div id="slider-morpho-dilate"></div>
+        <div id="slider-morpho-dilate-value"></div>
+      </div>
+      <div class="panel-code">
+
+        <textarea id="panel-code-morpho-dilate" class="panel-code-textarea"></textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-morpho-dilate">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
     <div class="panel-input  hide" id="panel-saturotate">
       <h2 class="panel-input-title">feColorMatrix - Saturate + Hue Rotate</h2>
       <div class="panel-input-slider">
@@ -461,10 +475,10 @@
                   <!-- feMorphology -->
 
                   <filter id="morphoUno">
-                    <feMorphology id"morpho-value" operator="erode" in="SourceGraphic" radius="3"/>
+                    <feMorphology id="morpho-value" operator="erode" in="SourceGraphic" radius="3"/>
                   </filter>
                   <filter id="morphoDos">
-                    <feMorphology operator="erode" in="SourceGraphic" radius="6"/>
+                    <feMorphology id="morpho-dilate-value" operator="dilate" in="SourceGraphic" radius="6"/>
                   </filter>
 
          </defs>
