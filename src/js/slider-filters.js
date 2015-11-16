@@ -3,14 +3,14 @@
 
     noUiSlider.create(saturateSlider, {
         start: [0],
-        step: 0.01,
+        step: 5,
         range: {
             'min': [0],
-            'max': [1]
+            'max': [30]
         },
         pips: {
             mode: 'values',
-            values: [0, 1],
+            values: [0, 5, 10, 15, 20, 25, 30],
             density: 10
         }
     });
@@ -39,9 +39,9 @@
 
 
     //feColorMatrix type hueRotate
-    var hueRotateSlider = document.getElementById('slider-huerotate');
+    var firsthueRotateSlider = document.getElementById('slider-huerotate');
 
-    noUiSlider.create(hueRotateSlider, {
+    noUiSlider.create(firsthueRotateSlider, {
         start: [180],
         step: 1,
         range: {
@@ -55,22 +55,22 @@
         }
     });
 
-    hueRotateSlider.noUiSlider.on('change', function() {
-        var valueHuerotate = hueRotateSlider.noUiSlider.get();
-        var huerotateFilter = document.getElementById("hue-value");
+    firsthueRotateSlider.noUiSlider.on('change', function() {
+        var firstvaluehuerotate = firsthueRotateSlider.noUiSlider.get();
+        var firsthuerotateFilter = document.getElementById("hue-value");
         var huerotateCode = document.getElementById("panel-code-huerotate");
-        huerotateFilter.setAttributeNS(null, "values", valueHuerotate);
+        firsthuerotateFilter.setAttributeNS(null, "values", firstvaluehuerotate);
 
         $(huerotateCode).text(
             '<filter id="saturate-customize">\n' +
-            ' <feColorMatrix type="hueRotate" values="' + valueHuerotate + '"/>\n' +
+            ' <feColorMatrix type="hueRotate" values="' + firstvaluehuerotate + '"/>\n' +
             '</filter>');
     });
 
-    var stepSliderValueElement = document.getElementById('slider-huerotate-value');
+    var stepSliderValueHueElement = document.getElementById('slider-huerotate-value');
 
-    hueRotateSlider.noUiSlider.on('update', function(values, handle) {
-        stepSliderValueElement.innerHTML = values[handle];
+    firsthueRotateSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueHueElement.innerHTML = values[handle];
     });
 
 
