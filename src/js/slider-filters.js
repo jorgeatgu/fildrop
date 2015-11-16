@@ -475,7 +475,7 @@
         var panelMorphoDilate = document.getElementById("panel-code-morpho-dilate");
         filterMorphoDilate.setAttributeNS(null, "radius", valueMorphoDilate);
 
-        $(panelMorpho).text(
+        $(panelMorphoDilate).text(
             '<filter id="morpho-customize">\n' +
             ' <feGaussianBlur operator="dilate" in="SourceGraphic" radius="' + valueMorphoDilate + '"/>\n' +
             '</filter>');
@@ -486,4 +486,88 @@
 
     morphoDilateSlider.noUiSlider.on('update', function(values, handle) {
         stepSliderValueDilateMorphoElement.innerHTML = values[handle];
+    });
+
+    /*
+    feColorMatrix saturotate
+    1/2
+    Saturate
+    */
+
+    var saturotateSlider = document.getElementById('slider-saturotate');
+
+    noUiSlider.create(saturotateSlider, {
+        start: [0],
+        step: 5,
+        range: {
+            'min': [0],
+            'max': [50]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50],
+            density: 5
+        }
+    });
+
+    saturotateSlider.noUiSlider.on('change', function() {
+        var saturotateValue = saturotateSlider.noUiSlider.get();
+        var valueSaturotateHuerotate = hueRotateSlider.noUiSlider.get();
+        var saturotateFilter = document.getElementById("saturotate-value");
+        var saturotateCode = document.getElementById("panel-code-saturotate");
+        saturotateFilter.setAttributeNS(null, "values", saturotateValue);
+
+        $(saturotateCode).text(
+            '<filter <filter id="saturotate-customize" filterUnits="objectBoundingBox">\n' +
+            ' <feColorMatrix type="saturate" result="saturado" values="' + saturotateValue + '"/>\n' +
+            ' <feColorMatrix type="hueRotate" in="saturado" in2="SourceGraphic" values="' + valueSaturotateHuerotate + '"/>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueSaturotateElement = document.getElementById('slider-saturotate-value');
+
+    saturotateSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueSaturotateElement.innerHTML = values[handle];
+    });
+
+    /*
+    feColorMatrix saturotate
+    2/2
+    hueRotate
+    */
+
+    var hueRotateSlider = document.getElementById('slider-saturotate-huerotate');
+
+    noUiSlider.create(hueRotateSlider, {
+        start: [180],
+        step: 1,
+        range: {
+            'min': [0],
+            'max': [360]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 90, 180, 270, 360],
+            density: 5
+        }
+    });
+
+    hueRotateSlider.noUiSlider.on('change', function() {
+        var saturotateValue = saturotateSlider.noUiSlider.get();
+        var valueSaturotateHuerotate = hueRotateSlider.noUiSlider.get();
+        var hueRotateFilter = document.getElementById("saturotate-hue-value");
+        var saturotateCode = document.getElementById("panel-code-saturotate");
+        hueRotateFilter.setAttributeNS(null, "values", valueSaturotateHuerotate);
+
+        $(saturotateCode).text(
+            '<filter <filter id="saturotate-customize" filterUnits="objectBoundingBox">\n' +
+            ' <feColorMatrix type="saturate" result="saturado" values="' + saturotateValue + '"/>\n' +
+            ' <feColorMatrix type="hueRotate" in="saturado" in2="SourceGraphic" values="' + valueSaturotateHuerotate + '"/>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueHueRotateElement = document.getElementById('slider-saturotate-huerotate-value');
+
+    hueRotateSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueHueRotateElement.innerHTML = values[handle];
     });

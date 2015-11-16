@@ -291,6 +291,9 @@
       <div class="panel-input-slider">
         <div id="slider-saturotate"></div>
         <div id="slider-saturotate-value"></div>
+
+        <div id="slider-saturotate-huerotate"></div>
+        <div id="slider-saturotate-huerotate-value"></div>
       </div>
       <div class="panel-code">
 
@@ -338,8 +341,8 @@
                   </filter>
 
                   <filter id="saturotate" filterUnits="objectBoundingBox">
-                      <feColorMatrix id="saturate-value" type="saturate" result="saturado" values="20"/>
-                      <feColorMatrix id="hue-value" type="hueRotate" in="saturado" in2="SourceGraphic" values="291"/>
+                      <feColorMatrix id="saturotate-value" type="saturate" result="saturado" values="20"/>
+                      <feColorMatrix id="saturotate-hue-value" type="hueRotate" in="saturado" in2="SourceGraphic" values="291"/>
                   </filter>
 
                   <filter id="rotamatrix" filterUnits="objectBoundingBox">
