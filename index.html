@@ -102,7 +102,7 @@
     <button class="btn-blur-uno" data-panel="open">
       Blur 1
     </button>
-    <button class="btn-blur-dos" data-panel="open">
+    <button class="btn-blur-dos">
       Blur 2
     </button>
     <button class="btn-morpho-uno" data-panel="open">
@@ -266,12 +266,10 @@
       </div>
       <div class="panel-code">
 
-        <pre id="panel-code-morpho" class="panel-code-textarea">
+        <textarea id="panel-code-morpho" class="panel-code-textarea"></textarea>
         <button class="panel-btn-copy" data-clipboard-target="#panel-code-morpho">
             Copy to clipboard
         </button>
-
-        </pre>
       </div>
     </div>
     <div class="panel-input  hide" id="panel-saturotate">
@@ -282,12 +280,10 @@
       </div>
       <div class="panel-code">
 
-        <pre id="panel-code-saturotate" class="panel-code-textarea">
+        <textarea id="panel-code-saturotate" class="panel-code-textarea"></textarea>
         <button class="panel-btn-copy" data-clipboard-target="#panel-code-saturotate">
             Copy to clipboard
         </button>
-
-        </pre>
       </div>
     </div>
 
@@ -465,7 +461,7 @@
                   <!-- feMorphology -->
 
                   <filter id="morphoUno">
-                    <feMorphology operator="erode" in="SourceGraphic" radius="3"/>
+                    <feMorphology id"morpho-value" operator="erode" in="SourceGraphic" radius="3"/>
                   </filter>
                   <filter id="morphoDos">
                     <feMorphology operator="erode" in="SourceGraphic" radius="6"/>

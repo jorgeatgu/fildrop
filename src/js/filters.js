@@ -207,9 +207,9 @@ $(document).ready(function() {
     addFilter(btnMap2, filters[22]);
     addFilter(btnBlur, filters[23]);
     addFilter(btnBlur2, filters[24]);
-    addFilter(btnMorpho, filters[26]);
-    addFilter(btnMorpho2, filters[27]);
-    addFilter(btnMultitable, filters[28]);
+    addFilter(btnMorpho, filters[25]);
+    addFilter(btnMorpho2, filters[26]);
+    addFilter(btnMultitable, filters[27]);
 
 
     showPanelFilter(btnSaturate, panelSaturate);

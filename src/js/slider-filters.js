@@ -415,3 +415,39 @@
     blurSlider.noUiSlider.on('update', function(values, handle) {
         stepSliderValueBlurElement.innerHTML = values[handle];
     });
+
+    //feMorphology
+    var morphoSlider = document.getElementById('slider-morpho');
+
+    noUiSlider.create(morphoSlider, {
+        start: [0],
+        step: 1,
+        range: {
+            'min': [0],
+            'max': [20]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 5, 10, 15, 20],
+            density: 10
+        }
+    });
+
+    morphoSlider.noUiSlider.on('change', function() {
+        var valueMorpho = morphoSlider.noUiSlider.get();
+        var filterMorpho = document.getElementById("morpho-value");
+        var panelMorpho = document.getElementById("panel-code-morpho");
+        filterMorpho.setAttributeNS(null, "radius", valueMorpho);
+
+        $(panelMorpho).text(
+            '<filter id="morpho-customize">\n' +
+            ' <feGaussianBlur operator="erode" in="SourceGraphic" radius="' + valueMorpho + '"/>\n' +
+            '</filter>');
+
+    });
+
+    var stepSliderValueMorphoElement = document.getElementById('slider-morpho-value');
+
+    morphoSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueMorphoElement.innerHTML = values[handle];
+    });
