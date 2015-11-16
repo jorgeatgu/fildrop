@@ -1,14 +1,32 @@
-SVG FILTERS
+FILDROP
 ============
 
 
-Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanpub.com/scalable/). En esta demo podemos ver los diferentes efectos de filtros que tenemos a nuestra disposición en SVG. No están todos los que son :)
+[DEMO](http://jorgeatgu.github.io/svg-filters/)
 
-[DEMO ONLINE](http://jorgeatgu.github.io/svg-filters/)
+##Filters to customize
 
-[DEMO CodePen](http://codepen.io/jorgeatgu/full/wBRmBZ/)
+##How to use
+
+Download **FILDROP**. The first thing you need to do is include the **CSS** and the **SVG** in your project.
+
+###CSS
+
+###SVG
+
+You can include the filters at the bottom of HTML. I prefer include the file at my folder images.
+
+<link rel="stylesheet" href="path/to/wallop.css">
+
+##Browser Suppport
+
+##Contributing
+
+To contribute to **FILDROP**, clone this repo locally, create your awesome filters and commit your code.
 
 ##Credits
+
+[Matthew Bystedt](http://apike.ca/prog_svg_filters.html)
 
 [David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters)
 
@@ -18,18 +36,4 @@ Nueva demo para el capítulo 7 de ["SCALABLE, un libro sobre SVG"](https://leanp
 
 [W3C](http://www.w3.org/TR/SVG/filters.html)
 
-[Matthew Bystedt](http://apike.ca/prog_svg_filters.html)
-
 [Drag & Drop](https://github.com/remy/html5demos)
-
-##CodePen
-
-[Michale Mullany](http://codepen.io/mullany/)
-
-[Animate Filters SMIL](http://codepen.io/jorgeatgu/pen/Ayevf)
-
-[Animate Filters SMIL feTurbulence](http://codepen.io/jorgeatgu/pen/npsAq)
-
-[Filter effects](http://codepen.io/jorgeatgu/pen/pJCqc)
-
-[Filter effects SMIL](http://codepen.io/jorgeatgu/pen/jyibl)

@@ -2,11 +2,11 @@
     var saturateSlider = document.getElementById('slider-saturate');
 
     noUiSlider.create(saturateSlider, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -15,15 +15,15 @@
         }
     });
 
-    saturateSlider.noUiSlider.on('change', function(){
+    saturateSlider.noUiSlider.on('change', function() {
         var valueSaturate = saturateSlider.noUiSlider.get();
         var saturateFilter = document.getElementById("saturate-value");
         var saturateCode = document.getElementById("panel-code-saturate");
-        saturateFilter.setAttributeNS(null, "values", valueSaturate );
+        saturateFilter.setAttributeNS(null, "values", valueSaturate);
 
         $(saturateCode).text(
             '<filter id="saturate-customize">\n' +
-                ' <feColorMatrix type="saturate" values="' + valueSaturate + '"/>\n' +
+            ' <feColorMatrix type="saturate" values="' + valueSaturate + '"/>\n' +
             '</filter>');
 
     });
@@ -32,7 +32,7 @@
 
     var stepSliderValueElement = document.getElementById('slider-saturate-value');
 
-    saturateSlider.noUiSlider.on('update', function( values, handle ) {
+    saturateSlider.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElement.innerHTML = values[handle];
     });
 
@@ -42,11 +42,11 @@
     var hueRotateSlider = document.getElementById('slider-huerotate');
 
     noUiSlider.create(hueRotateSlider, {
-        start: [ 180 ],
+        start: [180],
         step: 1,
         range: {
-            'min': [ 0 ],
-            'max': [ 360 ]
+            'min': [0],
+            'max': [360]
         },
         pips: {
             mode: 'values',
@@ -55,21 +55,21 @@
         }
     });
 
-    hueRotateSlider.noUiSlider.on('change', function(){
+    hueRotateSlider.noUiSlider.on('change', function() {
         var valueHuerotate = hueRotateSlider.noUiSlider.get();
         var huerotateFilter = document.getElementById("hue-value");
         var huerotateCode = document.getElementById("panel-code-huerotate");
-        huerotateFilter.setAttributeNS(null, "values", valueHuerotate );
+        huerotateFilter.setAttributeNS(null, "values", valueHuerotate);
 
         $(huerotateCode).text(
             '<filter id="saturate-customize">\n' +
-                ' <feColorMatrix type="hueRotate" values="' + valueHuerotate + '"/>\n' +
+            ' <feColorMatrix type="hueRotate" values="' + valueHuerotate + '"/>\n' +
             '</filter>');
     });
 
     var stepSliderValueElement = document.getElementById('slider-huerotate-value');
 
-    hueRotateSlider.noUiSlider.on('update', function( values, handle ) {
+    hueRotateSlider.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElement.innerHTML = values[handle];
     });
 
@@ -83,11 +83,11 @@
     var feGammaRa = document.getElementById('slider-gamma-ra');
 
     noUiSlider.create(feGammaRa, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -96,7 +96,7 @@
         }
     });
 
-    feGammaRa.noUiSlider.on('change', function(){
+    feGammaRa.noUiSlider.on('change', function() {
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -106,21 +106,21 @@
         var rGamma = document.getElementById("r-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCode = rGamma.getAttribute("amplitude");
-        rGamma.setAttributeNS(null, "amplitude", rGammaValue );
+        rGamma.setAttributeNS(null, "amplitude", rGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaRa = document.getElementById('slider-gamma-ra-value');
 
-    feGammaRa.noUiSlider.on('update', function( values, handle ) {
+    feGammaRa.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaRa.innerHTML = values[handle];
     });
 
@@ -133,11 +133,11 @@
     var feGammaRe = document.getElementById('slider-gamma-re');
 
     noUiSlider.create(feGammaRe, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -147,7 +147,7 @@
     });
 
 
-    feGammaRe.noUiSlider.on('change', function(){
+    feGammaRe.noUiSlider.on('change', function() {
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -157,21 +157,21 @@
         var rGamma = document.getElementById("r-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCodeRe = rGamma.getAttribute("exponent");
-        rGamma.setAttributeNS(null, "exponent", reGammaValue );
+        rGamma.setAttributeNS(null, "exponent", reGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaRe = document.getElementById('slider-gamma-re-value');
 
-    feGammaRe.noUiSlider.on('update', function( values, handle ) {
+    feGammaRe.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaRe.innerHTML = values[handle];
     });
 
@@ -185,11 +185,11 @@
     var feGammaGa = document.getElementById('slider-gamma-ga');
 
     noUiSlider.create(feGammaGa, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -198,7 +198,7 @@
         }
     });
 
-    feGammaGa.noUiSlider.on('change', function(){
+    feGammaGa.noUiSlider.on('change', function() {
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -208,21 +208,21 @@
         var gGamma = document.getElementById("g-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCode = gGamma.getAttribute("amplitude");
-        gGamma.setAttributeNS(null, "amplitude", gGammaValue );
+        gGamma.setAttributeNS(null, "amplitude", gGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaGa = document.getElementById('slider-gamma-ra-value');
 
-    feGammaGa.noUiSlider.on('update', function( values, handle ) {
+    feGammaGa.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaGa.innerHTML = values[handle];
     });
 
@@ -237,11 +237,11 @@
 
 
     noUiSlider.create(feGammaGe, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -250,7 +250,7 @@
         }
     });
 
-    feGammaGe.noUiSlider.on('change', function(){
+    feGammaGe.noUiSlider.on('change', function() {
         var reGammaValue = feGammaRe.noUiSlider.get();
         var rGammaValue = feGammaRa.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -260,21 +260,21 @@
         var rGamma = document.getElementById("g-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCodeRe = rGamma.getAttribute("amplitude");
-        rGamma.setAttributeNS(null, "amplitude", gaGammaValue );
+        rGamma.setAttributeNS(null, "amplitude", gaGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaGe = document.getElementById('slider-gamma-ge-value');
 
-    feGammaGe.noUiSlider.on('update', function( values, handle ) {
+    feGammaGe.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaGe.innerHTML = values[handle];
     });
 
@@ -288,11 +288,11 @@
     var feGammaBa = document.getElementById('slider-gamma-ba');
 
     noUiSlider.create(feGammaBa, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -301,7 +301,7 @@
         }
     });
 
-    feGammaBa.noUiSlider.on('change', function(){
+    feGammaBa.noUiSlider.on('change', function() {
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -311,21 +311,21 @@
         var bGamma = document.getElementById("b-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCode = bGamma.getAttribute("amplitude");
-        bGamma.setAttributeNS(null, "amplitude", bGammaValue );
+        bGamma.setAttributeNS(null, "amplitude", bGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaBa = document.getElementById('slider-gamma-ba-value');
 
-    feGammaBa.noUiSlider.on('update', function( values, handle ) {
+    feGammaBa.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaBa.innerHTML = values[handle];
     });
 
@@ -338,11 +338,11 @@
     var feGammaBe = document.getElementById('slider-gamma-be');
 
     noUiSlider.create(feGammaBe, {
-        start: [ 0 ],
+        start: [0],
         step: 0.01,
         range: {
-            'min': [ 0 ],
-            'max': [ 1 ]
+            'min': [0],
+            'max': [1]
         },
         pips: {
             mode: 'values',
@@ -351,7 +351,7 @@
         }
     });
 
-    feGammaBe.noUiSlider.on('change', function(){
+    feGammaBe.noUiSlider.on('change', function() {
         var rGammaValue = feGammaRa.noUiSlider.get();
         var reGammaValue = feGammaRe.noUiSlider.get();
         var gGammaValue = feGammaGa.noUiSlider.get();
@@ -361,27 +361,57 @@
         var bGamma = document.getElementById("b-gamma");
         var gammaPanel = document.getElementById("panel-code-gamma");
         var gammaCode = bGamma.getAttribute("exponent");
-        bGamma.setAttributeNS(null, "exponent", beGammaValue );
+        bGamma.setAttributeNS(null, "exponent", beGammaValue);
 
         $(gammaPanel).text(
             '<filter id="gamma">\n' +
-                '<feComponentTransfer>\n' +
-                    '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
-                    '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
-                    '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
-                '</feComponentTransfer>\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
+            '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
+            '<feFuncB type="gamma" amplitude="' + bGammaValue + '" exponent="' + beGammaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
             '</filter>');
     });
 
     var stepSliderValueElementfeGammaBe = document.getElementById('slider-gamma-be-value');
 
-    feGammaBe.noUiSlider.on('update', function( values, handle ) {
+    feGammaBe.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementfeGammaBe.innerHTML = values[handle];
     });
 
 
+    //feGaussianBlur
+    var blurSlider = document.getElementById('slider-blur');
 
+    noUiSlider.create(blurSlider, {
+        start: [0],
+        step: 1,
+        range: {
+            'min': [0],
+            'max': [8]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 4, 8],
+            density: 10
+        }
+    });
 
+    blurSlider.noUiSlider.on('change', function() {
+        var valueBlur = blurSlider.noUiSlider.get();
+        var filterBlur = document.getElementById("blur-value");
+        var panelBLur = document.getElementById("panel-code-blur");
+        filterBlur.setAttributeNS(null, "stdDeviation", valueBlur);
 
+        $(panelBLur).text(
+            '<filter id="blur-customize">\n' +
+            ' <feGaussianBlur stdDeviation="' + valueBlur + '"/>\n' +
+            '</filter>');
 
+    });
 
+    var stepSliderValueBlurElement = document.getElementById('slider-blur-value');
+
+    blurSlider.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueBlurElement.innerHTML = values[handle];
+    });

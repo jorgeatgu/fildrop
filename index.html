@@ -60,7 +60,7 @@
     <button class="btn-hueRotate" data-panel="open">
       hueRotate
     </button>
-    <button class="btn-luminance" data-panel="open">
+    <button class="btn-luminance">
       Luminance
     </button>
     <button class="btn-discrete">
@@ -392,9 +392,9 @@
                   </filter>
                   <filter id="linear">
                      <feComponentTransfer>
-                        <feFuncR type="linear" slope=".5" amplitude="6" intercept=".25"/>
-                        <feFuncG type="linear" slope=".5" amplitude="2" intercept="0"/>
-                        <feFuncB type="linear" slope=".5" amplitude="3" intercept=".5"/>
+                        <feFuncR id="r-linear" type="linear" slope=".5" amplitude="6" intercept=".25"/>
+                        <feFuncG id="g-linear" type="linear" slope=".5" amplitude="2" intercept="0"/>
+                        <feFuncB id="b-linear" type="linear" slope=".5" amplitude="3" intercept=".5"/>
                      </feComponentTransfer>
                   </filter>
                   <filter id="gamma">
@@ -443,7 +443,7 @@
                     <feColorMatrix type="matrix" values=".343 .669 .119 0 0 .249 .626 .130 0 0 .172 .334 .111 0 0 .000 .000 .000 1 0"/>
                   </filter>
 
-                 <filter id='turbulence' x='0' y='0'>
+                 <filter id='turbulence'>
                      <feTurbulence type='turbulence' baseFrequency='.7' result='fuzz' numOctaves='2' stitchTiles='stitch'/>
                      <feComposite in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
                  </filter>
