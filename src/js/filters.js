@@ -92,33 +92,43 @@ $(document).ready(function() {
     }
 
     function poison() {
-        $(btnPoison).click(function(){
+        $(btnPoison).click(function() {
 
             var bodys = document.getElementsByTagName("body");
-            var classRandom = filters[~~(Math.random()*filters.length)];
+            var classRandom = filters[~~(Math.random() * filters.length)];
 
-            $(bodys).each(function(){
+            $(bodys).each(function() {
                 $(bodys).addClass(classRandom);
-                setTimeout(function(){
-                $(bodys).removeClass(classRandom);
-                 }, 3000);
+                setTimeout(function() {
+                    $(bodys).removeClass(classRandom);
+                }, 3000);
             });
         });
     }
 
     function closePanel() {
         $(panel)
-        .velocity({ left: '-100%'}, { duration: 400, easing: "swing"}, [20, 50]);
+            .velocity({
+                left: '-100%'
+            }, {
+                duration: 400,
+                easing: "swing"
+            }, [20, 50]);
         $("img").removeClass();
     }
 
     function openPanel() {
         $(panel)
-        .velocity({ left: '0'}, { duration: 400, easing: "swing"}, [20, 50])
-        .addClass("panel-bottom")
-        .css("height", btnHeight);
+            .velocity({
+                left: '0'
+            }, {
+                duration: 400,
+                easing: "swing"
+            }, [20, 50])
+            .addClass("panel-bottom")
+            .css("height", btnHeight);
         //Go to the bottom of the page!
-        window.scrollTo(0,document.body.scrollHeight);
+        window.scrollTo(0, document.body.scrollHeight);
     }
 
     function equalHeight() {
@@ -127,7 +137,7 @@ $(document).ready(function() {
 
 
     function showPanelFilter(btn, panel) {
-        $(btn).click(function(){
+        $(btn).click(function() {
             $(panel).removeClass("hide");
         });
     }
@@ -139,20 +149,21 @@ $(document).ready(function() {
     clipboard.on('success', function(e) {
         var btnPanel = document.getElementsByClassName('panel-btn-copy');
         setTimeout(changeText, 300);
+
         function changeText() {
             $(btnPanel).text("Copied!").addClass("success");
-            setTimeout(function(){
-            $(btnPanel).removeClass("success").text("Copy to clipboard");
-             }, 1000);
+            setTimeout(function() {
+                $(btnPanel).removeClass("success").text("Copy to clipboard");
+            }, 1000);
         }
     });
 
     clipboard.on('error', function(e) {
         function changeText() {
             $(btnPanel).text("Error!").addClass("error");
-            setTimeout(function(){
-            $(btnPanel).removeClass("error").text("Copy to clipboard");
-             }, 1000);
+            setTimeout(function() {
+                $(btnPanel).removeClass("error").text("Copy to clipboard");
+            }, 1000);
         }
     });
 
