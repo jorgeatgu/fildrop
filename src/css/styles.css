@@ -94,6 +94,7 @@ button {
 			width: 100%;
 			img {
 				width: 90%;
+				max-height: 400px;
 				display: block;
 				border: 3px solid $color-btn;
 				border-left: 0;

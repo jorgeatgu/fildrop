@@ -193,5 +193,12 @@
                <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="1.00" k2="0.17" k3="0.79" k4="0.29"/>
               </filter>
 
+              <filter id="gamma-customize">
+              <feComponentTransfer>
+              <feFuncR type="gamma" amplitude="0.00" exponent="0.00"/>
+              <feFuncG type="gamma" amplitude="0.00" exponent="0.00"/>
+              <feFuncB type="gamma" amplitude="0.34" exponent="0.44"/>
+              </feComponentTransfer>
+              </filter>
      </defs>
 </svg>
