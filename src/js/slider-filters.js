@@ -598,6 +598,10 @@
     sliderTurbuBase.noUiSlider.on('change', function() {
         var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
         var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
         var sliderTurbuBaseV = document.getElementById("turbulence-value");
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderTurbuBaseV.setAttributeNS(null, "baseFrequency", sliderTurbuBaseValue);
@@ -605,7 +609,7 @@
         $(sliderTurbuBasePanel).text(
             '<filter id="turbulence-customize">\n' +
             ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderTurbuBaseValue + '" k2="' + sliderTurbuBaseValue + '" k3="' + sliderTurbuBaseValue + '" k4="' + sliderTurbuBaseValue + '"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
             '</filter>');
     });
 
@@ -639,6 +643,10 @@
     sliderTurbuNum.noUiSlider.on('change', function() {
         var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
         var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
         var sliderTurbuNumV = document.getElementById("turbulence-value");
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderTurbuNumV.setAttributeNS(null, "numOctaves", sliderTurbuNumValue);
@@ -646,7 +654,7 @@
         $(sliderTurbuBasePanel).text(
             '<filter id="turbulence-customize">\n' +
             ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderTurbuBaseValue + '" k2="' + sliderTurbuBaseValue + '" k3="' + sliderTurbuBaseValue + '" k4="' + sliderTurbuBaseValue + '"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
             '</filter>');
     });
 
@@ -661,9 +669,9 @@
     3/6 - k1
     */
 
-    var sliderTurbuNum = document.getElementById('slider-turbulence-num');
+    var sliderCompoK1 = document.getElementById('slider-composite-k1');
 
-    noUiSlider.create(sliderTurbuNum, {
+    noUiSlider.create(sliderCompoK1, {
         start: [0],
         step: 0.01,
         range: {
@@ -677,22 +685,161 @@
         }
     });
 
-    sliderTurbuNum.noUiSlider.on('change', function() {
+    sliderCompoK1.noUiSlider.on('change', function() {
         var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
         var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
-        var sliderTurbuNumV = document.getElementById("turbulence-value");
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
+        var sliderCompok1V = document.getElementById("composite-value");
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
-        sliderTurbuNumV.setAttributeNS(null, "numOctaves", sliderTurbuNumValue);
+        sliderCompok1V.setAttributeNS(null, "k1", sliderCompok1Value);
 
         $(sliderTurbuBasePanel).text(
             '<filter id="turbulence-customize">\n' +
             ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderTurbuBaseValue + '" k2="' + sliderTurbuBaseValue + '" k3="' + sliderTurbuBaseValue + '" k4="' + sliderTurbuBaseValue + '"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
             '</filter>');
     });
 
-    var stepSliderValueElementTurbuNum = document.getElementById('slider-turbulence-num-value');
+    var stepSliderValueElementCompoK1 = document.getElementById('slider-composite-k1-value');
 
-    sliderTurbuNum.noUiSlider.on('update', function(values, handle) {
-        stepSliderValueElementTurbuNum.innerHTML = values[handle];
+    sliderCompoK1.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementCompoK1.innerHTML = values[handle];
+    });
+
+    /*
+    feTurbulence + feComposite
+    4/6 - k2
+    */
+
+    var sliderCompoK2 = document.getElementById('slider-composite-k2');
+
+    noUiSlider.create(sliderCompoK2, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderCompoK2.noUiSlider.on('change', function() {
+        var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
+        var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
+        var sliderCompok1V = document.getElementById("composite-value");
+        var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
+        sliderCompok1V.setAttributeNS(null, "k2", sliderCompok2Value);
+
+        $(sliderTurbuBasePanel).text(
+            '<filter id="turbulence-customize">\n' +
+            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementCompoK2 = document.getElementById('slider-composite-k2-value');
+
+    sliderCompoK2.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementCompoK2.innerHTML = values[handle];
+    });
+
+    /*
+    feTurbulence + feComposite
+    5/6 - k3
+    */
+
+    var sliderCompoK3 = document.getElementById('slider-composite-k3');
+
+    noUiSlider.create(sliderCompoK3, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderCompoK3.noUiSlider.on('change', function() {
+        var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
+        var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
+        var sliderCompok1V = document.getElementById("composite-value");
+        var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
+        sliderCompok1V.setAttributeNS(null, "k3", sliderCompok3Value);
+
+        $(sliderTurbuBasePanel).text(
+            '<filter id="turbulence-customize">\n' +
+            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementCompoK3 = document.getElementById('slider-composite-k3-value');
+
+    sliderCompoK3.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementCompoK3.innerHTML = values[handle];
+    });
+
+    /*
+    feTurbulence + feComposite
+    6/6 - k4
+    */
+
+    var sliderCompoK4 = document.getElementById('slider-composite-k4');
+
+    noUiSlider.create(sliderCompoK4, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderCompoK4.noUiSlider.on('change', function() {
+        var sliderTurbuBaseValue = sliderTurbuBase.noUiSlider.get();
+        var sliderTurbuNumValue = sliderTurbuNum.noUiSlider.get();
+        var sliderCompok1Value = sliderCompoK1.noUiSlider.get();
+        var sliderCompok2Value = sliderCompoK2.noUiSlider.get();
+        var sliderCompok3Value = sliderCompoK3.noUiSlider.get();
+        var sliderCompok4Value = sliderCompoK4.noUiSlider.get();
+        var sliderCompok1V = document.getElementById("composite-value");
+        var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
+        sliderCompok1V.setAttributeNS(null, "k3", sliderCompok4Value);
+
+        $(sliderTurbuBasePanel).text(
+            '<filter id="turbulence-customize">\n' +
+            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementCompoK4 = document.getElementById('slider-composite-k4-value');
+
+    sliderCompoK4.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementCompoK4.innerHTML = values[handle];
     });

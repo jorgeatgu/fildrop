@@ -186,5 +186,12 @@
                 <feMorphology operator="dilate" in="SourceGraphic" radius="6"/>
               </filter>
 
+
+
+              <filter id="turbulence-customize">
+               <feTurbulence type="turbulence" result="fuzz" baseFrequency="0.26" numOctaves="0.00" stitchTiles="stitch"/>
+               <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="1.00" k2="0.17" k3="0.79" k4="0.29"/>
+              </filter>
+
      </defs>
 </svg>
