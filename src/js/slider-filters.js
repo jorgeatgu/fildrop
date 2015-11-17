@@ -843,3 +843,292 @@
     sliderCompoK4.noUiSlider.on('update', function(values, handle) {
         stepSliderValueElementCompoK4.innerHTML = values[handle];
     });
+
+    /*
+    feComponentTransfer - Linear
+    1/6 - Red -Slope
+    */
+
+    var sliderFeLineRs = document.getElementById('slider-linear-rs');
+
+    noUiSlider.create(sliderFeLineRs, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineRs.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineRsV = document.getElementById("r-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineRsV.setAttributeNS(null, "slope", sliderFeLineRsValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineRs = document.getElementById('slider-linear-rs-value');
+
+    sliderFeLineRs.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineRs.innerHTML = values[handle];
+    });
+
+    /*
+    feComponentTransfer - Linear
+    2/6 - Red - Amplitude
+    */
+
+    var sliderFeLineRa = document.getElementById('slider-linear-ra');
+
+    noUiSlider.create(sliderFeLineRa, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineRa.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineRaV = document.getElementById("r-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineRaV.setAttributeNS(null, "amplitude", sliderFeLineRaValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineRa = document.getElementById('slider-linear-ra-value');
+
+    sliderFeLineRa.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineRa.innerHTML = values[handle];
+    });
+
+
+    /*
+    feComponentTransfer - Linear
+    3/6 - Green -Slope
+    */
+
+    var sliderFeLineGs = document.getElementById('slider-linear-gs');
+
+    noUiSlider.create(sliderFeLineGs, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineGs.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineGsV = document.getElementById("g-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineGsV.setAttributeNS(null, "slope", sliderFeLineGsValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineGs = document.getElementById('slider-linear-gs-value');
+
+    sliderFeLineGs.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineGs.innerHTML = values[handle];
+    });
+
+    /*
+    feComponentTransfer - Linear
+    4/6 - Green -Slope
+    */
+
+    var sliderFeLineGa = document.getElementById('slider-linear-ga');
+
+    noUiSlider.create(sliderFeLineGa, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineGa.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineGaV = document.getElementById("g-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineGaV.setAttributeNS(null, "slope", sliderFeLineGaValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineGa = document.getElementById('slider-linear-ga-value');
+
+    sliderFeLineGa.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineGa.innerHTML = values[handle];
+    });
+
+    /*
+    feComponentTransfer - Linear
+    5/6 - Blue - Amplitude
+    */
+
+    var sliderFeLineBs = document.getElementById('slider-linear-bs');
+
+    noUiSlider.create(sliderFeLineBs, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineBs.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineBsV = document.getElementById("b-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineBsV.setAttributeNS(null, "slope", sliderFeLineBsValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineBs = document.getElementById('slider-linear-bs-value');
+
+    sliderFeLineBs.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineBs.innerHTML = values[handle];
+    });
+
+    /*
+    feComponentTransfer - Linear
+    6/6 - Blue - Amplitude
+    */
+
+    var sliderFeLineBa = document.getElementById('slider-linear-ba');
+
+    noUiSlider.create(sliderFeLineBa, {
+        start: [0],
+        step: 0.01,
+        range: {
+            'min': [0],
+            'max': [1]
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1],
+            density: 10
+        }
+    });
+
+    sliderFeLineBa.noUiSlider.on('change', function() {
+        var sliderFeLineRsValue = sliderFeLineRs.noUiSlider.get();
+        var sliderFeLineRaValue = sliderFeLineRa.noUiSlider.get();
+        var sliderFeLineGsValue = sliderFeLineGs.noUiSlider.get();
+        var sliderFeLineGaValue = sliderFeLineGa.noUiSlider.get();
+        var sliderFeLineBsValue = sliderFeLineBs.noUiSlider.get();
+        var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
+        var sliderFeLineBaV = document.getElementById("b-linear");
+        var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+        sliderFeLineBaV.setAttributeNS(null, "amplitude", sliderFeLineBaValue);
+
+        $(sliderFeLineRsPanel).text(
+            '<filter id="linear-customize">\n' +
+            '<feComponentTransfer>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '</feComponentTransfer>\n' +
+            '</filter>');
+    });
+
+    var stepSliderValueElementFeLineBa = document.getElementById('slider-linear-ba-value');
+
+    sliderFeLineBa.noUiSlider.on('update', function(values, handle) {
+        stepSliderValueElementFeLineBa.innerHTML = values[handle];
+    });

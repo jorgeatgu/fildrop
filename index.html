@@ -63,7 +63,7 @@
     <button class="btn-luminance">
       Luminance
     </button>
-    <button class="btn-discrete" data-panel="open">
+    <button class="btn-discrete">
       Discrete
     </button>
     <button class="btn-discrete-dos">
@@ -186,8 +186,23 @@
     <div class="panel-input  hide" id="panel-linear">
       <h2 class="panel-input-title">feComponentTransfer - Linear</h2>
       <div class="panel-input-slider">
-        <div id="slider-linear"></div>
-        <div id="slider-linear-value"></div>
+        <div id="slider-linear-rs"></div>
+        <div id="slider-linear-rs-value"></div>
+
+        <div id="slider-linear-ra"></div>
+        <div id="slider-linear-ra-value"></div>
+
+        <div id="slider-linear-gs"></div>
+        <div id="slider-linear-gs-value"></div>
+
+        <div id="slider-linear-ga"></div>
+        <div id="slider-linear-ga-value"></div>
+
+        <div id="slider-linear-bs"></div>
+        <div id="slider-linear-bs-value"></div>
+
+        <div id="slider-linear-ba"></div>
+        <div id="slider-linear-ba-value"></div>
       </div>
       <div class="panel-code">
         <textarea readonly id="panel-code-linear" class="panel-code-textarea">
@@ -419,9 +434,9 @@
                   </filter>
                   <filter id="linear">
                      <feComponentTransfer>
-                        <feFuncR id="r-linear" type="linear" slope=".5" amplitude="6" intercept=".25"/>
-                        <feFuncG id="g-linear" type="linear" slope=".5" amplitude="2" intercept="0"/>
-                        <feFuncB id="b-linear" type="linear" slope=".5" amplitude="3" intercept=".5"/>
+                        <feFuncR id="r-linear" type="linear" slope=".5" intercept=".25"/>
+                        <feFuncG id="g-linear" type="linear" slope=".5" intercept="0"/>
+                        <feFuncB id="b-linear" type="linear" slope=".5" intercept=".5"/>
                      </feComponentTransfer>
                   </filter>
                   <filter id="gamma">
