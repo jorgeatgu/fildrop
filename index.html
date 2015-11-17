@@ -63,7 +63,7 @@
     <button class="btn-luminance">
       Luminance
     </button>
-    <button class="btn-discrete">
+    <button class="btn-discrete" data-panel="open">
       Discrete
     </button>
     <button class="btn-discrete-dos">
@@ -200,8 +200,23 @@
     <div class="panel-input  hide" id="panel-turbulence">
       <h2 class="panel-input-title">feTurbulence + feComposite</h2>
       <div class="panel-input-slider">
-        <div id="slider-turbulence"></div>
-        <div id="slider-turbulence-value"></div>
+        <div id="slider-turbulence-base"></div>
+        <div id="slider-turbulence-base-value"></div>
+
+        <div id="slider-turbulence-num"></div>
+        <div id="slider-turbulence-num-value"></div>
+
+        <div id="slider-composite-k1"></div>
+        <div id="slider-composite-k1-value"></div>
+
+        <div id="slider-composite-k2"></div>
+        <div id="slider-composite-k2-value"></div>
+
+        <div id="slider-composite-k3"></div>
+        <div id="slider-composite-k3-value"></div>
+
+        <div id="slider-composite-k4"></div>
+        <div id="slider-composite-k4-value"></div>
       </div>
       <div class="panel-code">
         <textarea readonly id="panel-code-turbulence" class="panel-code-textarea">
@@ -304,7 +319,6 @@
       </div>
     </div>
 
-
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 500 500" width="500" height="500" aria-labelledby="title desc">
 
@@ -356,7 +370,7 @@
 
                   <filter id="dishue" filterUnits="objectBoundingBox">
                     <feComponentTransfer result="lsd">
-                      <feFuncR type="discrete" tableValues="0 .5 1 1"/>
+                      <feFuncR id="prueba-array" type="discrete" tableValues="0 .5 1 1"/>
                       <feFuncG type="discrete" tableValues="0 .5 1"/>
                       <feFuncB type="discrete" tableValues="0 .5"/>
                     </feComponentTransfer>
@@ -369,9 +383,9 @@
 
                   <filter id="discrete">
                     <feComponentTransfer>
-                      <feFuncR type="discrete" tableValues="0 .5 1 1"/>
-                      <feFuncG type="discrete" tableValues="0 .5 1"/>
-                      <feFuncB type="discrete" tableValues="0 .5"/>
+                      <feFuncR id="r-discrete" type="discrete" tableValues="0 .5 1 1"/>
+                      <feFuncG id="g-discrete" type="discrete" tableValues="0 .5 1"/>
+                      <feFuncB id="b-discrete" type="discrete" tableValues="0 .5"/>
                     </feComponentTransfer>
                   </filter>
                   <filter id="discrete-dos">
@@ -457,8 +471,8 @@
                   </filter>
 
                  <filter id='turbulence'>
-                     <feTurbulence type='turbulence' baseFrequency='.7' result='fuzz' numOctaves='2' stitchTiles='stitch'/>
-                     <feComposite in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
+                     <feTurbulence id="turbulence-value" type='turbulence' baseFrequency='.7' result='fuzz' numOctaves='2' stitchTiles='stitch'/>
+                     <feComposite id="composite-value" in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
                  </filter>
 
                   <filter id="turbuMap" >
