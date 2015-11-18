@@ -146,6 +146,7 @@
     <div class="panel-input  hide" id="panel-saturate">
       <h2 class="panel-input-title">feColorMatrix - Saturate</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">Values</span>
         <div id="slider-saturate"></div>
         <div id="slider-saturate-value"></div>
         <input id="input-format">
@@ -161,6 +162,7 @@
     <div class="panel-input  hide" id="panel-huerotate">
     <h2 class="panel-input-title">feColorMatrix - hueRotate</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">Values</span>
         <div id="slider-huerotate"></div>
         <div id="slider-huerotate-value"></div>
       </div>
@@ -172,39 +174,26 @@
         </button>
       </div>
     </div>
-    <div class="panel-input  hide" id="panel-luminance">
-    <h2 class="panel-input-title">feColorMatrix - Luminance to alpha</h2>
-      <div class="panel-input-slider">
-        <div id="slider-luminance"></div>
-        <div id="slider-luminance-value"></div>
-      </div>
-      <div class="panel-code">
-        <textarea readonly id="panel-code-luminance" class="panel-code-textarea">
-                </textarea>
-        <button class="panel-btn-copy" data-clipboard-target="#panel-code-luminance">
-            Copy to clipboard
-        </button>
-      </div>
-    </div>
+
     <div class="panel-input  hide" id="panel-linear">
       <h2 class="panel-input-title">feComponentTransfer - Linear</h2>
       <div class="panel-input-slider">
-        <div id="slider-linear-rs"></div>
-        <div id="slider-linear-rs-value"></div>
+        <div class="panel-input-medium" id="slider-linear-rs"></div>
+        <div class="panel-input-medium" id="slider-linear-ra"></div>
 
-        <div id="slider-linear-ra"></div>
+        <div id="slider-linear-rs-value"></div>
         <div id="slider-linear-ra-value"></div>
 
-        <div id="slider-linear-gs"></div>
-        <div id="slider-linear-gs-value"></div>
+        <div class="panel-input-medium" id="slider-linear-gs"></div>
+        <div class="panel-input-medium" id="slider-linear-ga"></div>
 
-        <div id="slider-linear-ga"></div>
+        <div id="slider-linear-gs-value"></div>
         <div id="slider-linear-ga-value"></div>
 
-        <div id="slider-linear-bs"></div>
-        <div id="slider-linear-bs-value"></div>
+        <div class="panel-input-medium" id="slider-linear-bs"></div>
+        <div class="panel-input-medium" id="slider-linear-ba"></div>
 
-        <div id="slider-linear-ba"></div>
+        <div id="slider-linear-bs-value"></div>
         <div id="slider-linear-ba-value"></div>
       </div>
       <div class="panel-code">
@@ -218,22 +207,22 @@
     <div class="panel-input  hide" id="panel-turbulence">
       <h2 class="panel-input-title">feTurbulence + feComposite</h2>
       <div class="panel-input-slider">
-        <div id="slider-turbulence-base"></div>
-        <div id="slider-turbulence-base-value"></div>
+        <div class="panel-input-medium" id="slider-turbulence-base"></div>
+        <div class="panel-input-medium" id="slider-turbulence-num"></div>
 
-        <div id="slider-turbulence-num"></div>
+        <div id="slider-turbulence-base-value"></div>
         <div id="slider-turbulence-num-value"></div>
 
-        <div id="slider-composite-k1"></div>
-        <div id="slider-composite-k1-value"></div>
+        <div class="panel-input-medium" id="slider-composite-k1"></div>
+        <div class="panel-input-medium" id="slider-composite-k2"></div>
 
-        <div id="slider-composite-k2"></div>
+        <div id="slider-composite-k1-value"></div>
         <div id="slider-composite-k2-value"></div>
 
-        <div id="slider-composite-k3"></div>
-        <div id="slider-composite-k3-value"></div>
+        <div class="panel-input-medium" id="slider-composite-k3"></div>
+        <div class="panel-input-medium" id="slider-composite-k4"></div>
 
-        <div id="slider-composite-k4"></div>
+        <div id="slider-composite-k3-value"></div>
         <div id="slider-composite-k4-value"></div>
       </div>
       <div class="panel-code">
@@ -248,23 +237,23 @@
       <h2 class="panel-input-title">feComponentTransfer - Gamma</h2>
       <div class="panel-input-slider">
 
-        <div class="panel-input-gamma" id="slider-gamma-ra"></div>
+        <div class="panel-input-medium" id="slider-gamma-ra"></div>
+        <div class="panel-input-medium" id="slider-gamma-re"></div>
 
-        <div class="panel-input-gamma" id="slider-gamma-re"></div>
         <div id="slider-gamma-ra-value"></div>
         <div id="slider-gamma-re-value"></div>
 
 
-        <div class="panel-input-gamma" id="slider-gamma-ga"></div>
+        <div class="panel-input-medium" id="slider-gamma-ga"></div>
+        <div class="panel-input-medium" id="slider-gamma-ge"></div>
 
-        <div class="panel-input-gamma" id="slider-gamma-ge"></div>
         <div id="slider-gamma-ga-value"></div>
         <div id="slider-gamma-ge-value"></div>
 
 
-        <div class="panel-input-gamma" id="slider-gamma-ba"></div>
+        <div class="panel-input-medium" id="slider-gamma-ba"></div>
+        <div class="panel-input-medium" id="slider-gamma-be"></div>
 
-        <div class="panel-input-gamma" id="slider-gamma-be"></div>
         <div id="slider-gamma-ba-value"></div>
         <div id="slider-gamma-be-value"></div>
       </div>
@@ -279,6 +268,7 @@
     <div class="panel-input  hide" id="panel-blur">
       <h2 class="panel-input-title">feGaussianBlur</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">stdDeviation</span>
         <div id="slider-blur"></div>
         <div id="slider-blur-value"></div>
       </div>
@@ -294,6 +284,7 @@
     <div class="panel-input  hide" id="panel-morpho">
       <h2 class="panel-input-title">feMorphology - Erode</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">Radius</span>
         <div id="slider-morpho"></div>
         <div id="slider-morpho-value"></div>
       </div>
@@ -308,6 +299,7 @@
     <div class="panel-input  hide" id="panel-morpho-dilate">
       <h2 class="panel-input-title">feMorphology - Dilate</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">Radius</span>
         <div id="slider-morpho-dilate"></div>
         <div id="slider-morpho-dilate-value"></div>
       </div>
@@ -320,11 +312,13 @@
       </div>
     </div>
     <div class="panel-input  hide" id="panel-saturotate">
-      <h2 class="panel-input-title">feColorMatrix - Saturate + Hue Rotate</h2>
+      <h2 class="panel-input-title">feColorMatrix - Saturate + hueRotate</h2>
       <div class="panel-input-slider">
+        <span class="panel-input-info">Saturate: values</span>
         <div id="slider-saturotate"></div>
         <div id="slider-saturotate-value"></div>
 
+        <span class="panel-input-info">hueRotate: values</span>
         <div id="slider-saturotate-huerotate"></div>
         <div id="slider-saturotate-huerotate-value"></div>
       </div>

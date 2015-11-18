@@ -325,23 +325,88 @@ button {
 	bottom: 0;
 }
 
-#panel-gamma {
+#panel-gamma,
+#panel-linear {
 	.panel-input-slider {
-		top: 0;
+		top: 35px;
 	}
-	h4 {
-		font-size: 16px;
-		display: inline-block;
-		width: 45%;
-		margin-right: 5%;
+}
+
+#panel-turbulence, {
+	.panel-input-slider {
+		top: 5px;
+	}
+	.panel-code {
+		vertical-align: top;
+		margin-top: 60px;
+	}
+}
+
+#panel-saturotate {
+	.panel-input-slider {
+		top: -10px;
+	}
+}
+
+#slider-saturotate {
+	margin-bottom: 50px;
+}
+
+
+#slider-turbulence-base,
+#slider-turbulence-num,
+#slider-composite-k1,
+#slider-composite-k2,
+#slider-composite-k3,
+#slider-composite-k4 {
+	&:after {
+		content: 'baseFrequency';
+		font-size: 20px;
+		font-family: $work-sans;
+		font-weight: bold;
+		color: $color-panel-code;
+		position: absolute;
+		top: -35px;
+		left: 0;
+	}
+}
+
+#slider-turbulence-num:after {
+	content: 'numOctaves';
+}
+
+#slider-composite-k1:after {
+	content: 'k1';
+}
+
+#slider-composite-k2:after {
+	content: 'k2';
+}
+
+#slider-composite-k3:after {
+	content: 'k3';
+}
+
+#slider-composite-k4:after {
+	content: 'k4';
+}
+
+.panel-input-slider {
+	.panel-input-info {
+		font-family: $work-sans;
+		font-size: 20px;
+		font-weight: bold;
+		color: $color-panel-code;
+		margin-bottom: 15px;
+		display: block;
 	}
 }
 
 .panel-input-slider {
-	.panel-input-gamma {
+	.panel-input-medium {
 		display: inline-block;
 		width: 45%;
-		margin: 30px 0;
+		margin: 40px 0;
 		margin-right: 5%;
 		box-sizing: border-box;
 	}
