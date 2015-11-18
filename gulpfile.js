@@ -28,9 +28,8 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-
 gulp.task('minify', function() {
-    return gulp.src('./src/css/styles.css')
+    return gulp.src('./dist/css/styles.css')
         .pipe(nano())
         .pipe(rename({
             suffix: '.min'
@@ -98,7 +97,8 @@ gulp.task('css', function() {
 
 
 gulp.task('default', function() {
-    gulp.watch('./src/css/*.css', ['css', 'minify']);
+    gulp.watch('./src/css/*.css', ['css']);
     gulp.watch('./src/img/**', ['images']);
     gulp.watch('./src/js/**', ['compress']);
+    gulp.watch('./src/css/*.css', ['minify']);
 });

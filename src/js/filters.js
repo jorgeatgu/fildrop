@@ -83,6 +83,7 @@ $(document).ready(function() {
     var panelMorpho = $("#panel-morpho");
     var panelMorphoDilate = $("#panel-morpho-dilate");
     var panelSaturotate = $("#panel-saturotate");
+    var panelDiscrete = $("#panel-discrete");
 
 
     //Functions
@@ -109,23 +110,17 @@ $(document).ready(function() {
 
     function closePanel() {
         $(panel)
-            .velocity({
+            .animate({
                 left: '-100%'
-            }, {
-                duration: 400,
-                easing: "swing"
-            }, [20, 50]);
+            }, 400);
         $("img").removeClass();
     }
 
     function openPanel() {
         $(panel)
-            .velocity({
+            .animate({
                 left: '0'
-            }, {
-                duration: 400,
-                easing: "swing"
-            }, [20, 50])
+            }, 400)
             .addClass("panel-bottom")
             .css("height", btnHeight);
         //Go to the bottom of the page!
@@ -224,5 +219,6 @@ $(document).ready(function() {
     showPanelFilter(btnMorpho, panelMorpho);
     showPanelFilter(btnMorpho2, panelMorphoDilate);
     showPanelFilter(btnSaturotate, panelSaturotate);
+    showPanelFilter(btnDiscrete, panelDiscrete);
 
 });

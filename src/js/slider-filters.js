@@ -15,6 +15,14 @@
         }
     });
 
+    var inputFormat = document.getElementById('input-format');
+
+
+
+    inputFormat.addEventListener('change', function() {
+        saturateSlider.noUiSlider.set(this.value);
+    });
+
     saturateSlider.noUiSlider.on('change', function() {
         var valueSaturate = saturateSlider.noUiSlider.get();
         var saturateFilter = document.getElementById("saturate-value");
@@ -26,7 +34,11 @@
             ' <feColorMatrix type="saturate" values="' + valueSaturate + '"/>\n' +
             '</filter>');
 
+        inputFormat.value = values[handle];
+
     });
+
+
 
 
 
