@@ -891,15 +891,11 @@ button {
 	bottom: 0;
 }
 
-#panel-gamma .panel-input-slider, #panel-linear .panel-input-slider {
-  top: 35px;
-}
-
-#panel-turbulence .panel-input-slider, .panel-input-slider {
+#panel-turbulence .panel-input-slider, #panel-gamma .panel-input-slider, #panel-linear .panel-input-slider {
   top: 5px;
 }
 
-#panel-turbulence .panel-code, .panel-code {
+#panel-turbulence .panel-code, #panel-gamma .panel-code, #panel-linear .panel-code {
   vertical-align: top;
   margin-top: 60px;
 }
@@ -913,9 +909,8 @@ button {
 }
 
 
-#slider-turbulence-base:after, #slider-turbulence-num:after, #slider-composite-k1:after, #slider-composite-k2:after, #slider-composite-k3:after, #slider-composite-k4:after {
-  content: 'baseFrequency';
-  font-size: 1.25rem;
+#slider-turbulence-base:after, #slider-turbulence-num:after, #slider-composite-k1:after, #slider-composite-k2:after, #slider-composite-k3:after, #slider-composite-k4:after, #slider-gamma-ra:after, #slider-gamma-re:after, #slider-gamma-ga:after, #slider-gamma-ge:after, #slider-gamma-ba:after, #slider-gamma-be:after, #slider-linear-rs:after, #slider-linear-ra:after, #slider-linear-gs:after, #slider-linear-ga:after, #slider-linear-bs:after, #slider-linear-ba:after {
+  font-size: 1.13rem;
   font-family: 'Work Sans',sans-serif;
   font-weight: bold;
   color: #001E40;
@@ -923,6 +918,11 @@ button {
   top: -35px;
   left: 0;
 }
+
+#slider-turbulence-base:after {
+	content: 'baseFrequency';
+}
+
 
 #slider-turbulence-num:after {
 	content: 'numOctaves';
@@ -944,9 +944,57 @@ button {
 	content: 'k4';
 }
 
+#slider-gamma-ra:after {
+	content: 'Red: amplitude';
+}
+
+#slider-gamma-re:after {
+	content: 'Red: exponent';
+}
+
+#slider-gamma-ga:after {
+	content: 'Green: amplitude';
+}
+
+#slider-gamma-ge:after {
+	content: 'Green: exponent';
+}
+
+#slider-gamma-ba:after {
+	content: 'Blue: amplitude';
+}
+
+#slider-gamma-be:after {
+	content: 'Blue: exponent';
+}
+
+#slider-linear-rs:after {
+	content: 'Red: slope';
+}
+
+#slider-linear-ra:after {
+	content: 'Red: amplitude';
+}
+
+#slider-linear-gs:after {
+	content: 'Green: slope';
+}
+
+#slider-linear-ga:after {
+	content: 'Green: amplitude';
+}
+
+#slider-linear-bs:after {
+	content: 'Blue: slope';
+}
+
+#slider-linear-ba:after {
+	content: 'Blue: amplitude';
+}
+
 .panel-input-slider .panel-input-info {
   font-family: 'Work Sans',sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.13rem;
   font-weight: bold;
   color: #001E40;
   margin-bottom: 15px;
@@ -1004,7 +1052,7 @@ button {
 }
 
 .panel-input-slider .noUi-value-horizontal {
-  font-size: 1.13rem;
+  font-size: 1rem;
   color: #001F3F;
   font-family: 'Work Sans',sans-serif;
 }

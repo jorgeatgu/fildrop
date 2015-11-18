@@ -325,14 +325,9 @@ button {
 	bottom: 0;
 }
 
+#panel-turbulence,
 #panel-gamma,
 #panel-linear {
-	.panel-input-slider {
-		top: 35px;
-	}
-}
-
-#panel-turbulence, {
 	.panel-input-slider {
 		top: 5px;
 	}
@@ -358,10 +353,21 @@ button {
 #slider-composite-k1,
 #slider-composite-k2,
 #slider-composite-k3,
-#slider-composite-k4 {
+#slider-composite-k4,
+#slider-gamma-ra,
+#slider-gamma-re,
+#slider-gamma-ga,
+#slider-gamma-ge,
+#slider-gamma-ba,
+#slider-gamma-be,
+#slider-linear-rs,
+#slider-linear-ra,
+#slider-linear-gs,
+#slider-linear-ga,
+#slider-linear-bs,
+#slider-linear-ba {
 	&:after {
-		content: 'baseFrequency';
-		font-size: 20px;
+		font-size: 18px;
 		font-family: $work-sans;
 		font-weight: bold;
 		color: $color-panel-code;
@@ -370,6 +376,11 @@ button {
 		left: 0;
 	}
 }
+
+#slider-turbulence-base:after {
+	content: 'baseFrequency';
+}
+
 
 #slider-turbulence-num:after {
 	content: 'numOctaves';
@@ -391,10 +402,58 @@ button {
 	content: 'k4';
 }
 
+#slider-gamma-ra:after {
+	content: 'Red: amplitude';
+}
+
+#slider-gamma-re:after {
+	content: 'Red: exponent';
+}
+
+#slider-gamma-ga:after {
+	content: 'Green: amplitude';
+}
+
+#slider-gamma-ge:after {
+	content: 'Green: exponent';
+}
+
+#slider-gamma-ba:after {
+	content: 'Blue: amplitude';
+}
+
+#slider-gamma-be:after {
+	content: 'Blue: exponent';
+}
+
+#slider-linear-rs:after {
+	content: 'Red: slope';
+}
+
+#slider-linear-ra:after {
+	content: 'Red: amplitude';
+}
+
+#slider-linear-gs:after {
+	content: 'Green: slope';
+}
+
+#slider-linear-ga:after {
+	content: 'Green: amplitude';
+}
+
+#slider-linear-bs:after {
+	content: 'Blue: slope';
+}
+
+#slider-linear-ba:after {
+	content: 'Blue: amplitude';
+}
+
 .panel-input-slider {
 	.panel-input-info {
 		font-family: $work-sans;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
 		color: $color-panel-code;
 		margin-bottom: 15px;
@@ -447,7 +506,7 @@ button {
 		}
 	}
 	.noUi-value-horizontal {
-		font-size: 18px;
+		font-size: 16px;
 		color: $color-secundario;
 		font-family: $work-sans;
 	}

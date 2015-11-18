@@ -864,7 +864,7 @@
     var sliderFeLineRs = document.getElementById('slider-linear-rs');
 
     noUiSlider.create(sliderFeLineRs, {
-        start: [0],
+        start: [0.5],
         step: 0.01,
         range: {
             'min': [0],
