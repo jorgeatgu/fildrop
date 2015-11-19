@@ -1,112 +1,111 @@
 .saturate {
-    filter: url('#saturate');
+    filter: url("#saturate");
 }
 
 .saturotate {
-    filter: url('#saturotate');
+    filter: url("#saturotate");
 }
 
 .rotamatrix {
-    filter: url('#rotamatrix');
+    filter: url("#rotamatrix");
 }
 
 .multitable {
-    filter: url('#multitable');
+    filter: url("#multitable");
 }
 
 .tablen {
-    filter: url('#tablen');
+    filter: url("#tablen");
 }
 
 .dishue {
-    filter: url('#dishue');
+    filter: url("#dishue");
 }
 
 .matrix {
-    filter: url('#matrix');
+    filter: url("#matrix");
 }
 
 .matrix-dos {
-    filter: url('#matrixDos');
+    filter: url("#matrixDos");
 }
 
 .huerotate {
-    filter: url('#hueRotate');
+    filter: url("#hueRotate");
 }
 
 .luminance {
-    filter: url('#luminanceToAlpha');
+    filter: url("#luminanceToAlpha");
 }
 
 .discrete {
-    filter: url('#discrete');
+    filter: url("#discrete");
 }
 
 .discrete-dos {
-    filter: url('#discrete-dos');
+    filter: url("#discrete-dos");
 }
 
 .table {
-    filter: url('#table');
+    filter: url("#table");
 }
 
 .table-dos {
-    filter: url('#tableDos');
+    filter: url("#tableDos");
 }
 
 .identity {
-    filter: url('#identity');
+    filter: url("#identity");
 }
 
 .linear {
-    filter: url('#linear');
+    filter: url("#linear");
 }
 
 .gamma {
-    filter: url('#gamma');
+    filter: url("#gamma");
 }
 
 .turbulence {
-    filter: url('#turbulence');
+    filter: url("#turbulence");
 }
 
 .sepia {
-    filter: url('#sepiatone');
+    filter: url("#sepiatone");
 }
 
 .fematrix-uno {
-    filter: url('#fematrixUno');
+    filter: url("#fematrixUno");
 }
 
 .fematrix-dos {
-    filter: url('#fematrixDos');
+    filter: url("#fematrixDos");
 }
 
 .turbu-map {
-    filter: url('#turbuMap');
+    filter: url("#turbuMap");
 }
 
 .map-uno {
-    filter: url('#mapUno');
+    filter: url("#mapUno");
 }
 
 .map-dos {
-    filter: url('#mapDos');
+    filter: url("#mapDos");
 }
 
 .blur-uno {
-    filter: url('#blurUno');
+    filter: url("#blurUno");
 }
 
 .blur-dos {
-    filter: url('#blurDos');
+    filter: url("#blurDos");
 }
 
-
 .morpho-uno {
-    filter: url('#morphoUno');
+    filter: url("#morphoUno");
 }
 
 .morpho-dos {
-    filter: url('#morphoDos');
+    filter: url("#morphoDos");
 }

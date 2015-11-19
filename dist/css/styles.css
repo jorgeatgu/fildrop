@@ -390,144 +390,143 @@ td, th {
 
 /* Tipography */
 .saturate {
-    -webkit-filter: url('#saturate');
-            filter: url('#saturate');
+    -webkit-filter: url("#saturate");
+            filter: url("#saturate");
 }
 
 .saturotate {
-    -webkit-filter: url('#saturotate');
-            filter: url('#saturotate');
+    -webkit-filter: url("#saturotate");
+            filter: url("#saturotate");
 }
 
 .rotamatrix {
-    -webkit-filter: url('#rotamatrix');
-            filter: url('#rotamatrix');
+    -webkit-filter: url("#rotamatrix");
+            filter: url("#rotamatrix");
 }
 
 .multitable {
-    -webkit-filter: url('#multitable');
-            filter: url('#multitable');
+    -webkit-filter: url("#multitable");
+            filter: url("#multitable");
 }
 
 .tablen {
-    -webkit-filter: url('#tablen');
-            filter: url('#tablen');
+    -webkit-filter: url("#tablen");
+            filter: url("#tablen");
 }
 
 .dishue {
-    -webkit-filter: url('#dishue');
-            filter: url('#dishue');
+    -webkit-filter: url("#dishue");
+            filter: url("#dishue");
 }
 
 .matrix {
-    -webkit-filter: url('#matrix');
-            filter: url('#matrix');
+    -webkit-filter: url("#matrix");
+            filter: url("#matrix");
 }
 
 .matrix-dos {
-    -webkit-filter: url('#matrixDos');
-            filter: url('#matrixDos');
+    -webkit-filter: url("#matrixDos");
+            filter: url("#matrixDos");
 }
 
 .huerotate {
-    -webkit-filter: url('#hueRotate');
-            filter: url('#hueRotate');
+    -webkit-filter: url("#hueRotate");
+            filter: url("#hueRotate");
 }
 
 .luminance {
-    -webkit-filter: url('#luminanceToAlpha');
-            filter: url('#luminanceToAlpha');
+    -webkit-filter: url("#luminanceToAlpha");
+            filter: url("#luminanceToAlpha");
 }
 
 .discrete {
-    -webkit-filter: url('#discrete');
-            filter: url('#discrete');
+    -webkit-filter: url("#discrete");
+            filter: url("#discrete");
 }
 
 .discrete-dos {
-    -webkit-filter: url('#discrete-dos');
-            filter: url('#discrete-dos');
+    -webkit-filter: url("#discrete-dos");
+            filter: url("#discrete-dos");
 }
 
 .table {
-    -webkit-filter: url('#table');
-            filter: url('#table');
+    -webkit-filter: url("#table");
+            filter: url("#table");
 }
 
 .table-dos {
-    -webkit-filter: url('#tableDos');
-            filter: url('#tableDos');
+    -webkit-filter: url("#tableDos");
+            filter: url("#tableDos");
 }
 
 .identity {
-    -webkit-filter: url('#identity');
-            filter: url('#identity');
+    -webkit-filter: url("#identity");
+            filter: url("#identity");
 }
 
 .linear {
-    -webkit-filter: url('#linear');
-            filter: url('#linear');
+    -webkit-filter: url("#linear");
+            filter: url("#linear");
 }
 
 .gamma {
-    -webkit-filter: url('#gamma');
-            filter: url('#gamma');
+    -webkit-filter: url("#gamma");
+            filter: url("#gamma");
 }
 
 .turbulence {
-    -webkit-filter: url('#turbulence');
-            filter: url('#turbulence');
+    -webkit-filter: url("#turbulence");
+            filter: url("#turbulence");
 }
 
 .sepia {
-    -webkit-filter: url('#sepiatone');
-            filter: url('#sepiatone');
+    -webkit-filter: url("#sepiatone");
+            filter: url("#sepiatone");
 }
 
 .fematrix-uno {
-    -webkit-filter: url('#fematrixUno');
-            filter: url('#fematrixUno');
+    -webkit-filter: url("#fematrixUno");
+            filter: url("#fematrixUno");
 }
 
 .fematrix-dos {
-    -webkit-filter: url('#fematrixDos');
-            filter: url('#fematrixDos');
+    -webkit-filter: url("#fematrixDos");
+            filter: url("#fematrixDos");
 }
 
 .turbu-map {
-    -webkit-filter: url('#turbuMap');
-            filter: url('#turbuMap');
+    -webkit-filter: url("#turbuMap");
+            filter: url("#turbuMap");
 }
 
 .map-uno {
-    -webkit-filter: url('#mapUno');
-            filter: url('#mapUno');
+    -webkit-filter: url("#mapUno");
+            filter: url("#mapUno");
 }
 
 .map-dos {
-    -webkit-filter: url('#mapDos');
-            filter: url('#mapDos');
+    -webkit-filter: url("#mapDos");
+            filter: url("#mapDos");
 }
 
 .blur-uno {
-    -webkit-filter: url('#blurUno');
-            filter: url('#blurUno');
+    -webkit-filter: url("#blurUno");
+            filter: url("#blurUno");
 }
 
 .blur-dos {
-    -webkit-filter: url('#blurDos');
-            filter: url('#blurDos');
+    -webkit-filter: url("#blurDos");
+            filter: url("#blurDos");
 }
 
-
 .morpho-uno {
-    -webkit-filter: url('#morphoUno');
-            filter: url('#morphoUno');
+    -webkit-filter: url("#morphoUno");
+            filter: url("#morphoUno");
 }
 
 .morpho-dos {
-    -webkit-filter: url('#morphoDos');
-            filter: url('#morphoDos');
+    -webkit-filter: url("#morphoDos");
+            filter: url("#morphoDos");
 }
 /*! nouislider - 8.1.0 - 2015-10-25 16:05:44 */
 
