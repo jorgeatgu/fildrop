@@ -1025,8 +1025,18 @@ button {
   height: 10px;
 }
 
+.panel-input-slider .noUi-tooltip {
+  color: #fff;
+  font-size: 0.88rem;
+  font-family: 'Work Sans',sans-serif;
+  border: 0;
+  background-color: transparent;
+  left: -1px;
+  top: -1px;
+}
+
 .panel-input-slider .noUi-target, .panel-input-slider .noUi-pips-horizontal {
-  padding: 0.31rem;
+  padding: 0.63rem;
 }
 
 .panel-input-slider .noUi-target {
@@ -1037,11 +1047,11 @@ button {
 }
 
 .panel-input-slider .noUi-horizontal .noUi-handle {
-  border-radius: 50%;
-  width: 30px;
+  border-radius: 30%;
+  width: 50px;
   height: 30px;
   top: -15px;
-  left: -15px;
+  left: -25px;
   background-color: #001F3F;
   border: 1px solid #fff;
   box-shadow: none;
@@ -1052,12 +1062,7 @@ button {
 }
 
 .panel-input-slider .noUi-horizontal .noUi-handle:before {
-  border-radius: 50%;
-  width: 14px;
-  height: 14px;
-  left: 7px;
-  top: 7px;
-  background-color: #fff;
+  display: none;
 }
 
 .panel-input-slider .noUi-value-horizontal {
@@ -1068,5 +1073,24 @@ button {
 
 .panel-input-slider .noUi-marker-horizontal.noUi-marker {
   background-color: #000;
+}
+
+.panel-poison {
+	font-size: 1rem;
+	font-family: 'Hind',sans-serif;
+	display: block;
+	text-align: center;
+	color: #E74C7B;
+}
+
+.panel-poison svg {
+  width: 20px;
+  height: 20px;
+  padding: 0 0.31rem;
+}
+
+.panel-poison a {
+  text-decoration: none;
+  color: #E74C7B;
 }
 /*# sourceMappingURL=styles.css.map */

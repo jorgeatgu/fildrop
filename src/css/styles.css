@@ -482,6 +482,15 @@ button {
 	.noUi-horizontal {
 		height: 10px;
 	}
+	.noUi-tooltip {
+		color: #fff;
+		font-size: 14px;
+		font-family: $work-sans;
+	    border: 0;
+	    background-color: transparent;
+	    left: -1px;
+	    top: -1px;
+	}
 	.noUi-target,
 	.noUi-pips-horizontal {
 		padding: 10px;
@@ -493,11 +502,11 @@ button {
 		border-radius: 0;
 	}
 	.noUi-horizontal .noUi-handle {
-		border-radius: 50%;
-		width: 30px;
+		border-radius: 30%;
+		width: 50px;
 		height: 30px;
 		top: -15px;
-		left: -15px;
+		left: -25px;
 		background-color: $color-secundario;
 		border: 1px solid #fff;
 		box-shadow: none;
@@ -505,12 +514,7 @@ button {
 			display: none;
 		}
 		&:before {
-			border-radius: 50%;
-			width: 14px;
-			height: 14px;
-			left: 7px;
-			top: 7px;
-			background-color: #fff;
+			display: none;
 		}
 	}
 	.noUi-value-horizontal {
@@ -520,5 +524,22 @@ button {
 	}
 	.noUi-marker-horizontal.noUi-marker {
 		background-color: #000;
+	}
+}
+
+.panel-poison {
+	font-size: 16px;
+	font-family: $hind;
+	display: block;
+	text-align: center;
+	color: #E74C7B;
+	svg {
+		width: 20px;
+		height: 20px;
+		padding: 0 5px;
+	}
+	a {
+		text-decoration: none;
+		color: #E74C7B;
 	}
 }

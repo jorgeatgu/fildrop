@@ -3,6 +3,7 @@
 
     noUiSlider.create(saturateSlider, {
         start: [4],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -15,13 +16,6 @@
         }
     });
 
-    var inputFormat = document.getElementById('input-format');
-
-
-
-    inputFormat.addEventListener('change', function() {
-        saturateSlider.noUiSlider.set(this.value);
-    });
 
     saturateSlider.noUiSlider.on('change', function() {
         var valueSaturate = saturateSlider.noUiSlider.get();
@@ -33,8 +27,6 @@
             '<filter id="saturate-customize">\n' +
             ' <feColorMatrix type="saturate" values="' + valueSaturate + '"/>\n' +
             '</filter>');
-
-        inputFormat.value = values[handle];
 
     });
 
@@ -53,6 +45,7 @@
 
     noUiSlider.create(firsthueRotateSlider, {
         start: [180],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -94,6 +87,7 @@
 
     noUiSlider.create(feGammaRa, {
         start: [0.5],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -144,6 +138,7 @@
 
     noUiSlider.create(feGammaRe, {
         start: [1],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -196,6 +191,7 @@
 
     noUiSlider.create(feGammaGa, {
         start: [0.4],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -248,6 +244,7 @@
 
     noUiSlider.create(feGammaGe, {
         start: [0.25],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -299,6 +296,7 @@
 
     noUiSlider.create(feGammaBa, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0.57],
@@ -349,6 +347,7 @@
 
     noUiSlider.create(feGammaBe, {
         start: [0.3],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -395,6 +394,7 @@
 
     noUiSlider.create(blurSlider, {
         start: [3],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -431,6 +431,7 @@
 
     noUiSlider.create(morphoSlider, {
         start: [3],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -467,6 +468,7 @@
 
     noUiSlider.create(morphoDilateSlider, {
         start: [4],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -508,6 +510,7 @@
 
     noUiSlider.create(saturotateSlider, {
         start: [0],
+        tooltips: true,
         step: 5,
         range: {
             'min': [0],
@@ -550,6 +553,7 @@
 
     noUiSlider.create(hueRotateSlider, {
         start: [180],
+        tooltips: true,
         step: 1,
         range: {
             'min': [0],
@@ -592,6 +596,7 @@
 
     noUiSlider.create(sliderTurbuBase, {
         start: [026],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -638,6 +643,7 @@
 
     noUiSlider.create(sliderTurbuNum, {
         start: [0.15],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -683,6 +689,7 @@
 
     noUiSlider.create(sliderCompoK1, {
         start: [1.00],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -728,6 +735,7 @@
 
     noUiSlider.create(sliderCompoK2, {
         start: [0.17],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -773,6 +781,7 @@
 
     noUiSlider.create(sliderCompoK3, {
         start: [0.79],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -818,6 +827,7 @@
 
     noUiSlider.create(sliderCompoK4, {
         start: [0.29],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -863,6 +873,7 @@
 
     noUiSlider.create(sliderFeLineRs, {
         start: [0.5],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -911,6 +922,7 @@
 
     noUiSlider.create(sliderFeLineRa, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -960,6 +972,7 @@
 
     noUiSlider.create(sliderFeLineGs, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -1008,6 +1021,7 @@
 
     noUiSlider.create(sliderFeLineGa, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -1056,6 +1070,7 @@
 
     noUiSlider.create(sliderFeLineBs, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
@@ -1104,6 +1119,7 @@
 
     noUiSlider.create(sliderFeLineBa, {
         start: [0],
+        tooltips: true,
         step: 0.01,
         range: {
             'min': [0],
