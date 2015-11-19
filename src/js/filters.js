@@ -29,7 +29,9 @@ $(document).ready(function() {
         "blur-dos",
         "morpho-uno",
         "morpho-dos",
-        "multitable"
+        "multitable",
+        "begamma",
+        "bulence"
     ];
 
 
@@ -73,6 +75,8 @@ $(document).ready(function() {
     var btnMorpho = $(".btn-morpho-uno");
     var btnMorpho2 = $(".btn-morpho-dos");
     var btnPoison = $(".btn-poison");
+    var btnBegamma = $(".btn-begamma");
+    var btnBulence = $(".btn-bulence");
     var panelSaturate = $("#panel-saturate");
     var panelHuerotate = $("#panel-huerotate");
     var panelLuminance = $("#panel-luminance");
@@ -103,7 +107,7 @@ $(document).ready(function() {
                 $(bodys).addClass(classRandom);
                 setTimeout(function() {
                     $(bodys).removeClass(classRandom);
-                }, 3000);
+                }, 3500);
             });
         });
     }
@@ -124,7 +128,7 @@ $(document).ready(function() {
             .addClass("panel-bottom")
             .css("height", btnHeight);
         //Go to the bottom of the page!
-        window.scrollTo(0, document.body.scrollHeight);
+        // window.scrollTo(0, document.body.scrollHeight);
     }
 
     function equalHeight() {
@@ -206,6 +210,8 @@ $(document).ready(function() {
     addFilter(btnMorpho, filters[25]);
     addFilter(btnMorpho2, filters[26]);
     addFilter(btnMultitable, filters[27]);
+    addFilter(btnBegamma, filters[28]);
+    addFilter(btnBulence, filters[29]);
 
 
     showPanelFilter(btnSaturate, panelSaturate);

@@ -65,7 +65,7 @@
         firsthuerotateFilter.setAttributeNS(null, "values", firstvaluehuerotate);
 
         $(huerotateCode).text(
-            '<filter id="saturate-customize">\n' +
+            '<filter id="huerotate-customize">\n' +
             ' <feColorMatrix type="hueRotate" values="' + firstvaluehuerotate + '"/>\n' +
             '</filter>');
     });
@@ -113,7 +113,7 @@
         rGamma.setAttributeNS(null, "amplitude", rGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -165,7 +165,7 @@
         rGamma.setAttributeNS(null, "exponent", reGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -217,7 +217,7 @@
         gGamma.setAttributeNS(null, "amplitude", gGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -270,7 +270,7 @@
         rGamma.setAttributeNS(null, "amplitude", gaGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -322,7 +322,7 @@
         bGamma.setAttributeNS(null, "amplitude", bGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -373,7 +373,7 @@
         bGamma.setAttributeNS(null, "exponent", beGammaValue);
 
         $(gammaPanel).text(
-            '<filter id="gamma">\n' +
+            '<filter id="gamma-customize">\n' +
             '<feComponentTransfer>\n' +
             '<feFuncR type="gamma" amplitude="' + rGammaValue + '" exponent="' + reGammaValue + '"/>\n' +
             '<feFuncG type="gamma" amplitude="' + gGammaValue + '" exponent="' + gaGammaValue + '"/>\n' +
@@ -667,11 +667,11 @@
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderTurbuNumV.setAttributeNS(null, "numOctaves", sliderTurbuNumValue);
 
-        $(sliderTurbuBasePanel).text(
-            '<filter id="turbulence-customize">\n' +
-            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
-            '</filter>');
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+        '</filter>');
     });
 
     var stepSliderValueElementTurbuNum = document.getElementById('slider-turbulence-num-value');
@@ -713,11 +713,11 @@
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderCompok1V.setAttributeNS(null, "k1", sliderCompok1Value);
 
-        $(sliderTurbuBasePanel).text(
-            '<filter id="turbulence-customize">\n' +
-            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
-            '</filter>');
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+        '</filter>');
     });
 
     var stepSliderValueElementCompoK1 = document.getElementById('slider-composite-k1-value');
@@ -759,11 +759,11 @@
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderCompok1V.setAttributeNS(null, "k2", sliderCompok2Value);
 
-        $(sliderTurbuBasePanel).text(
-            '<filter id="turbulence-customize">\n' +
-            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
-            '</filter>');
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+        '</filter>');
     });
 
     var stepSliderValueElementCompoK2 = document.getElementById('slider-composite-k2-value');
@@ -805,11 +805,11 @@
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderCompok1V.setAttributeNS(null, "k3", sliderCompok3Value);
 
-        $(sliderTurbuBasePanel).text(
-            '<filter id="turbulence-customize">\n' +
-            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
-            '</filter>');
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+        '</filter>');
     });
 
     var stepSliderValueElementCompoK3 = document.getElementById('slider-composite-k3-value');
@@ -851,11 +851,11 @@
         var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
         sliderCompok1V.setAttributeNS(null, "k3", sliderCompok4Value);
 
-        $(sliderTurbuBasePanel).text(
-            '<filter id="turbulence-customize">\n' +
-            ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
-            ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
-            '</filter>');
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="' + sliderTurbuBaseValue + '" numOctaves="' + sliderTurbuNumValue + '" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="' + sliderCompok1Value + '" k2="' + sliderCompok2Value + '" k3="' + sliderCompok3Value + '" k4="' + sliderCompok4Value + '"/>\n' +
+        '</filter>');
     });
 
     var stepSliderValueElementCompoK4 = document.getElementById('slider-composite-k4-value');
