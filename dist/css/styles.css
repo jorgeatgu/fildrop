@@ -1011,11 +1011,18 @@ button {
 
 .panel-input-slider .noUi-base {
   background-color: #E74C7B;
-  border: 1px solid #001F3F;
+  border: 0;
+  border-radius: 10px;
 }
 
 .panel-input-slider .noUi-origin {
   border-radius: 0;
+  background-color: #BFBFBF;
+  border-radius: 10px;
+}
+
+.panel-input-slider .noUi-horizontal {
+  height: 10px;
 }
 
 .panel-input-slider .noUi-target, .panel-input-slider .noUi-pips-horizontal {
@@ -1023,7 +1030,9 @@ button {
 }
 
 .panel-input-slider .noUi-target {
-  border: 1px solid #001F3F;
+  border: 0;
+  padding: 0;
+  background: transparent;
   border-radius: 0;
 }
 

@@ -2,8 +2,8 @@
     var saturateSlider = document.getElementById('slider-saturate');
 
     noUiSlider.create(saturateSlider, {
-        start: [0],
-        step: 5,
+        start: [4],
+        step: 1,
         range: {
             'min': [0],
             'max': [30]
@@ -37,8 +37,6 @@
         inputFormat.value = values[handle];
 
     });
-
-
 
 
 
@@ -95,7 +93,7 @@
     var feGammaRa = document.getElementById('slider-gamma-ra');
 
     noUiSlider.create(feGammaRa, {
-        start: [0],
+        start: [0.5],
         step: 0.01,
         range: {
             'min': [0],
@@ -145,7 +143,7 @@
     var feGammaRe = document.getElementById('slider-gamma-re');
 
     noUiSlider.create(feGammaRe, {
-        start: [0],
+        start: [1],
         step: 0.01,
         range: {
             'min': [0],
@@ -197,7 +195,7 @@
     var feGammaGa = document.getElementById('slider-gamma-ga');
 
     noUiSlider.create(feGammaGa, {
-        start: [0],
+        start: [0.4],
         step: 0.01,
         range: {
             'min': [0],
@@ -249,7 +247,7 @@
 
 
     noUiSlider.create(feGammaGe, {
-        start: [0],
+        start: [0.25],
         step: 0.01,
         range: {
             'min': [0],
@@ -303,7 +301,7 @@
         start: [0],
         step: 0.01,
         range: {
-            'min': [0],
+            'min': [0.57],
             'max': [1]
         },
         pips: {
@@ -350,7 +348,7 @@
     var feGammaBe = document.getElementById('slider-gamma-be');
 
     noUiSlider.create(feGammaBe, {
-        start: [0],
+        start: [0.3],
         step: 0.01,
         range: {
             'min': [0],
@@ -396,7 +394,7 @@
     var blurSlider = document.getElementById('slider-blur');
 
     noUiSlider.create(blurSlider, {
-        start: [0],
+        start: [3],
         step: 1,
         range: {
             'min': [0],
@@ -432,7 +430,7 @@
     var morphoSlider = document.getElementById('slider-morpho');
 
     noUiSlider.create(morphoSlider, {
-        start: [0],
+        start: [3],
         step: 1,
         range: {
             'min': [0],
@@ -468,7 +466,7 @@
     var morphoDilateSlider = document.getElementById('slider-morpho-dilate');
 
     noUiSlider.create(morphoDilateSlider, {
-        start: [0],
+        start: [4],
         step: 1,
         range: {
             'min': [0],
@@ -593,7 +591,7 @@
     var sliderTurbuBase = document.getElementById('slider-turbulence-base');
 
     noUiSlider.create(sliderTurbuBase, {
-        start: [0],
+        start: [026],
         step: 0.01,
         range: {
             'min': [0],
@@ -639,7 +637,7 @@
     var sliderTurbuNum = document.getElementById('slider-turbulence-num');
 
     noUiSlider.create(sliderTurbuNum, {
-        start: [0],
+        start: [0.15],
         step: 0.01,
         range: {
             'min': [0],
@@ -684,7 +682,7 @@
     var sliderCompoK1 = document.getElementById('slider-composite-k1');
 
     noUiSlider.create(sliderCompoK1, {
-        start: [0],
+        start: [1.00],
         step: 0.01,
         range: {
             'min': [0],
@@ -729,7 +727,7 @@
     var sliderCompoK2 = document.getElementById('slider-composite-k2');
 
     noUiSlider.create(sliderCompoK2, {
-        start: [0],
+        start: [0.17],
         step: 0.01,
         range: {
             'min': [0],
@@ -774,7 +772,7 @@
     var sliderCompoK3 = document.getElementById('slider-composite-k3');
 
     noUiSlider.create(sliderCompoK3, {
-        start: [0],
+        start: [0.79],
         step: 0.01,
         range: {
             'min': [0],
@@ -819,7 +817,7 @@
     var sliderCompoK4 = document.getElementById('slider-composite-k4');
 
     noUiSlider.create(sliderCompoK4, {
-        start: [0],
+        start: [0.29],
         step: 0.01,
         range: {
             'min': [0],

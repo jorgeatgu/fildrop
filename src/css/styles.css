@@ -471,17 +471,25 @@ button {
 	}
 	.noUi-base {
 		background-color: #E74C7B;
-		border: 1px solid $color-secundario;
+		border: 0;
+		border-radius: 10px;
 	}
 	.noUi-origin {
 		border-radius: 0;
+		background-color: #BFBFBF;
+		border-radius: 10px;
+	}
+	.noUi-horizontal {
+		height: 10px;
 	}
 	.noUi-target,
 	.noUi-pips-horizontal {
-		padding: 5px;
+		padding: 10px;
 	}
 	.noUi-target {
-		border: 1px solid $color-secundario;
+		border: 0;
+		padding: 0;
+	    background: transparent;
 		border-radius: 0;
 	}
 	.noUi-horizontal .noUi-handle {

@@ -106,8 +106,8 @@
               <filter id="gamma">
                  <feComponentTransfer>
                       <feFuncR type="gamma" amplitude="2" exponent="1"/>
-                      <feFuncG type="gamma" amplitude="2" exponent="3"/>
-                      <feFuncB type="gamma" amplitude="2" exponent="1"/>
+                      <feFuncG type="gamma" amplitude="0.4" exponent="0.25"/>
+                      <feFuncB type="gamma" amplitude="0.57" exponent="0.3"/>
                  </feComponentTransfer>
               </filter>
 
@@ -189,7 +189,7 @@
 
 
               <filter id="turbulence-customize">
-               <feTurbulence type="turbulence" result="fuzz" baseFrequency="0.26" numOctaves="0.00" stitchTiles="stitch"/>
+               <feTurbulence type="turbulence" result="fuzz" baseFrequency="0.26" numOctaves="0.15" stitchTiles="stitch"/>
                <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="1.00" k2="0.17" k3="0.79" k4="0.29"/>
               </filter>
 
