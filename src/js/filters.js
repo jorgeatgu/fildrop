@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     //Variables
 
-    var btnHeight = $('.section-buttons').outerHeight() + 45;
+    var btnHeight = $('.section-buttons').outerHeight() + 15;
     var picture = $('picture').find("img");
     var pictureHeight = $(picture).outerHeight();
     var btnFilters = $('.section-buttons').find("button");
@@ -132,7 +132,7 @@ $(document).ready(function() {
     }
 
     function equalHeight() {
-        $("#holder").css("min-height", pictureHeight);
+        $("#holder").css("height", pictureHeight);
     }
 
 

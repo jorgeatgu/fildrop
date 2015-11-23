@@ -200,5 +200,10 @@
               <feFuncB type="gamma" amplitude="0.34" exponent="0.44"/>
               </feComponentTransfer>
               </filter> -->
+
+              <filter id="saturotate-customize" filterUnits="objectBoundingBox">
+               <feColorMatrix type="saturate" result="saturado" values="20.00"/>
+               <feColorMatrix type="hueRotate" in="saturado" in2="SourceGraphic" values="344.00"/>
+              </filter>
      </defs>
 </svg>

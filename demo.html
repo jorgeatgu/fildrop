@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FILDROP - SVG FILTERS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Hind:500|Work+Sans:500' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+        .saturate {
+            filter: url("#saturate");
+        }
+
+        .saturotate {
+            filter: url("#saturotate");
+        }
+
+        .rotamatrix {
+            filter: url("#rotamatrix");
+        }
+
+        .multitable {
+            filter: url("#multitable");
+        }
+
+        .tablen {
+            filter: url("#tablen");
+        }
+
+        .dishue {
+            filter: url("#dishue");
+        }
+
+        .matrix {
+            filter: url("#matrix");
+        }
+
+        .matrix-dos {
+            filter: url("#matrixDos");
+        }
+
+        .huerotate {
+            filter: url("#hueRotate");
+        }
+
+        .luminance {
+            filter: url("#luminanceToAlpha");
+        }
+
+        .discrete {
+            filter: url("#discrete");
+        }
+
+        .discrete-dos {
+            filter: url("#discrete-dos");
+        }
+
+        .table {
+            filter: url("#table");
+        }
+
+        .table-dos {
+            filter: url("#tableDos");
+        }
+
+        .identity {
+            filter: url("#identity");
+        }
+
+        .linear {
+            filter: url("#linear");
+        }
+
+        .gamma {
+            filter: url("#gamma");
+        }
+
+        .turbulence {
+            filter: url("#turbulence");
+        }
+
+        .sepia {
+            filter: url("#sepiatone");
+        }
+
+        .fematrix-uno {
+            filter: url("#fematrixUno");
+        }
+
+        .fematrix-dos {
+            filter: url("#fematrixDos");
+        }
+
+        .turbu-map {
+            filter: url("#turbuMap");
+        }
+
+        .map-uno {
+            filter: url("#mapUno");
+        }
+
+        .map-dos {
+            filter: url("#mapDos");
+        }
+
+        .blur-uno {
+            filter: url("#blurUno");
+        }
+
+        .blur-dos {
+            filter: url("#blurDos");
+        }
+
+        .morpho-uno {
+            filter: url("#morphoUno");
+        }
+
+        .morpho-dos {
+            filter: url("#morphoDos");
+        }</style>
+    </head>
+<body>
+  <nav class="icons">
+    <section class="icons-texto">
+      <h1 class="icons-texto-principal">FILDROP</h1>
+      <p class="icons-texto-secundario">A set of custom SVG filter effects</p>
+    </section>
+    <section class="icons-social">
+      <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">Download</a>
+      <a href="https://github.com/jorgeatgu/SVG-FILTERS" target="_blank">GitHub</a>
+      <a href="https://twitter.com/intent/tweet?text=Fildrop+a+set+of+custom+SVG+filter+effects.&amp;url=http://jorgeatgu.github.io/svg-filters/&amp;via=jorgeatgu&amp;hashtags=SVG" target="_blank">Tweet</a>
+    </section>
+  </nav>
+
+  <section class="section-left">
+      <article class="section-left-example">
+          <h1 class="texto-secundario">Example</h1>
+          <picture>
+              <img src="dist/img/ino-festival-asalto-2015.JPG" alt="Mural de INO en el festival asalto celebrado en Zaragoza en septiembre de 2014. Fotografía de Jorge Aznar">
+          </picture>
+      </article>
+      <article class="section-left-drag">
+          <h1 class="texto-secundario">Drag an drop your image</h1>
+          <div id="holder" >
+          </div>
+          <p id="upload" class="hidden">
+              <label>Drag &amp; drop not supported, but you can still upload via this input field:
+                  <br>
+                  <input type="file">
+              </label>
+          </p>
+          <p id="filereader" class="hidden">File API &amp; FileReader API not supported</p>
+          <p id="formdata" class="hidden">XHR2's FormData is not supported</p>
+          <p id="progress" class="hidden">XHR2's upload progress isn't supported</p>
+      </article>
+  </section>
+
+
+  <section class="section-buttons">
+
+    <button class="btn-saturate" data-panel="open">
+      Saturate
+    </button>
+    <button class="btn-matrix">
+      Matrix
+    </button>
+    <button class="btn-matrix-dos">
+      Matrix
+    </button>
+    <button class="btn-hueRotate" data-panel="open">
+      hueRotate
+    </button>
+    <button class="btn-luminance">
+      Luminance
+    </button>
+    <button class="btn-discrete">
+      Discrete
+    </button>
+    <button class="btn-discrete-dos">
+      Discrete 2
+    </button>
+    <button class="btn-table">
+      Table
+    </button>
+    <button class="btn-table-dos">
+      Table 2
+    </button>
+    <button class="btn-identity">
+      Identity
+    </button>
+    <button class="btn-turbu-map">
+      Turbu-map
+    </button>
+    <button class="btn-linear" data-panel="open">
+      Linear
+    </button>
+    <button class="btn-sepia">
+      Sepia
+    </button>
+    <button class="btn-turbulence" data-panel="open">
+      Turbulence
+    </button>
+    <button class="btn-gamma" data-panel="open">
+      Gamma
+    </button>
+    <button class="btn-con-matrix-uno">
+      feMatrix 1
+    </button>
+    <button class="btn-con-matrix-dos">
+      feMatrix 2
+    </button>
+    <button class="btn-blur-uno" data-panel="open">
+      Blur 1
+    </button>
+    <button class="btn-blur-dos">
+      Blur 2
+    </button>
+    <button class="btn-morpho-uno" data-panel="open">
+      Morpho 1
+    </button>
+    <button class="btn-morpho-dos" data-panel="open">
+      Morpho 2
+    </button>
+    <button class="btn-saturotate" data-panel="open">
+      Saturotate
+    </button>
+    <button class="btn-rotamatrix">
+      Rotamatrix
+    </button>
+    <button class="btn-multitable">
+      Multitable
+    </button>
+    <button class="btn-tablen">
+      Tablen
+    </button>
+    <button class="btn-dishue">
+      Dishue
+    </button>
+    <button class="btn-poison">
+      <svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="26 -26 612 612"><path fill="#000" d="M148.9 309.5c3.5 11.5 7.1 23.3 9 35.3.7 4.9 3.6 40.3 5.2 59.7.6 7.5 6.3 13.5 13.6 14.6l25.8 3.9c3.7.6 6.7 3.4 7.4 7.1l3.4 17.4c1.5 7.6 8.1 13 15.8 13l200.2-.1c7.6 0 14.1-5.3 15.7-12.7l3.9-17.9c.9-3.5 3.8-6.2 7.4-6.7l31.4-4.6c7.6-1.1 13.3-7.3 13.8-15 1.2-20 3.5-56.4 4.2-61.4 1.7-11.8 5.1-23.4 8.5-34.8 4.7-15.9 9.6-32.2 9.6-49.2C523.8 149.4 437.4 61 331.2 61s-192.6 88.5-192.6 197.2c0 17.8 5.2 34.8 10.3 51.3zm207.4-10c1.2-30.9 28.9-38.6 59.8-37.4 30.9 1.2 53.2 11 52 41.8s-27.2 54.9-58.1 53.7c-30.9-1.2-54.9-27.3-53.7-58.1zM338.1 360l20 29.7c1.8 2.6 2 6 .6 8.9l-2.9 6c-1.5 3.1-4.6 5-8 5h-34.4c-3.4 0-6.5-2-8-5l-2.9-6c-1.4-2.9-1.1-6.2.6-8.9l20-29.7c3.8-5.2 11.5-5.2 15 0zm-91.8-98c30.9-1.2 58.6 6.5 59.8 37.4 1.2 30.9-22.8 56.9-53.7 58.1s-56.9-22.8-58.1-53.7c-1.2-30.8 21.1-40.5 52-41.8zM582.3 32.6c2.4-14.8-2.1-30.4-13.5-41.8-18.3-18.2-48.2-18.6-66.9-.7-19.6 18.7-19.8 49.6-.8 68.7l-17.5 17.5c-7 7-7 18.3 0 25.3l29.8 29.8c7 7 18.3 7 25.3 0l17.5-17.5c19 19 50 18.7 68.7-.8 17.8-18.7 17.5-48.6-.7-66.9-11.4-11.5-27.1-16-41.9-13.6zM107.8 113.9l17.5 17.5c7 7 18.3 7 25.3 0l29.8-29.8c7-7 7-18.3 0-25.3l-17.5-17.5c19-19 18.7-50-.8-68.7-18.7-17.8-48.6-17.5-66.9.7-11.4 11.4-15.9 27-13.5 41.8-14.8-2.4-30.4 2.1-41.8 13.5-18.2 18.3-18.6 48.2-.7 66.9 18.6 19.6 49.6 19.9 68.6.9zM624.8 447c-18.7-19.6-49.6-19.8-68.7-.8l-17.5-17.5c-7-7-18.3-7-25.3 0l-29.8 29.8c-7 7-7 18.3 0 25.3l17.5 17.5c-19 19-18.7 50 .8 68.7 18.7 17.8 48.6 17.5 66.9-.7 11.4-11.4 15.9-27 13.5-41.8 14.8 2.4 30.4-2.1 41.8-13.5 18.3-18.4 18.7-48.3.8-67zM81.7 527.4c-2.4 14.8 2.1 30.4 13.5 41.8 18.3 18.2 48.2 18.6 66.9.7 19.6-18.7 19.8-49.6.8-68.7l17.5-17.5c7-7 7-18.3 0-25.3l-29.8-29.8c-7-7-18.3-7-25.3 0l-17.5 17.5c-19-19-50-18.7-68.7.8-17.8 18.7-17.5 48.6.7 66.9 11.4 11.5 27.1 16 41.9 13.6z"/></svg>
+    </button>
+
+  </section>
+
+  <section class="panel-poison">
+    <h3>Made with<svg xmlns="http://www.w3.org/2000/svg" width="31.9" height="31.9" viewBox="-263 265.1 31.9 31.9"><path fill="#000" d="M-254.7 271.5c-1.6 0-2.8 1.3-2.8 2.8v19.8c0 1.6 1.3 2.8 2.8 2.8h15.3c1.6 0 2.8-1.3 2.8-2.8v-19.8c0-1.6-1.3-2.8-2.8-2.8h-15.3zm14.9 19.5c0 .9-.7 1.6-1.6 1.6h-11.2c-.9 0-1.6-.7-1.6-1.6v-13.3c0-.9.7-1.6 1.6-1.6h11.2c.9 0 1.6.7 1.6 1.6V291z"/><path fill="#000" d="M-250.7 286.9l.6-1.2v2.9c0 .3.2.7.5.8.6.3 1.6.6 2.9.6 1.2 0 2.1-.3 2.7-.6.4-.2.6-.6.6-1v-2.8.1l.6 1.1c1-.9 1.6-2.2 1.6-3.6 0-2.8-2.5-5.1-5.7-5.1-3.1 0-5.7 2.3-5.7 5.1.2 1.5.9 2.8 1.9 3.7zm4.7-3c0-.2.2-.3.3-.3h2c.2 0 .3.1.3.3 0 .9-.6 1.6-1.3 1.6-.7 0-1.3-.7-1.3-1.6zm-.7 1.5c.1 0 .2 0 .3.1l.8.9-.4.3-.4-.2c-.1-.1-.3-.1-.4 0l-.4.2-.4-.3.8-.9c-.1-.1 0-.1.1-.1zm-3.2-1.5c0-.2.1-.3.3-.3h2c.2 0 .4.1.4.3 0 .9-.6 1.6-1.3 1.6-.8 0-1.4-.7-1.4-1.6zM-242 266.7c0-.9-.7-1.6-1.6-1.6h-6.7c-.9 0-1.6.7-1.6 1.6v3.8h10l-.1-3.8z"/></svg> by <a href="http://jorgeatgu.com">Jorge Aznar</a></h3>
+  </section>
+
+  <section class="panel">
+    <button id="panel-btn-close">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="357" height="357" viewBox="0 0 357 357">
+          <polygon fill="#fff" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/>
+        </svg>
+    </button>
+    <div class="panel-input  hide" id="panel-saturate">
+      <h2 class="panel-input-title">feColorMatrix - Saturate</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">Values</span>
+        <div id="slider-saturate"></div>
+        <div id="slider-saturate-value"></div>
+      </div>
+      <div class="panel-code">
+        <textarea readonly id="panel-code-saturate" class="panel-code-textarea">
+        </textarea>
+        <button class="panel-btn-copy btn" data-clipboard-target="#panel-code-saturate">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-huerotate">
+    <h2 class="panel-input-title">feColorMatrix - hueRotate</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">Values</span>
+        <div id="slider-huerotate"></div>
+        <div id="slider-huerotate-value"></div>
+      </div>
+      <div class="panel-code">
+        <textarea readonly id="panel-code-huerotate" class="panel-code-textarea">
+                </textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-huerotate">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+
+    <div class="panel-input  hide" id="panel-linear">
+      <h2 class="panel-input-title">feComponentTransfer - Linear</h2>
+      <div class="panel-input-slider">
+        <div class="panel-input-medium" id="slider-linear-rs"></div>
+        <div class="panel-input-medium" id="slider-linear-ra"></div>
+
+        <div id="slider-linear-rs-value"></div>
+        <div id="slider-linear-ra-value"></div>
+
+        <div class="panel-input-medium" id="slider-linear-gs"></div>
+        <div class="panel-input-medium" id="slider-linear-ga"></div>
+
+        <div id="slider-linear-gs-value"></div>
+        <div id="slider-linear-ga-value"></div>
+
+        <div class="panel-input-medium" id="slider-linear-bs"></div>
+        <div class="panel-input-medium" id="slider-linear-ba"></div>
+
+        <div id="slider-linear-bs-value"></div>
+        <div id="slider-linear-ba-value"></div>
+      </div>
+      <div class="panel-code">
+        <textarea readonly id="panel-code-linear" class="panel-code-textarea">
+                </textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-linear">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-turbulence">
+      <h2 class="panel-input-title">feTurbulence + feComposite</h2>
+      <div class="panel-input-slider">
+        <div class="panel-input-medium" id="slider-turbulence-base"></div>
+        <div class="panel-input-medium" id="slider-turbulence-num"></div>
+
+        <div id="slider-turbulence-base-value"></div>
+        <div id="slider-turbulence-num-value"></div>
+
+        <div class="panel-input-medium" id="slider-composite-k1"></div>
+        <div class="panel-input-medium" id="slider-composite-k2"></div>
+
+        <div id="slider-composite-k1-value"></div>
+        <div id="slider-composite-k2-value"></div>
+
+        <div class="panel-input-medium" id="slider-composite-k3"></div>
+        <div class="panel-input-medium" id="slider-composite-k4"></div>
+
+        <div id="slider-composite-k3-value"></div>
+        <div id="slider-composite-k4-value"></div>
+      </div>
+      <div class="panel-code">
+        <textarea readonly id="panel-code-turbulence" class="panel-code-textarea">
+                </textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-turbulence">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-gamma">
+      <h2 class="panel-input-title">feComponentTransfer - Gamma</h2>
+      <div class="panel-input-slider">
+
+        <div class="panel-input-medium" id="slider-gamma-ra"></div>
+        <div class="panel-input-medium" id="slider-gamma-re"></div>
+
+        <div id="slider-gamma-ra-value"></div>
+        <div id="slider-gamma-re-value"></div>
+
+
+        <div class="panel-input-medium" id="slider-gamma-ga"></div>
+        <div class="panel-input-medium" id="slider-gamma-ge"></div>
+
+        <div id="slider-gamma-ga-value"></div>
+        <div id="slider-gamma-ge-value"></div>
+
+
+        <div class="panel-input-medium" id="slider-gamma-ba"></div>
+        <div class="panel-input-medium" id="slider-gamma-be"></div>
+
+        <div id="slider-gamma-ba-value"></div>
+        <div id="slider-gamma-be-value"></div>
+      </div>
+      <div class="panel-code">
+        <textarea readonly id="panel-code-gamma" class="panel-code-textarea">
+                </textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-gamma">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-blur">
+      <h2 class="panel-input-title">feGaussianBlur</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">stdDeviation</span>
+        <div id="slider-blur"></div>
+        <div id="slider-blur-value"></div>
+      </div>
+      <div class="panel-code">
+
+        <textarea readonly id="panel-code-blur" class="panel-code-textarea">
+                </textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-blur">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-morpho">
+      <h2 class="panel-input-title">feMorphology - Erode</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">Radius</span>
+        <div id="slider-morpho"></div>
+        <div id="slider-morpho-value"></div>
+      </div>
+      <div class="panel-code">
+
+        <textarea id="panel-code-morpho" class="panel-code-textarea"></textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-morpho">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-morpho-dilate">
+      <h2 class="panel-input-title">feMorphology - Dilate</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">Radius</span>
+        <div id="slider-morpho-dilate"></div>
+        <div id="slider-morpho-dilate-value"></div>
+      </div>
+      <div class="panel-code">
+
+        <textarea id="panel-code-morpho-dilate" class="panel-code-textarea"></textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-morpho-dilate">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <div class="panel-input  hide" id="panel-saturotate">
+      <h2 class="panel-input-title">feColorMatrix - Saturate + hueRotate</h2>
+      <div class="panel-input-slider">
+        <span class="panel-input-info">Saturate: values</span>
+        <div id="slider-saturotate"></div>
+        <div id="slider-saturotate-value"></div>
+
+        <span class="panel-input-info">hueRotate: values</span>
+        <div id="slider-saturotate-huerotate"></div>
+        <div id="slider-saturotate-huerotate-value"></div>
+      </div>
+      <div class="panel-code">
+
+        <textarea id="panel-code-saturotate" class="panel-code-textarea"></textarea>
+        <button class="panel-btn-copy" data-clipboard-target="#panel-code-saturotate">
+            Copy to clipboard
+        </button>
+      </div>
+    </div>
+
+
+
+
+        <svg viewBox="0 0 500 500" width="500" height="500" aria-labelledby="title desc">
+
+
+
+         <title id="title">Filters SVG</title>
+
+             <!-- feColorMatrix -->
+
+                  <filter id="saturate" filterUnits="objectBoundingBox">
+                    <feColorMatrix id="saturate-value" type="saturate" in="SourceGraphic" values="0.4"/>
+                  </filter>
+                  <filter id="matrix" filterUnits="objectBoundingBox">
+                    <feColorMatrix type="matrix" in="SourceGraphic"
+                    values="-1 2 -3 0 -.5
+                            0 1 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0"/>
+                  </filter>
+                  <filter id="matrixDos" filterUnits="objectBoundingBox">
+                    <feColorMatrix type="matrix" in="SourceGraphic"
+                    values="-1 2 -3 0 -.5
+                            2 1 0 0 0
+                            0 3 0 0 0
+                            0 0 1 1 0"/>
+                  </filter>
+
+                  <filter id="hueRotate">
+                    <feColorMatrix id="hue-value" type="hueRotate" in="SourceGraphic" values="90"/>
+                  </filter>
+                  <filter id="luminanceToAlpha" filterUnits="objectBoundingBox">
+                    <feColorMatrix id="luminance-value" type="luminanceToAlpha" in="SourceGraphic"/>
+                  </filter>
+
+                  <filter id="saturotate" filterUnits="objectBoundingBox">
+                      <feColorMatrix id="saturotate-value" type="saturate" result="saturado" values="20"/>
+                      <feColorMatrix id="saturotate-hue-value" type="hueRotate" in="saturado" in2="SourceGraphic" values="291"/>
+                  </filter>
+
+                  <filter id="rotamatrix" filterUnits="objectBoundingBox">
+                      <feColorMatrix type="hueRotate" result="romatrix"  values="245"/>
+                      <feColorMatrix type="matrix" in="romatrix" in2="SourceGraphic"
+                      values="-1 2 -3 0 -.5
+                              2 1 0 0 0
+                              0 3 1 0 0
+                              0 0 1 1 0"/>
+                  </filter>
+
+                  <filter id="dishue" filterUnits="objectBoundingBox">
+                    <feComponentTransfer result="lsd">
+                      <feFuncR id="prueba-array" type="discrete" tableValues="0 .5 1 1"/>
+                      <feFuncG type="discrete" tableValues="0 .5 1"/>
+                      <feFuncB type="discrete" tableValues="0 .5"/>
+                    </feComponentTransfer>
+                    <feColorMatrix type="hueRotate" in="lsd" in2="SourceGraphic" values="-180"/>
+                  </filter>
+
+
+
+                  <!-- feComponentTransfer -->
+
+                  <filter id="discrete">
+                    <feComponentTransfer>
+                      <feFuncR id="r-discrete" type="discrete" tableValues="0 .5 1 1"/>
+                      <feFuncG id="g-discrete" type="discrete" tableValues="0 .5 1"/>
+                      <feFuncB id="b-discrete" type="discrete" tableValues="0 .5"/>
+                    </feComponentTransfer>
+                  </filter>
+                  <filter id="discrete-dos">
+                    <feComponentTransfer>
+                      <feFuncR type="discrete" tableValues="0 .5 1 1"/>
+                      <feFuncG type="discrete" tableValues="0  5 1"/>
+                      <feFuncB type="discrete" tableValues="0 .5 1 1"/>
+                    </feComponentTransfer>
+                  </filter>
+                  <filter id="table">
+                     <feComponentTransfer>
+                         <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                         <feFuncG type="table" tableValues="1 0 1" exponent="2"/>
+                         <feFuncB type="table" tableValues="1 0 1" exponent="5"/>
+                     </feComponentTransfer>
+                  </filter>
+                  <filter id="tableDos">
+                     <feComponentTransfer>
+                         <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                         <feFuncG type="table" tableValues="1 10 1" exponent="2"/>
+                         <feFuncB type="table" tableValues="1 5 1" exponent="5"/>
+                     </feComponentTransfer>
+                  </filter>
+                  <filter id="identity">
+                     <feComponentTransfer>
+                         <feFuncR type="identity"/>
+                         <feFuncG type="identity"/>
+                         <feFuncB type="identity"/>
+                         <feFuncA type="identity"/>
+                     </feComponentTransfer>
+                  </filter>
+                  <filter id="linear">
+                     <feComponentTransfer>
+                        <feFuncR id="r-linear" type="linear" slope=".5" intercept=".25"/>
+                        <feFuncG id="g-linear" type="linear" slope=".5" intercept="0"/>
+                        <feFuncB id="b-linear" type="linear" slope=".5" intercept=".5"/>
+                     </feComponentTransfer>
+                  </filter>
+                  <filter id="gamma">
+                     <feComponentTransfer>
+                          <feFuncR id="r-gamma" type="gamma" amplitude="1" exponent="1"/>
+                          <feFuncG id="g-gamma" type="gamma" amplitude="1" exponent="3"/>
+                          <feFuncB id="b-gamma" type="gamma" amplitude="1" exponent="1"/>
+                     </feComponentTransfer>
+                  </filter>
+
+                  <filter id="multitable">
+                     <feComponentTransfer result="tablas">
+                         <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                         <feFuncG type="table" tableValues="1 0 1" exponent="2"/>
+                         <feFuncB type="table" tableValues="1 0 1" exponent="5"/>
+                     </feComponentTransfer>
+                         <feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-5"/>
+                  </filter>
+
+                  <filter id="tablen">
+                     <feComponentTransfer result="tablas">
+                         <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+                         <feFuncG type="table" tableValues="1 0 2" exponent="2"/>
+                         <feFuncB type="table" tableValues="1 0 0" exponent="1"/>
+                     </feComponentTransfer>
+                         <feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-50"/>
+                  </filter>
+
+                  <!-- feConvolveMatrix -->
+
+                  <filter id="fematrixUno">
+                     <feConvolveMatrix order="3"
+                     kernelMatrix="-1 -1 3
+                     -2 1 -1
+                     -1 1 -1"/>
+                  </filter>
+                  <filter id="fematrixDos">
+                      <feConvolveMatrix order="4"
+                             kernelMatrix="-2 2 1 -1
+                             -1 3 2 1
+                             -1 0 -1 -4
+                             -1 1 0 0"/>
+                  </filter>
+
+                  <filter id="sepiatone">
+                    <feColorMatrix type="matrix" values=".343 .669 .119 0 0 .249 .626 .130 0 0 .172 .334 .111 0 0 .000 .000 .000 1 0"/>
+                  </filter>
+
+                 <filter id='turbulence'>
+                     <feTurbulence id="turbulence-value" type='turbulence' baseFrequency='.7' result='fuzz' numOctaves='2' stitchTiles='stitch'/>
+                     <feComposite id="composite-value" in='SourceGraphic' in2='fuzz' operator='arithmetic' k1='0' k2='1' k3='-3' k4='.01'/>
+                 </filter>
+
+                  <filter id="turbuMap" >
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulence" data-filterId="3"/>
+                    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence" scale="40"/>
+                  </filter>
+
+                 <!-- feGaussianBlur -->
+
+                  <filter id="blurUno">
+                    <feGaussianBlur id="blur-value" stdDeviation="3"/>
+                  </filter>
+                  <filter id="blurDos">
+                    <feGaussianBlur stdDeviation="9"/>
+                  </filter>
+
+                  <!-- feMorphology -->
+
+                  <filter id="morphoUno">
+                    <feMorphology id="morpho-value" operator="erode" in="SourceGraphic" radius="3"/>
+                  </filter>
+                  <filter id="morphoDos">
+                    <feMorphology id="morpho-dilate-value" operator="dilate" in="SourceGraphic" radius="6"/>
+                  </filter>
+
+    </svg>
+
+
+
+  </section>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="dist/js/clipboard.min.js"></script>
+  <script type="text/javascript" src="dist/js/dragdrop.js"></script>
+  <script type="text/javascript" src="dist/js/nouislider.min.js"></script>
+  <script type="text/javascript" src="dist/js/filters.js"></script>
+  <script type="text/javascript" src="dist/js/slider-filters.js"></script>
+  <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36222123-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+  </script>
+
+</body>
+</html>
