@@ -44,7 +44,7 @@
     var firsthueRotateSlider = document.getElementById('slider-huerotate');
 
     noUiSlider.create(firsthueRotateSlider, {
-        start: [180],
+        start: [90],
         tooltips: true,
         step: 1,
         range: {
@@ -295,7 +295,7 @@
     var feGammaBa = document.getElementById('slider-gamma-ba');
 
     noUiSlider.create(feGammaBa, {
-        start: [0],
+        start: [1],
         tooltips: true,
         step: 0.01,
         range: {
@@ -346,7 +346,7 @@
     var feGammaBe = document.getElementById('slider-gamma-be');
 
     noUiSlider.create(feGammaBe, {
-        start: [0.3],
+        start: [1],
         tooltips: true,
         step: 0.01,
         range: {
@@ -467,7 +467,7 @@
     var morphoDilateSlider = document.getElementById('slider-morpho-dilate');
 
     noUiSlider.create(morphoDilateSlider, {
-        start: [4],
+        start: [6],
         tooltips: true,
         step: 1,
         range: {
@@ -509,7 +509,7 @@
     var saturotateSlider = document.getElementById('slider-saturotate');
 
     noUiSlider.create(saturotateSlider, {
-        start: [0],
+        start: [20],
         tooltips: true,
         step: 5,
         range: {
@@ -552,7 +552,7 @@
     var hueRotateSlider = document.getElementById('slider-saturotate-huerotate');
 
     noUiSlider.create(hueRotateSlider, {
-        start: [180],
+        start: [291],
         tooltips: true,
         step: 1,
         range: {
@@ -595,7 +595,7 @@
     var sliderTurbuBase = document.getElementById('slider-turbulence-base');
 
     noUiSlider.create(sliderTurbuBase, {
-        start: [026],
+        start: [0.7],
         tooltips: true,
         step: 0.01,
         range: {
@@ -642,16 +642,16 @@
     var sliderTurbuNum = document.getElementById('slider-turbulence-num');
 
     noUiSlider.create(sliderTurbuNum, {
-        start: [0.15],
+        start: [2],
         tooltips: true,
-        step: 0.01,
+        step: 0.1,
         range: {
             'min': [0],
-            'max': [1]
+            'max': [2]
         },
         pips: {
             mode: 'values',
-            values: [0, 1],
+            values: [0, 1, 2],
             density: 10
         }
     });
@@ -688,7 +688,7 @@
     var sliderCompoK1 = document.getElementById('slider-composite-k1');
 
     noUiSlider.create(sliderCompoK1, {
-        start: [1.00],
+        start: [0],
         tooltips: true,
         step: 0.01,
         range: {
@@ -734,7 +734,7 @@
     var sliderCompoK2 = document.getElementById('slider-composite-k2');
 
     noUiSlider.create(sliderCompoK2, {
-        start: [0.17],
+        start: [1],
         tooltips: true,
         step: 0.01,
         range: {
@@ -780,7 +780,7 @@
     var sliderCompoK3 = document.getElementById('slider-composite-k3');
 
     noUiSlider.create(sliderCompoK3, {
-        start: [0.79],
+        start: [-3],
         tooltips: true,
         step: 0.01,
         range: {
@@ -826,7 +826,7 @@
     var sliderCompoK4 = document.getElementById('slider-composite-k4');
 
     noUiSlider.create(sliderCompoK4, {
-        start: [0.29],
+        start: [0.01],
         tooltips: true,
         step: 0.01,
         range: {
@@ -900,9 +900,9 @@
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
@@ -915,13 +915,13 @@
 
     /*
     feComponentTransfer - Linear
-    2/6 - Red - Amplitude
+    2/6 - Red - Intercept
     */
 
     var sliderFeLineRa = document.getElementById('slider-linear-ra');
 
     noUiSlider.create(sliderFeLineRa, {
-        start: [0],
+        start: [0.25],
         tooltips: true,
         step: 0.01,
         range: {
@@ -944,14 +944,14 @@
         var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
         var sliderFeLineRaV = document.getElementById("r-linear");
         var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
-        sliderFeLineRaV.setAttributeNS(null, "amplitude", sliderFeLineRaValue);
+        sliderFeLineRaV.setAttributeNS(null, "intercept", sliderFeLineRaValue);
 
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
@@ -971,7 +971,7 @@
     var sliderFeLineGs = document.getElementById('slider-linear-gs');
 
     noUiSlider.create(sliderFeLineGs, {
-        start: [0],
+        start: [0.5],
         tooltips: true,
         step: 0.01,
         range: {
@@ -999,9 +999,9 @@
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
@@ -1014,7 +1014,7 @@
 
     /*
     feComponentTransfer - Linear
-    4/6 - Green -Slope
+    4/6 - Green - Intercept
     */
 
     var sliderFeLineGa = document.getElementById('slider-linear-ga');
@@ -1043,14 +1043,14 @@
         var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
         var sliderFeLineGaV = document.getElementById("g-linear");
         var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
-        sliderFeLineGaV.setAttributeNS(null, "slope", sliderFeLineGaValue);
+        sliderFeLineGaV.setAttributeNS(null, "intercept", sliderFeLineGaValue);
 
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
@@ -1063,13 +1063,13 @@
 
     /*
     feComponentTransfer - Linear
-    5/6 - Blue - Amplitude
+    5/6 - Blue - Slope
     */
 
     var sliderFeLineBs = document.getElementById('slider-linear-bs');
 
     noUiSlider.create(sliderFeLineBs, {
-        start: [0],
+        start: [0.5],
         tooltips: true,
         step: 0.01,
         range: {
@@ -1097,9 +1097,9 @@
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
@@ -1118,7 +1118,7 @@
     var sliderFeLineBa = document.getElementById('slider-linear-ba');
 
     noUiSlider.create(sliderFeLineBa, {
-        start: [0],
+        start: [0.5],
         tooltips: true,
         step: 0.01,
         range: {
@@ -1141,14 +1141,14 @@
         var sliderFeLineBaValue = sliderFeLineBa.noUiSlider.get();
         var sliderFeLineBaV = document.getElementById("b-linear");
         var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
-        sliderFeLineBaV.setAttributeNS(null, "amplitude", sliderFeLineBaValue);
+        sliderFeLineBaV.setAttributeNS(null, "intercept", sliderFeLineBaValue);
 
         $(sliderFeLineRsPanel).text(
             '<filter id="linear-customize">\n' +
             '<feComponentTransfer>\n' +
-            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" amplitude="' + sliderFeLineRaValue + '"/>\n' +
-            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" amplitude="' + sliderFeLineGaValue + '"/>\n' +
-            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" amplitude="' + sliderFeLineBaValue + '"/>\n' +
+            '<feFuncR type="linear" slope="' + sliderFeLineRsValue + '" intercept="' + sliderFeLineRaValue + '"/>\n' +
+            '<feFuncG type="linear" slope="' + sliderFeLineGsValue + '" intercept="' + sliderFeLineGaValue + '"/>\n' +
+            '<feFuncB type="linear" slope="' + sliderFeLineBsValue + '" intercept="' + sliderFeLineBaValue + '"/>\n' +
             '</feComponentTransfer>\n' +
             '</filter>');
     });
