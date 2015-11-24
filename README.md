@@ -1,36 +1,40 @@
 FILDROP
 ============
 
-
 [DEMO](http://jorgeatgu.github.io/svg-filters/)
 
 ##Filters to customize
 
+You can customize someone filters. The filter will be customized if have an icon on the button.
+
 ##How to use
 
-Download **FILDROP**. The first thing you need to do is include the **CSS** and the **SVG** in your project.
+Download **FILDROP**. The first thing you need to do is include the **CSS** and the **SVG** in your project. You can include the filters at the bottom of HTML. I prefer include the file at my folder images.
 
-###CSS
+```
+<link rel="stylesheet" href="path/to/filter.css">
+```
 
-###SVG
+Add class to the element
 
-You can include the filters at the bottom of HTML. I prefer include the file at my folder images.
+```
+<img class="saturate" src="path/to/image.png">
+```
 
-<link rel="stylesheet" href="path/to/wallop.css">
+You can view all filter effect in this [demo all filters]()
 
-##Browser Suppport
+
+##Browser support
 
 ##Contributing
 
-To contribute to **FILDROP**, clone this repo locally, create your awesome filters and commit your code.
+To contribute to **FILDROP**, clone this repo locally, create your awesome filters and create pull request with your filter.
 
 ##Credits
 
 [Matthew Bystedt](http://apike.ca/prog_svg_filters.html)
 
 [David Dailey ](http://srufaculty.sru.edu/david.dailey/svg/#Filters)
-
-[Hands On: SVG FILTER EFFECTS](http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_svg-filter-effects.htm)
 
 [WebPlatform SVG FILTER](http://docs.webplatform.org/wiki/svg/tutorials/smarter_svg_filters)
 

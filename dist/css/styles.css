@@ -1090,4 +1090,28 @@ button {
   text-decoration: none;
   color: #E74C7B;
 }
+
+.section-demo {
+	font-size: 0;
+}
+
+.section-demo article {
+  width: 25%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 1.25rem;
+  margin-top: 10px;
+}
+
+.section-demo article img {
+  max-width: 100%;
+  border: 2px solid #001E40;
+}
+
+.section-demo p {
+  font-size: 1.13rem;
+  font-family: 'Work Sans',sans-serif;
+  color: #001F3F;
+  margin: 0 0 0.63rem 0;
+}
 /*# sourceMappingURL=styles.css.map */
