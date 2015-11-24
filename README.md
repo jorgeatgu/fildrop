@@ -21,7 +21,7 @@ Add class to the element
 <img class="saturate" src="path/to/image.png">
 ```
 
-You can view all filter effects in this [demo]()
+You can view all filter effects in this [demo](http://jorgeatgu.github.io/svg-filters/demo.html)
 
 Classes:
 
@@ -55,6 +55,14 @@ Classes:
   * `morpho-dos`
 
 ##Browser support
+
+- [x] **Internet Explorer 10+**
+- [x] **Chrome 8+**
+- [x] **Firefox 3+**
+- [x] **Opera 10+**
+- [x] **Safari 6+**
+
+[CanIuse](http://caniuse.com/#feat=svg-filters)
 
 ##Contributing
 
