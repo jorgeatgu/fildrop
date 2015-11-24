@@ -31,6 +31,7 @@ button {
 			font-size: 58px;
 			display: inline-block;
 			margin: 0 20px 0 0;
+			text-decoration: none;
 		}
 		.icons-texto-secundario {
 			text-align: left;

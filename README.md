@@ -11,13 +11,13 @@ You can customize someone filters. The filter will be customized if have an icon
 
 Download **FILDROP**. The first thing you need to do is include the **CSS** and the **SVG** in your project. You can include the filters at the bottom of HTML. I prefer include the file at my folder images.
 
-```
+```html
 <link rel="stylesheet" href="path/to/filter.css">
 ```
 
 Add class to the element
 
-```
+```html
 <img class="saturate" src="path/to/image.png">
 ```
 
@@ -25,8 +25,8 @@ You can view all filter effects in this [demo](http://jorgeatgu.github.io/svg-fi
 
 Classes:
 
-* `saturate`
   * `saturotate`
+  * `saturate`
   * `rotamatrix`
   * `multitable`
   * `tablen`
