@@ -21,8 +21,38 @@ Add class to the element
 <img class="saturate" src="path/to/image.png">
 ```
 
-You can view all filter effect in this [demo all filters]()
+You can view all filter effects in this [demo]()
 
+Classes:
+
+* `saturate`
+  * `saturotate`
+  * `rotamatrix`
+  * `multitable`
+  * `tablen`
+  * `dishue`
+  * `matrix`
+  * `matrix-dos`
+  * `huerotate`
+  * `luminance`
+  * `discrete`
+  * `discrete-dos`
+  * `table`
+  * `table-dos`
+  * `identity`
+  * `linear`
+  * `gamma`
+  * `turbulence`
+  * `sepia`
+  * `fematrix-uno`
+  * `fematrix-dos`
+  * `turbu-map`
+  * `map-uno`
+  * `map-dos`
+  * `blur-uno`
+  * `blur-dos`
+  * `morpho-uno`
+  * `morpho-dos`
 
 ##Browser support
 
