@@ -1,11 +1,13 @@
 FILDROP
 ============
 
+Fildrop is a set of custom SVG filters.
+
 [DEMO](http://jorgeatgu.github.io/svg-filters/)
 
 ##Filters to customize
 
-You can customize someone filters. The filter will be customized if have an icon on the button.
+You can customize someone filters. The filter will be customized if have an icon at top-right of the button.
 
 ##How to use
 
@@ -67,6 +69,10 @@ Classes:
 ##Contributing
 
 To contribute to **FILDROP**, clone this repo locally, create your awesome filters and create pull request with your filter.
+
+##License
+
+Fildrop is licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ##Credits
 
