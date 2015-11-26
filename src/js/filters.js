@@ -91,6 +91,14 @@ $(document).ready(function() {
     var panelDiscrete2 = $("#panel-discrete-dos");
     var panelMatrix = $("#panel-matrix");
     var panelMatrix2 = $("#panel-matrix-dos");
+    var panelTable = $("#panel-table");
+    var panelTable2 = $("#panel-table-dos");
+    var panelIdentity = $("#panel-identity");
+    var panelTurbuMap = $("#panel-turbumap");
+    var panelSepia = $("#panel-sepia");
+    var panelFeMatrix = $("#panel-fematrix");
+    var panelFeMatrix2 = $("#panel-fematrix-dos");
+    var panelBlur2 = $("#panel-blur-dos");
 
 
 
@@ -265,13 +273,78 @@ $(document).ready(function() {
     var discretePanel2 = document.getElementById("panel-code-discrete-dos");
 
     $(discretePanel2).text(
-        '<filter id="discrete">\n' +
+        '<filter id="discrete-dos">\n' +
         '<feFuncR type="discrete" tableValues="0 .5 1 1"/>\n' +
         '<feFuncG type="discrete" tableValues="0 .5 1"\n' +
         '<feFuncB type="discrete" tableValues="0 .5 "\n' +
         '</filter>');
 
-    //Copy to clipboard
+    var tablePanel = document.getElementById("panel-code-table");
+
+    $(tablePanel).text(
+        '<filter id="table">\n' +
+        '<feFuncR type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '<feFuncG type="table" tableValues="1 0 1" exponent="2"\n' +
+        '<feFuncB type="table" tableValues="1 0 1" exponent="5"\n' +
+        '</filter>');
+
+    var tablePanel2 = document.getElementById("panel-code-table-dos");
+
+    $(tablePanel2).text(
+        '<filter id="table">\n' +
+        '<feFuncR type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '<feFuncG type="table" tableValues="1 10 1" exponent="2"\n' +
+        '<feFuncB type="table" tableValues="1 5 1" exponent="5"\n' +
+        '</filter>');
+
+    var tableIdentity = document.getElementById("panel-code-identity");
+
+    $(tableIdentity).text(
+        '<filter id="table">\n' +
+        '<feFuncR type="identity"/>\n' +
+        '<feFuncG type="identity"\n' +
+        '<feFuncB type="identity"\n' +
+        '<feFuncA type="identity"\n' +
+        '</filter>');
+
+    var tableTurbuMap = document.getElementById("panel-code-turbumap");
+
+    $(tableTurbuMap).text(
+        '<filter id="turbuMap">\n' +
+        ' <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulence" data-filterId="3"/>\n' +
+        '<feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence" scale="40"/>\n' +
+        '</filter>');
+
+    var tableSepia = document.getElementById("panel-code-sepia");
+
+    $(tableSepia).text(
+        '<filter id="sepiatone">\n' +
+        '<feColorMatrix type="matrix" values=".343 .669 .119 0 0 .249 .626 .130 0 0 .172 .334 .111 0 0 .000 .000 .000 1 0"/>\n' +
+        '</filter>');
+
+    var tableFeMatrix = document.getElementById("panel-code-fematrix");
+
+    $(tableFeMatrix).text(
+        '<filter id="sepiatone">\n' +
+        '<feConvolveMatrix order="3" kernelMatrix="-1 -1 3 -2 1 -1 -1 1 -1"/>\n' +
+        '</filter>');
+
+
+    var tableFeMatrix2 = document.getElementById("panel-code-fematrix-dos");
+
+    $(tableFeMatrix2).text(
+        '<filter id="sepiatone">\n' +
+        '<feConvolveMatrix order="4" kernelMatrix="-2 2 1 -1 -1 3 2 1 -1 0 -1 -4 -1 1 0 0"/>\n' +
+        '</filter>');
+
+    var tableBlur2 = document.getElementById("panel-code-blur-dos");
+
+    $(tableBlur2).text(
+        '<filter id="sepiatone">\n' +
+        '<feGaussianBlur stdDeviation= "9"/>\n' +
+        '</filter>');
+
+    // Copy to clipboard
 
     var clipboard = new Clipboard('.panel-btn-copy');
 
@@ -360,5 +433,13 @@ $(document).ready(function() {
     showPanelFilter(btnDiscrete2, panelDiscrete2);
     showPanelFilter(btnMatrix, panelMatrix);
     showPanelFilter(btnMatrix2, panelMatrix2);
+    showPanelFilter(btnTable, panelTable);
+    showPanelFilter(btnTable2, panelTable2);
+    showPanelFilter(btnIdentity, panelIdentity);
+    showPanelFilter(btnTurbuMap, panelTurbuMap);
+    showPanelFilter(btnSepia, panelSepia);
+    showPanelFilter(btnConMatrix, panelFeMatrix);
+    showPanelFilter(btnConMatrix2, panelFeMatrix2);
+    showPanelFilter(btnBlur2, panelBlur2);
 
 });
