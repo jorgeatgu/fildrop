@@ -531,7 +531,7 @@
         saturotateFilter.setAttributeNS(null, "values", saturotateValue);
 
         $(saturotateCode).text(
-            'x<filter id="saturotate-customize" filterUnits="objectBoundingBox">\n' +
+            '<filter id="saturotate-customize" filterUnits="objectBoundingBox">\n' +
             ' <feColorMatrix type="saturate" result="saturado" values="' + saturotateValue + '"/>\n' +
             ' <feColorMatrix type="hueRotate" in="saturado" in2="SourceGraphic" values="' + valueSaturotateHuerotate + '"/>\n' +
             '</filter>');

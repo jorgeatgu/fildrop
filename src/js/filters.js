@@ -88,6 +88,10 @@ $(document).ready(function() {
     var panelMorphoDilate = $("#panel-morpho-dilate");
     var panelSaturotate = $("#panel-saturotate");
     var panelDiscrete = $("#panel-discrete");
+    var panelDiscrete2 = $("#panel-discrete-dos");
+    var panelMatrix = $("#panel-matrix");
+    var panelMatrix2 = $("#panel-matrix-dos");
+
 
 
     //Functions
@@ -182,17 +186,17 @@ $(document).ready(function() {
 
     //Morpho - Erode
 
-    var panelMorpho = document.getElementById("panel-code-morpho");
+    var codeMorpho = document.getElementById("panel-code-morpho");
 
-    $(panelMorpho).text(
+    $(codeMorpho).text(
         '<filter id="morpho-customize">\n' +
         ' <feGaussianBlur operator="erode" in="SourceGraphic" radius="3"/>\n' +
         '</filter>');
 
     //Morpho - Dilate
-    var panelMorphoDilate = document.getElementById("panel-code-morpho-dilate");
+    var codeMorphoDilate = document.getElementById("panel-code-morpho-dilate");
 
-    $(panelMorphoDilate).text(
+    $(codeMorphoDilate).text(
         '<filter id="morpho-customize-dilate">\n' +
         ' <feGaussianBlur operator="dilate" in="SourceGraphic" radius="6"/>\n' +
         '</filter>');
@@ -228,6 +232,44 @@ $(document).ready(function() {
         '</feComponentTransfer>\n' +
         '</filter>');
 
+    var matrixCodePanel = document.getElementById("panel-code-matrix");
+
+    $(matrixCodePanel).text(
+        '<filter id="matrix">\n' +
+        '<feColorMatrix type="matrix" in="SourceGraphic" values="-1 2 -3 0 -.5 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0"/>\n' +
+        '</filter>');
+
+    var matrixCodePanelDos = document.getElementById("panel-code-matrix-dos");
+
+    $(matrixCodePanelDos).text(
+        '<filter id="matrix">\n' +
+        '<feColorMatrix type="matrix" in="SourceGraphic" values="-1 2 -3 0 -.5 2 1 0 0 0 0 3 0 0 0 0 0 1 1 0"/>\n' +
+        '</filter>');
+
+    var luminancePanel = document.getElementById("panel-code-luminance");
+
+    $(luminancePanel).text(
+        '<filter id="luminanceToAlpha" filterUnits="objectBoundingBox">\n' +
+        '<feColorMatrix id="luminance-value" type="luminanceToAlpha" in="SourceGraphic"/>\n' +
+        '</filter>');
+
+    var discretePanel = document.getElementById("panel-code-discrete");
+
+    $(discretePanel).text(
+        '<filter id="discrete">\n' +
+        '<feFuncR type="discrete" tableValues="0 .5 1 1"/>\n' +
+        '<feFuncG type="discrete" tableValues="0 .5 1"\n' +
+        '<feFuncB type="discrete" tableValues="0 .5 "\n' +
+        '</filter>');
+
+    var discretePanel2 = document.getElementById("panel-code-discrete-dos");
+
+    $(discretePanel2).text(
+        '<filter id="discrete">\n' +
+        '<feFuncR type="discrete" tableValues="0 .5 1 1"/>\n' +
+        '<feFuncG type="discrete" tableValues="0 .5 1"\n' +
+        '<feFuncB type="discrete" tableValues="0 .5 "\n' +
+        '</filter>');
 
     //Copy to clipboard
 
@@ -257,9 +299,11 @@ $(document).ready(function() {
     //FIRE!
 
     $(btnFilters).click(function() {
-        if (typeof $(this).data('panel') !== 'undefined') {
-            openPanel();
-        }
+        //Remove by @elrumordelaluz
+        // if (typeof $(this).data('panel') !== 'undefined') {
+
+        // }
+        openPanel();
     });
 
     $(btnClose).click(function() {
@@ -313,5 +357,8 @@ $(document).ready(function() {
     showPanelFilter(btnMorpho2, panelMorphoDilate);
     showPanelFilter(btnSaturotate, panelSaturotate);
     showPanelFilter(btnDiscrete, panelDiscrete);
+    showPanelFilter(btnDiscrete2, panelDiscrete2);
+    showPanelFilter(btnMatrix, panelMatrix);
+    showPanelFilter(btnMatrix2, panelMatrix2);
 
 });
