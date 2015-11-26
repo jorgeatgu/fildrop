@@ -142,6 +142,93 @@ $(document).ready(function() {
         });
     }
 
+    //Print values defaultStatus in every filter
+
+    var saturateCode = document.getElementById("panel-code-saturate");
+    var huerotateCode = document.getElementById("panel-code-huerotate");
+
+    //Saturate
+    $(saturateCode).text(
+        '<filter id="saturate-customize">\n' +
+        ' <feColorMatrix type="saturate" values="14"/>\n' +
+        '</filter>');
+
+    //Saturotate
+    $(huerotateCode).text(
+        '<filter id="huerotate-customize">\n' +
+        ' <feColorMatrix type="hueRotate" values="90"/>\n' +
+        '</filter>');
+
+    //Gamma
+    var gammaPanel = document.getElementById("panel-code-gamma");
+
+    $(gammaPanel).text(
+        '<filter id="gamma-customize">\n' +
+        '<feComponentTransfer>\n' +
+        '<feFuncR type="gamma" amplitude="1" exponent="1"/>\n' +
+        '<feFuncG type="gamma" amplitude="0.4" exponent="0.25"/>\n' +
+        '<feFuncB type="gamma" amplitude="1" exponent="1"/>\n' +
+        '</feComponentTransfer>\n' +
+        '</filter>');
+
+    //Blur
+
+    var panelBLur = document.getElementById("panel-code-blur");
+
+    $(panelBLur).text(
+        '<filter id="blur-customize">\n' +
+        ' <feGaussianBlur stdDeviation="3"/>\n' +
+        '</filter>');
+
+    //Morpho - Erode
+
+    var panelMorpho = document.getElementById("panel-code-morpho");
+
+    $(panelMorpho).text(
+        '<filter id="morpho-customize">\n' +
+        ' <feGaussianBlur operator="erode" in="SourceGraphic" radius="3"/>\n' +
+        '</filter>');
+
+    //Morpho - Dilate
+    var panelMorphoDilate = document.getElementById("panel-code-morpho-dilate");
+
+    $(panelMorphoDilate).text(
+        '<filter id="morpho-customize-dilate">\n' +
+        ' <feGaussianBlur operator="dilate" in="SourceGraphic" radius="6"/>\n' +
+        '</filter>');
+
+    //Saturotate
+
+    var saturotateCode = document.getElementById("panel-code-saturotate");
+
+    $(saturotateCode).text(
+        '<filter id="saturotate-customize" filterUnits="objectBoundingBox">\n' +
+        ' <feColorMatrix type="saturate" result="saturado" values="20"/>\n' +
+        ' <feColorMatrix type="hueRotate" in="saturado" in2="SourceGraphic" values="291"/>\n' +
+        '</filter>');
+
+    var sliderTurbuBasePanel = document.getElementById("panel-code-turbulence");
+
+    $(sliderTurbuBasePanel).text(
+        '<filter id="turbulence-customize">\n' +
+        ' <feTurbulence type="turbulence" result="fuzz" baseFrequency="0.7" numOctaves="2" stitchTiles="stitch"/>\n' +
+        ' <feComposite in="SourceGraphic" in2="fuzz" operator="arithmetic" k1="0" k2="1" k3="-3" k4="0.01"/>\n' +
+        '</filter>');
+
+    //Linear
+
+    var sliderFeLineRsPanel = document.getElementById("panel-code-linear");
+
+    $(sliderFeLineRsPanel).text(
+        '<filter id="linear-customize">\n' +
+        '<feComponentTransfer>\n' +
+        '<feFuncR type="linear" slope="0.5" intercept="0.25"/>\n' +
+        '<feFuncG type="linear" slope="0.5" intercept="0"/>\n' +
+        '<feFuncB type="linear" slope="0.5" intercept="0.5"/>\n' +
+        '</feComponentTransfer>\n' +
+        '</filter>');
+
+
     //Copy to clipboard
 
     var clipboard = new Clipboard('.panel-btn-copy');
