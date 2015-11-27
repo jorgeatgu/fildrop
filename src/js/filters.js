@@ -100,6 +100,9 @@ $(document).ready(function() {
     var panelFeMatrix2 = $("#panel-fematrix-dos");
     var panelBlur2 = $("#panel-blur-dos");
     var panelRotamatrix = $("#panel-rotamatrix");
+    var panelMultitable = $("#panel-multitable");
+    var panelTablen = $("#panel-tablen");
+    var panelDishue = $("#panel-dishue");
 
 
 
@@ -353,7 +356,41 @@ $(document).ready(function() {
         '<feColorMatrix type="matrix" in="romatrix" in2="SourceGraphic" values="-1 2 -3 0 -.5 2 1 0 0 0 0 3 1 0 0 0 0 1 1 0"/>\n' +
         '</filter>');
 
+    var tableMultitable = document.getElementById("panel-code-multitable");
 
+    $(tableMultitable).text(
+        '<filter id="multitable">\n' +
+        '<feComponentTransfer result="tablas">\n' +
+        '<feFuncR type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '<feFuncG type="table" tableValues="1 0 1" exponent="2"/>\n' +
+        '<feFuncB type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '</feComponentTransfer>\n' +
+        '<feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-5"/>\n' +
+        '</filter>');
+
+    var tableTablen = document.getElementById("panel-code-tablen");
+
+    $(tableTablen).text(
+        '<filter id="multitable">\n' +
+        '<feComponentTransfer result="tablas">\n' +
+        '<feFuncR type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '<feFuncG type="table" tableValues="1 0 1" exponent="2"/>\n' +
+        '<feFuncB type="table" tableValues="1 0 1" exponent="5"/>\n' +
+        '</feComponentTransfer>\n' +
+        '<feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-5"/>\n' +
+        '</filter>');
+
+    var tableDishue = document.getElementById("panel-code-dishue");
+
+    $(tableDishue).text(
+        '<filter id="dishue">\n' +
+        '<feComponentTransfer result="lsd">\n' +
+        '<feFuncR type="discrete" tableValues="0 .5 1 1"/>\n' +
+        '<feFuncG type="discrete" tableValues="0 .5 1"/>\n' +
+        '<feFuncB type="discrete" tableValues="0 .5"/>\n' +
+        '</feComponentTransfer>\n' +
+        '<feColorMatrix type="hueRotate" in="lsd" in2="SourceGraphic" values="-180"/>\n' +
+        '</filter>');
 
     // Copy to clipboard
 
@@ -453,5 +490,8 @@ $(document).ready(function() {
     showPanelFilter(btnConMatrix2, panelFeMatrix2);
     showPanelFilter(btnBlur2, panelBlur2);
     showPanelFilter(btnRotamatrix, panelRotamatrix);
+    showPanelFilter(btnMultitable, panelMultitable);
+    showPanelFilter(btnTablen, panelTablen);
+    showPanelFilter(btnDishue, panelDishue);
 
 });
