@@ -564,6 +564,8 @@ button {
 .icons .icons-texto .icons-texto-principal {
   color: #001F3F;
   font-size: 3.63rem;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
   display: inline-block;
   margin: 0 1.25rem 0 0;
   text-decoration: none;
