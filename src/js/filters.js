@@ -420,11 +420,9 @@ $(document).ready(function() {
     //FIRE!
 
     $(btnFilters).click(function() {
-        //Remove by @elrumordelaluz
-        // if (typeof $(this).data('panel') !== 'undefined') {
-
-        // }
-        openPanel();
+        if (typeof $(this).data('panel') !== 'undefined') {
+            openPanel();
+        }
     });
 
     $(btnClose).click(function() {
