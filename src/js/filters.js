@@ -99,6 +99,7 @@ $(document).ready(function() {
     var panelFeMatrix = $("#panel-fematrix");
     var panelFeMatrix2 = $("#panel-fematrix-dos");
     var panelBlur2 = $("#panel-blur-dos");
+    var panelRotamatrix = $("#panel-rotamatrix");
 
 
 
@@ -344,6 +345,16 @@ $(document).ready(function() {
         '<feGaussianBlur stdDeviation= "9"/>\n' +
         '</filter>');
 
+    var tableRotamatrix = document.getElementById("panel-code-rotamatrix");
+
+    $(tableRotamatrix).text(
+        '<filter id="rotamatrix">\n' +
+        '<feColorMatrix type="hueRotate" result="romatrix"  values="245"/>\n' +
+        '<feColorMatrix type="matrix" in="romatrix" in2="SourceGraphic" values="-1 2 -3 0 -.5 2 1 0 0 0 0 3 1 0 0 0 0 1 1 0"/>\n' +
+        '</filter>');
+
+
+
     // Copy to clipboard
 
     var clipboard = new Clipboard('.panel-btn-copy');
@@ -441,5 +452,6 @@ $(document).ready(function() {
     showPanelFilter(btnConMatrix, panelFeMatrix);
     showPanelFilter(btnConMatrix2, panelFeMatrix2);
     showPanelFilter(btnBlur2, panelBlur2);
+    showPanelFilter(btnRotamatrix, panelRotamatrix);
 
 });
