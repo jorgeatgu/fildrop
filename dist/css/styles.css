@@ -711,11 +711,6 @@ button {
   background-size: 10px;
 }
 
-.section-buttons button[data-panel="open"]:hover {
-  background: #fff url('../img/btn-edit-filter.svg') 98% 5% no-repeat;
-  background-size: 10px;
-}
-
 .section-buttons .btn-poison {
   padding: 0.75rem 0.63rem;
 }
@@ -1082,10 +1077,10 @@ button {
 
 .panel-poison {
 	font-size: 1rem;
-	font-family: 'Hind',sans-serif;
+	font-family: 'Montserrat',sans-serif;
 	display: block;
 	text-align: center;
-	color: #E74C7B;
+	color: #001F3F;
 }
 
 .panel-poison svg {
@@ -1096,7 +1091,7 @@ button {
 
 .panel-poison a {
   text-decoration: none;
-  color: #E74C7B;
+  color: #001F3F;
 }
 
 .section-demo {

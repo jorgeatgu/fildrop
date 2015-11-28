@@ -158,10 +158,6 @@ button {
 		&[data-panel="open"] {
 			background: transparent url('../img/btn-edit-filter.svg') 98% 5% no-repeat;
 			background-size: 10px;
-			&:hover {
-				background: #fff url('../img/btn-edit-filter.svg') 98% 5% no-repeat;
-				background-size: 10px;
-			}
 		}
 	}
 	.btn-poison {
@@ -534,10 +530,10 @@ button {
 
 .panel-poison {
 	font-size: 16px;
-	font-family: $hind;
+	font-family: $monse;
 	display: block;
 	text-align: center;
-	color: #E74C7B;
+	color: $color-secundario;
 	svg {
 		width: 20px;
 		height: 20px;
@@ -545,7 +541,7 @@ button {
 	}
 	a {
 		text-decoration: none;
-		color: #E74C7B;
+		color: $color-secundario;
 	}
 }
 
