@@ -597,7 +597,7 @@ button {
 }
 
 .icons .icons-social a:hover {
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,.65);
   color: #84174D;
 }
 

@@ -71,13 +71,19 @@ gulp.task('css', function() {
         }),
         stylelint({
             "rules": {
-                "indentation": [2, "tab", {
-                    except: ["_reset.css"],
-                }],
+                "indentation": [2, "tab"],
+                "string-quotes": [2, "double"],
                 "no-eol-whitespace": [2],
-                "number-leading-zero": [2],
-                "number-max-precision": [2],
-                "number-zero-length-no-unit": [2]
+                "number-leading-zero": [2, "never"],
+                "number-max-precision": [2, "2"],
+                "selector-list-comma-newline-after": [2, "always"],
+                "selector-combinator-space-after": [2, "always"],
+                "selector-combinator-space-before": [2, "always"],
+                "number-zero-length-no-unit": [2],
+                "rule-no-duplicate-properties": [2],
+                "rule-no-single-line": [2],
+                "rule-trailing-semicolon": [2, "always"],
+                "nesting-block-opening-brace-newline-before": [2, "always-multi-line"]
             }
         }),
         reporter({
