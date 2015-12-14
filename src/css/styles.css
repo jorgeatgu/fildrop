@@ -1,7 +1,7 @@
 @import "_reset.css";
 @import "_variables.css";
 @import "_filters.css";
-@import "_nouislider.min.css";
+
 
 html,
 body {
@@ -570,3 +570,41 @@ button {
 		margin: 0 0 10px 0;
 	}
 }
+
+@media only screen and (max-width:32em) {
+
+	.icons .icons-social,
+	.icons .icons-texto {
+		width: 100%;
+		text-align: left;
+	}
+
+	.icons .icons-texto {
+		margin-bottom: 16px;
+	}
+  .section-left .section-left-drag {
+  	display: none;
+  }
+
+  .section-buttons button {
+  	width: 25%;
+  	padding: 5px;
+  }
+
+  .section-buttons button[data-panel="open"] {
+  	background: transparent;
+
+  }
+
+  .section-left .section-left-example {
+  	float: none;
+  	width: 100%;
+  }
+
+  .section-left .section-left-example picture img{
+  	width: 100%;
+  	border-right: 0;
+  }
+}
+
+@import "_nouislider.min.css";
