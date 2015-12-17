@@ -4,7 +4,6 @@ newer = require('gulp-newer');
 imagemin = require('gulp-imagemin');
 pngquant = require('imagemin-pngquant');
 postcss = require('gulp-postcss');
-precss = require('precss');
 autoprefixer = require('autoprefixer');
 atImport = require('postcss-import');
 nano = require('gulp-cssnano');
@@ -57,7 +56,6 @@ gulp.task('compress', function() {
 gulp.task('css', function() {
     var processors = [
         atImport,
-        precss,
         rucksack,
         autoprefixer({
             browsers: ['last 2 version']
