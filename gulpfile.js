@@ -14,6 +14,7 @@ reporter = require('postcss-reporter');
 rucksack = require('rucksack-css');
 sourcemaps = require('gulp-sourcemaps');
 nested = require('postcss-nested');
+vars = require('postcss-simple-vars');
 
 
 gulp.task('imagemin', function() {
@@ -57,6 +58,7 @@ gulp.task('compress', function() {
 gulp.task('css', function() {
     var processors = [
         atImport,
+        vars,
         nested,
         rucksack,
         autoprefixer({
