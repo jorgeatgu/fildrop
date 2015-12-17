@@ -1,6 +1,6 @@
 {
   "name": "svg-filters",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Drag and drop SVG Filters",
   "main": "gulpfile.js",
   "scripts": {
@@ -18,7 +18,8 @@
   "author": {
     "name": "Jorge Aznar",
     "email": "contacto@jorgeatgu.com",
-    "url": "http://jorgeatgu.com"
+    "url": "http://jorgeatgu.com",
+    "twitter": "http://twitter.com/jorgeatgu"
   },
   "license": "MIT",
   "bugs": {
@@ -27,23 +28,24 @@
   "homepage": "http://jorgeatgu.github.io/svg-filters/",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
+    "cssnano": "^3.4.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clone": "^1.0.0",
     "gulp-imagemin": "^2.4.0",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-newer": "^1.0.0",
+    x "gulp-newer": "^1.0.0",
     "gulp-postcss": "^6.0.1",
-    "gulp-sass": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.4.2",
     "imagemin-pngquant": "^4.2.0",
+    "postcss-import": "^7.1.3",
     "postcss-nested": "^1.0.0",
+    "postcss-pxtorem": "^3.1.1",
+    "postcss-reporter": "^1.3.0",
     "postcss-short-color": "^1.0.0",
+    "postcss-simple-vars": "^1.1.0",
     "postcss-sorting": "^1.1.0",
-    "precss": "^1.3.0",
     "stylelint": "^3.1.2"
-  },
-  "dependencies": {
-    "rucksack-css": "^0.8.5"
   }
 }

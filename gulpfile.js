@@ -11,7 +11,6 @@ rename = require('gulp-rename');
 pxtorem = require('postcss-pxtorem');
 stylelint = require('stylelint');
 reporter = require('postcss-reporter');
-rucksack = require('rucksack-css');
 sourcemaps = require('gulp-sourcemaps');
 nested = require('postcss-nested');
 vars = require('postcss-simple-vars');
@@ -61,7 +60,6 @@ gulp.task('css', function() {
         atImport,
         vars,
         nested,
-        rucksack,
         autoprefixer({
             browsers: ['last 2 version']
         }),
