@@ -13,6 +13,7 @@ stylelint = require('stylelint');
 reporter = require('postcss-reporter');
 rucksack = require('rucksack-css');
 sourcemaps = require('gulp-sourcemaps');
+nested = require('postcss-nested');
 
 
 gulp.task('imagemin', function() {
@@ -56,6 +57,7 @@ gulp.task('compress', function() {
 gulp.task('css', function() {
     var processors = [
         atImport,
+        nested,
         rucksack,
         autoprefixer({
             browsers: ['last 2 version']
