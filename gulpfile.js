@@ -15,6 +15,7 @@ rucksack = require('rucksack-css');
 sourcemaps = require('gulp-sourcemaps');
 nested = require('postcss-nested');
 vars = require('postcss-simple-vars');
+sorting = require('postcss-sorting');
 
 
 gulp.task('imagemin', function() {
@@ -70,6 +71,9 @@ gulp.task('css', function() {
             prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'padding'],
             replace: true,
             media_query: false
+        }),
+        sorting({
+            "sort-order": "csscomb"
         }),
         reporter({
             clearMessages: true
