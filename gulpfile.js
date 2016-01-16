@@ -29,16 +29,6 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('minify', function() {
-    return gulp.src('./dist/css/styles.css')
-        .pipe(nano())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('./dist/css'));
-});
-
-
 var imgSrc = './src/img/**';
 var imgDest = './dist/img';
 
@@ -81,6 +71,16 @@ gulp.task('css', function() {
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dist/css'));
+});
+
+
+gulp.task('minify', function() {
+    return gulp.src('./dist/css/styles.css')
+        .pipe(nano())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('./dist/css'));
 });
 
