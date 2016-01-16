@@ -143,8 +143,6 @@ $(document).ready(function() {
             }, 400)
             .addClass("panel-bottom")
             .css("height", btnHeight);
-        //Go to the bottom of the page!
-        // window.scrollTo(0, document.body.scrollHeight);
     }
 
     function equalHeight() {

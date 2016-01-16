@@ -488,14 +488,16 @@ button {
 	.noUi-horizontal {
 		height: 10px;
 	}
-	.noUi-tooltip {
-		color: #fff;
-		font-size: 14px;
-		font-family: $work-sans;
-	    border: 0;
-	    background-color: transparent;
-	    left: -1px;
-	    top: -1px;
+	.noUi-handle-lower {
+		.noUi-tooltip {
+			color: #fff;
+			font-size: 14px;
+			font-family: $work-sans;
+		    border: 0;
+		    background-color: transparent;
+		    left: -1px;
+		    top: -1px;
+		}
 	}
 	.noUi-target,
 	.noUi-pips-horizontal {
