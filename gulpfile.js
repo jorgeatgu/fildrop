@@ -89,5 +89,5 @@ gulp.task('default', function() {
     gulp.watch('./src/css/*.css', ['css']);
     gulp.watch('./src/img/**', ['images']);
     gulp.watch('./src/js/**', ['compress']);
-    gulp.watch('./src/css/*.css', ['minify']);
+    gulp.watch('./dist/css/*.css', ['minify']);
 });
