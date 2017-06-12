@@ -5,11 +5,11 @@ Fildrop is a set of custom SVG filters. Build with [Drag & Drop](https://github.
 
 [DEMO](http://jorgeatgu.github.io/svg-filters/)
 
-##Filters to customize
+## Filters to customize
 
 You can customize someone filters. The filter will be customized if have an icon at top-right of the button.
 
-##How to use
+## How to use
 
 Download **FILDROP**. The first thing you need to do is include the **CSS** and the **SVG** in your project. You can include the filters at the bottom of HTML. I prefer include the file at my images folder.
 
@@ -56,7 +56,7 @@ Classes:
   * `morpho-uno`
   * `morpho-dos`
 
-##Browser support
+## Browser support
 
 - [x] **Internet Explorer 10+**
 - [x] **Chrome 8+**
@@ -66,15 +66,15 @@ Classes:
 
 [CanIuse](http://caniuse.com/#feat=svg-filters)
 
-##Contributing
+## Contributing
 
 To contribute to **FILDROP**, clone this repo locally, create your awesome filters and create pull request with your filter.
 
-##License
+## License
 
 Fildrop is licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
-##Credits
+## Credits
 
 [Matthew Bystedt](http://apike.ca/prog_svg_filters.html)
 
